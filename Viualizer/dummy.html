@@ -1,0 +1,1414 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Tile Visualizer</title>
+
+    <!-- <style>
+        * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  line-height: 1.6;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+.grid a {
+  color: white;
+}
+
+/* HEADER */
+header {
+  position: sticky;
+  top: 0;
+  background: #801fc0;
+  color: white;
+  padding: 18px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+nav {
+  display: flex;
+  gap: 28px;
+  transition: 0.4s;
+}
+
+/* STICKY NAVBAR */
+.navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+
+  /* Recommended for violet theme */
+  background: #ffffff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.nav-link {
+  position: relative;
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background: white;
+  transition: 0.4s;
+}
+
+.nav-link:hover {
+  color: white;
+}
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* HERO */
+.hero {
+  height: 90vh;
+  background: url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c")
+    center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.hero h1 {
+  font-size: 48px;
+  color: black;
+}
+.hero p {
+  margin-top: 10px;
+  font-size: 18px;
+  color: black;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: 0.3s;
+  background: #801fc0;
+  color: white;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background: white;
+  color: #801fc0;
+  transition: 0.5s;
+  transform: translateY(-2px);
+}
+
+/* SECTION */
+section {
+  padding: 70px 20px;
+  text-align: center;
+}
+.light {
+  background: #f3f0ff;
+}
+
+/* GRID */
+.grid {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* CARD */
+.card {
+  width: 250px;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+/* GALLERY */
+.gallery img {
+  width: 250px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card button {
+  margin: 15px 0;
+  background: black;
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.card button:hover {
+  background: #801fc0;
+  transform: scale(1.05);
+}
+
+/* SERVICES */
+.service {
+  background: #801fc0;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 250px;
+  font-weight: bold;
+
+  display: flex;
+  justify-content: center; /* Horizontal center */
+  align-items: center; /* Vertical center */
+  text-align: center;
+}
+a {
+  text-decoration: none;
+}
+
+/* ================= SERVICES HOVER EFFECT ================= */
+#services .service {
+  position: relative;
+  overflow: hidden;
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+/* Shine animation layer */
+#services .service::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.35),
+    transparent
+  );
+  transform: translateX(-120%);
+  transition: transform 0.6s ease;
+}
+
+/* Hover effect */
+#services .service:hover {
+  cursor: pointer;
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 18px 35px #b984db;
+}
+
+/* Shine move */
+#services .service:hover::before {
+  transform: translateX(120%);
+}
+
+/* Press effect */
+#services .service:active {
+  transform: scale(0.97);
+}
+
+/* CONTACT SECTION */
+
+.contact-section {
+  padding: 60px 20px;
+  background: #f6f3fb;
+}
+
+.contact-section h2 {
+  text-align: center;
+  font-size: 32px;
+  color: #7209b7;
+  margin-bottom: 40px;
+}
+
+/* CONTACT LAYOUT */
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+}
+
+/* CONTACT FORM */
+
+.contact-form {
+  flex: 1;
+  min-width: 300px;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.contact-form h3 {
+  margin-bottom: 20px;
+  color: #7209b7;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #7209b7;
+  box-shadow: 0 0 5px rgba(114, 9, 183, 0.3);
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 12px;
+  background: #7209b7;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background: #5b06a0;
+}
+
+/* CONTACT INFO */
+
+.contact-info {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 30px 10px;
+}
+
+/* CONTACT ROW */
+.contact-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  font-size: 16px;
+  color: #333;
+  line-height: 1.5;
+  transition: 0.3s;
+}
+
+.contact-row:hover {
+  color: #7209b7;
+}
+
+/* ICON IMAGE */
+.contact-row img {
+  width: 37px;
+  height: 37px;
+  object-fit: contain;
+}
+
+.social-icons img {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+}
+
+/* LINKS */
+.contact-row a,
+span {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.contact-row a,
+span:hover {
+  color: #7209b7;
+  cursor: pointer;
+}
+
+/* MAP */
+.map-full {
+  margin-top: 50px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.map-full iframe {
+  width: 100%;
+  height: 400px;
+  border: 0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .contact-section h2 {
+    font-size: 26px;
+  }
+
+  .map-full iframe {
+    height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-row {
+    font-size: 14px;
+  }
+
+  .contact-row img {
+    width: 20px;
+    height: 20px;
+  }
+  .contact-row img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* FOOTER */
+footer {
+  background: #111;
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  nav {
+    position: absolute;
+    top: 75px;
+    right: -100%;
+    flex-direction: column;
+    background: #111;
+    width: 240px;
+    padding: 25px;
+    border-radius: 12px;
+    transition: 0.4s;
+  }
+
+  nav.active {
+    right: 20px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+/* ================= PRODUCT BUTTON GLITTER EFFECT ================= */
+#products .card button {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #000, #222);
+  color: white;
+  border-radius: 25px;
+  transition: all 0.35s ease;
+  font-size: 15px;
+}
+
+/* Glitter shine layer */
+#products .card button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 120%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.5),
+    transparent
+  );
+  transition: 0.6s;
+}
+
+/* Hover effects */
+#products .card button:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+}
+
+/* Shine animation */
+#products .card button:hover::before {
+  left: 120%;
+}
+
+/* Click feel */
+#products .card button:active {
+  transform: scale(0.95);
+}
+
+/* BACK TO TOP BUTTON */
+#backToTop {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #ff7b00, #ff3c00);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.4s ease;
+  z-index: 999;
+}
+
+/* Image inside */
+#backToTop img {
+  width: 130%;
+  height: 130%;
+  object-fit: fill;
+  border-radius: 50px;
+  /* filter: brightness(0) invert(1); */
+  transition: transform 0.3s ease;
+}
+
+/* Show Button */
+#backToTop.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Hover Effect */
+/* #backToTop:hover {
+  transform: translateY(-6px) scale(1.08);
+  box-shadow: 0 15px 35px rgba(255, 60, 0, 0.5);
+}
+
+#backToTop:hover img {
+  transform: translateY(-3px);
+} */
+
+/* Mobile Adjust */
+@media (max-width: 768px) {
+  #backToTop {
+    right: 20px;
+    bottom: 20px;
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/* MODERN FOOTER */
+.modern-footer {
+  background: #111;
+  color: #ddd;
+  padding-top: 60px;
+  font-size: 14px;
+}
+
+.footer-container {
+  width: 90%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+}
+
+.footer-box h3,
+.footer-box h4 {
+  color: #fff;
+  margin-bottom: 20px;
+  position: relative;
+  font-size: 30px;
+}
+
+.footer-box h4::after {
+  content: "";
+  width: 40px;
+  height: 3px;
+  background: #801fc0;
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+}
+
+.footer-box p {
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+.footer-box ul {
+  list-style: none;
+}
+
+.footer-box ul li {
+  margin-bottom: 10px;
+  transition: 0.3s;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.footer-box ul li:hover {
+  transform: translateX(6px);
+  color: #801fc0;
+}
+
+.footer-box a {
+  color: #ddd;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-box a:hover {
+  color: #801fc0;
+}
+
+/* Icons */
+.footer-box i {
+  width: 35px;
+  font-size: 30px;
+  color: #801fc0;
+}
+
+.social-icons {
+  margin-top: -5px;
+}
+
+.social-icons a {
+  margin-top: 20px;
+  display: inline-block;
+  margin-right: 10px;
+  padding: 10px;
+  border-radius: 50%;
+  color: white;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  transform: translateY(-5px);
+}
+
+/* Bottom */
+.footer-bottom {
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  background: #000;
+  font-size: 13px;
+  color: #aaa;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .modern-footer {
+    text-align: center;
+  }
+
+  .footer-box h4::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.modern-footer {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 0.8s ease;
+}
+
+/* ================= COMMON SECTION STYLE ================= */
+.section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-header h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.section-header p {
+  color: #666;
+  font-size: 15px;
+}
+
+/* SECTION */
+
+.best-selling {
+  padding: 80px 20px;
+  background: linear-gradient(180deg, #faf7ff, #ffffff);
+  text-align: center;
+}
+
+/* HEADER */
+
+.section-header h2 {
+  font-size: 34px;
+  color: #7209b7;
+  margin-bottom: 10px;
+}
+
+.section-header p {
+  color: #666;
+  margin-bottom: 40px;
+}
+
+/* GRID */
+
+.best-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 35px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* CARD */
+
+.best-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  position: relative;
+  transition: 0.4s;
+}
+
+/* CARD HOVER */
+
+.best-card:hover {
+  transform: translateY(-12px) scale(1.03);
+  box-shadow: 0 20px 50px rgba(114, 9, 183, 0.25);
+}
+
+/* IMAGE */
+
+.img-wrap {
+  overflow: hidden;
+}
+
+.img-wrap img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  transition: 0.6s;
+}
+
+.best-card:hover img {
+  transform: scale(1.1);
+}
+
+/* BADGE */
+
+.badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: #7209b7;
+  color: white;
+  font-size: 13px;
+  padding: 6px 12px;
+  border-radius: 30px;
+  box-shadow: 0 5px 15px rgba(114, 9, 183, 0.5);
+  animation: badgePulse 2s infinite;
+}
+
+.badge.trending {
+  background: #b984db;
+}
+
+.badge.premium {
+  background: linear-gradient(45deg, #7209b7, #b984db);
+}
+
+/* BADGE ANIMATION */
+
+@keyframes badgePulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* INFO */
+
+.best-info {
+  padding: 22px;
+}
+
+.best-info h3 {
+  font-size: 20px;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.best-info p {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 12px;
+}
+
+/* RATING */
+
+.rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+/* GLITTER STARS */
+
+.stars {
+  font-size: 28px;
+  color: #ffd700;
+  animation: starGlow 2s infinite alternate;
+}
+
+/* STAR ANIMATION */
+
+@keyframes starGlow {
+  0% {
+    text-shadow: 0 0 3px #ffd700;
+  }
+
+  50% {
+    text-shadow:
+      0 0 6px #ffd700,
+      0 0 10px #ffd700,
+      0 0 15px #fff3a0;
+  }
+
+  100% {
+    text-shadow: 0 0 4px #ffd700;
+  }
+}
+
+/* BUTTON */
+
+.btn-primary {
+  display: inline-block;
+  background: linear-gradient(45deg, #7209b7, #b984db);
+  color: white;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-size: 14px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  transform: scale(1.08);
+  box-shadow: 0 10px 20px rgba(114, 9, 183, 0.4);
+}
+
+/* ================= OFFERS SECTION ================= */
+.offers-section {
+  padding: 80px 8%;
+  background: linear-gradient(135deg, #111, #222);
+  color: #fff;
+  text-align: center;
+}
+
+.offer-content h2 {
+  font-size: 34px;
+  margin-bottom: 15px;
+}
+
+.offer-content span {
+  color: #ff7b00;
+  font-weight: bold;
+}
+
+.offer-note {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #ccc;
+}
+
+.btn-offer {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 35px;
+  border-radius: 30px;
+  background: #ff7b00;
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.btn-offer:hover {
+  background: #ff3c00;
+  transform: translateY(-4px);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .section-header h2 {
+    font-size: 26px;
+  }
+
+  .offer-content h2 {
+    font-size: 26px;
+  }
+}
+
+    </style> -->
+
+    <style>
+      :root {
+        --primary: #7209b7;
+        --secondary: #b984db;
+        --bg: #f6f3fb;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family:
+          Segoe UI,
+          sans-serif;
+      }
+
+      body {
+        background: var(--bg);
+        color: #333;
+      }
+
+      header {
+        background: linear-gradient(90deg, var(--primary), var(--secondary));
+        color: white;
+        padding: 18px;
+        text-align: center;
+        font-size: 22px;
+        font-weight: 600;
+      }
+
+      .wrapper {
+        max-width: 1200px;
+        margin: auto;
+        padding: 20px;
+      }
+
+      /* ROOM GALLERY */
+
+      #gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+        margin-top: 25px;
+      }
+
+      .thumb {
+        width: 100%;
+        height: 220px;
+        border-radius: 12px;
+        cursor: pointer;
+        object-fit: cover;
+        transition: 0.3s;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+      }
+
+      .thumb:hover {
+        transform: scale(1.05);
+      }
+
+      /* VISUALIZER */
+
+      .container {
+        position: relative;
+        width: 100%;
+        max-width: 900px;
+        margin: auto;
+        aspect-ratio: 4/3;
+        background: white;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+        margin-top: 30px;
+      }
+
+      /* GRID */
+
+      #grid {
+        position: absolute;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        left: 0;
+        top: 0;
+        width: 300px;
+        height: 200px;
+        z-index: 1;
+        transform-origin: center;
+      }
+
+      .cell {
+        border: none;
+        background-size: cover;
+        background-position: center;
+        background-repeat: repeat;
+      }
+
+      /* ROOM IMAGE */
+
+      #selectedImg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 2;
+      }
+
+      /* TILE CAROUSEL */
+
+      .carousel-wrapper {
+        margin-top: 30px;
+      }
+
+      .carousel-title {
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+
+      .carousel-container {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .carousel {
+        display: flex;
+        overflow-x: auto;
+        gap: 12px;
+        padding: 10px;
+        scroll-behavior: smooth;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      /* TILE BOX */
+
+      .tile-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+        padding: 8px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      /* TILE IMAGE */
+
+      .tile-thumb {
+        width: 110px;
+        height: 110px;
+        object-fit: cover;
+        border-radius: 8px;
+        border: 3px solid transparent;
+      }
+
+      /* TILE NAME */
+
+      .tile-name {
+        font-size: 13px;
+        font-weight: 600;
+        text-align: center;
+      }
+
+      /* ACTIVE TILE */
+
+      .tile-box.active {
+        background: #f1e6ff;
+      }
+
+      .tile-box.active .tile-thumb {
+        border-color: var(--primary);
+      }
+
+      /* BUTTONS */
+
+      button {
+        background: var(--primary);
+        color: white;
+        border: none;
+        padding: 10px 14px;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background: var(--secondary);
+      }
+
+      /* CONTROLS */
+
+      .controls {
+        margin-top: 35px;
+        background: white;
+        padding: 25px;
+        border-radius: 12px;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .controls h3 {
+        margin-bottom: 20px;
+        color: var(--primary);
+      }
+
+      .control-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 20px;
+      }
+
+      .control-group {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .control-group label {
+        font-weight: 600;
+        margin-bottom: 6px;
+      }
+
+      /* SLIDERS */
+
+      input[type="range"] {
+        width: 100%;
+        height: 6px;
+        border-radius: 5px;
+        background: linear-gradient(90deg, var(--primary), var(--secondary));
+        outline: none;
+      }
+
+      input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background: white;
+        border: 3px solid var(--primary);
+        cursor: pointer;
+      }
+
+      .back-btn {
+        margin-top: 20px;
+        background: #444;
+      }
+
+      /* RESPONSIVE */
+
+      @media (max-width: 900px) {
+        #gallery {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .thumb {
+          height: 200px;
+        }
+      }
+
+      @media (max-width: 500px) {
+        #gallery {
+          grid-template-columns: 1fr;
+        }
+
+        .thumb {
+          height: 190px;
+        }
+
+        .tile-thumb {
+          width: 85px;
+          height: 85px;
+        }
+      }
+
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>Tile Visualizer</header>
+
+    <div class="wrapper">
+      <!-- PAGE 1 -->
+
+      <div id="page1">
+        <h2>Select Room</h2>
+
+        <div id="gallery"></div>
+      </div>
+
+      <!-- PAGE 2 -->
+
+      <div id="page2" class="hidden">
+        <div class="container">
+          <div id="grid"></div>
+
+          <img id="selectedImg" />
+        </div>
+
+        <!-- TILE CAROUSEL -->
+
+        <div class="carousel-wrapper">
+          <div class="carousel-title">Select Tile Design</div>
+
+          <div class="carousel-container">
+            <button onclick="scrollTiles(-200)">◀</button>
+
+            <div class="carousel" id="tileCarousel"></div>
+
+            <button onclick="scrollTiles(200)">▶</button>
+          </div>
+        </div>
+
+        <!-- CONTROLS -->
+
+        <div class="controls">
+          <h3>Adjust Tiles</h3>
+
+          <div class="control-grid">
+            <div class="control-group">
+              <label>Move X</label>
+              <input type="range" id="moveX" min="-500" max="500" value="0" />
+            </div>
+
+            <div class="control-group">
+              <label>Move Y</label>
+              <input type="range" id="moveY" min="-500" max="500" value="0" />
+            </div>
+
+            <div class="control-group">
+              <label>Scale</label>
+              <input
+                type="range"
+                id="scale"
+                min="0.2"
+                max="3"
+                step="0.1"
+                value="1"
+              />
+            </div>
+
+            <div class="control-group">
+              <label>Tilt X</label>
+              <input type="range" id="tiltX" min="-90" max="90" value="0" />
+            </div>
+
+            <div class="control-group">
+              <label>Tilt Y</label>
+              <input type="range" id="tiltY" min="-90" max="90" value="0" />
+            </div>
+
+            <div class="control-group">
+              <label>Rotation</label>
+              <input type="range" id="rotate" min="-180" max="180" value="0" />
+            </div>
+          </div>
+
+          <button class="back-btn" onclick="location.reload()">Back</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      /* GRID CELLS */
+
+      const grid = document.getElementById("grid");
+
+      for (let i = 0; i < 20; i++) {
+        const cell = document.createElement("div");
+        cell.className = "cell";
+
+        grid.appendChild(cell);
+      }
+
+      /* ROOM IMAGES */
+
+      const rooms = ["room.png", "room.png", "room.png", "room.png"];
+
+      /* TILE IMAGES WITH NAMES */
+
+      const tiles = [
+        { name: "Tile 1", src: "Tile Image 1.jpg" },
+        { name: "Tile 2", src: "Tile Image 2.jpg" },
+        { name: "Tile 3", src: "Tile Image 4.jpg" },
+        { name: "Tile 4", src: "bathroom-floor-tiles-png-transparent-png.png" },
+        { name: "Tile 1", src: "Tile Image 1.jpg" },
+        { name: "Tile 2", src: "Tile Image 2.jpg" },
+        { name: "Tile 3", src: "Tile Image 4.jpg" },
+        { name: "Tile 4", src: "bathroom-floor-tiles-png-transparent-png.png" },
+      ];
+
+      const gallery = document.getElementById("gallery");
+      const tileCarousel = document.getElementById("tileCarousel");
+
+      const page1 = document.getElementById("page1");
+      const page2 = document.getElementById("page2");
+
+      const selectedImg = document.getElementById("selectedImg");
+
+      /* ROOM GALLERY */
+
+      rooms.forEach((src) => {
+        const img = document.createElement("img");
+        img.src = src;
+        img.className = "thumb";
+
+        img.onclick = () => {
+          selectedImg.src = src;
+          page1.classList.add("hidden");
+          page2.classList.remove("hidden");
+        };
+
+        gallery.appendChild(img);
+      });
+
+      /* APPLY TILE */
+
+      function applyTile(url) {
+        document.querySelectorAll(".cell").forEach((cell) => {
+          cell.style.backgroundImage = `url("${url}")`;
+        });
+      }
+
+      /* TILE CAROUSEL */
+
+      tiles.forEach((tile) => {
+        const box = document.createElement("div");
+        box.className = "tile-box";
+
+        const img = document.createElement("img");
+        img.src = tile.src;
+        img.className = "tile-thumb";
+
+        const name = document.createElement("div");
+        name.className = "tile-name";
+        name.innerText = tile.name;
+
+        box.appendChild(img);
+        box.appendChild(name);
+
+        box.onclick = () => {
+          applyTile(tile.src);
+
+          document.querySelectorAll(".tile-box").forEach((b) => {
+            b.classList.remove("active");
+          });
+
+          box.classList.add("active");
+        };
+
+        tileCarousel.appendChild(box);
+      });
+
+      function scrollTiles(val) {
+        tileCarousel.scrollLeft += val;
+      }
+
+      /* CONTROLS */
+
+      const controls = ["moveX", "moveY", "scale", "tiltX", "tiltY", "rotate"];
+
+      controls.forEach((id) => {
+        document.getElementById(id).addEventListener("input", updateGrid);
+      });
+
+      function updateGrid() {
+        const x = document.getElementById("moveX").value;
+        const y = document.getElementById("moveY").value;
+        const scale = document.getElementById("scale").value;
+        const tiltX = document.getElementById("tiltX").value;
+        const tiltY = document.getElementById("tiltY").value;
+        const rotate = document.getElementById("rotate").value;
+
+        grid.style.transform = `
+translate(${x}px,${y}px)
+scale(${scale})
+perspective(1000px)
+rotateX(${tiltX}deg)
+rotateY(${tiltY}deg)
+rotateZ(${rotate}deg)
+`;
+      }
+    </script>
+  </body>
+</html>
