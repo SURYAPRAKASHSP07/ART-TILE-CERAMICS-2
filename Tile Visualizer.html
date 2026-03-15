@@ -1,0 +1,571 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Tile Visualizer</title>
+
+    <style>
+      :root {
+        --primary: #7209b7;
+        --secondary: #b984db;
+        --bg: #f6f3fb;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family:
+          Segoe UI,
+          sans-serif;
+      }
+
+      body {
+        background: var(--bg);
+      }
+
+      header {
+        background: linear-gradient(90deg, var(--primary), var(--secondary));
+        color: white;
+        padding: 18px;
+        text-align: center;
+        font-size: 22px;
+      }
+
+      /* PAGE WRAPPER */
+
+      .wrapper {
+        max-width: 1200px;
+        margin: auto;
+        padding: 20px;
+      }
+
+      /* ROOM GALLERY */
+
+      #gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+        margin-top: 25px;
+      }
+
+      .room-card {
+        text-align: center;
+        cursor: pointer;
+      }
+
+      .thumb {
+        width: 100%;
+        height: 230px;
+        object-fit: cover;
+        border-radius: 12px;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+        transition: 0.3s;
+      }
+
+      .thumb:hover {
+        transform: scale(1.05);
+      }
+
+      .room-name {
+        margin-top: 8px;
+        font-weight: 600;
+        font-size: 15px;
+      }
+
+      /* VISUALIZER */
+
+      .container {
+        position: relative;
+        max-width: 900px;
+        margin: auto;
+        aspect-ratio: 4/3;
+        background: white;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+        margin-top: 30px;
+      }
+
+      #selectedImg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 2;
+      }
+
+      /* GRID */
+
+      #grid {
+        position: absolute;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        width: 300px;
+        height: 200px;
+        z-index: 1;
+        transform-origin: center;
+      }
+
+      .cell {
+        border: none;
+        background-size: cover;
+        background-repeat: repeat;
+        background-position: center;
+      }
+
+      /* TILE CAROUSEL */
+
+      .carousel-wrapper {
+        margin-top: 30px;
+      }
+
+      .carousel-container {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .carousel {
+        display: flex;
+        overflow-x: auto;
+        gap: 12px;
+        padding: 10px;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      .tile-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 8px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .tile-thumb {
+        width: 110px;
+        height: 110px;
+        object-fit: cover;
+        border-radius: 8px;
+        border: 3px solid transparent;
+      }
+
+      .tile-name {
+        font-size: 13px;
+        font-weight: 600;
+        text-align: center;
+      }
+
+      .tile-box.active {
+        background: #f1e6ff;
+      }
+
+      .tile-box.active .tile-thumb {
+        border-color: var(--primary);
+      }
+
+      /* BUTTON */
+
+      button {
+        background: var(--primary);
+        color: white;
+        border: none;
+        padding: 10px;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background: var(--secondary);
+      }
+
+      /* CONTROLS */
+
+      .controls {
+        margin-top: 35px;
+        background: white;
+        padding: 25px;
+        border-radius: 12px;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .controls h3 {
+        margin-bottom: 15px;
+        color: var(--primary);
+      }
+
+      .control-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 20px;
+      }
+
+      .control-group {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .control-group label {
+        font-weight: 600;
+        margin-bottom: 5px;
+      }
+
+      input[type="range"] {
+        width: 100%;
+      }
+
+      /* RESPONSIVE */
+
+      @media (max-width: 900px) {
+        #gallery {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 500px) {
+        #gallery {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>Tile Visualizer</header>
+
+    <div class="wrapper">
+      <!-- PAGE 1 -->
+
+      <div id="page1">
+        <h2>Select Room</h2>
+
+        <div id="gallery"></div>
+        <button>
+          <a style="text-decoration: none; color: white" href="index.html"
+            >Back</a
+          >
+        </button>
+      </div>
+
+      <!-- PAGE 2 -->
+
+      <div id="page2" class="hidden">
+        <div class="container">
+          <div id="grid"></div>
+
+          <img id="selectedImg" />
+        </div>
+
+        <!-- TILE CAROUSEL -->
+
+        <div class="carousel-wrapper">
+          <h3>Select Tile</h3>
+
+          <div class="carousel-container">
+            <button onclick="scrollTiles(-200)">◀</button>
+
+            <div class="carousel" id="tileCarousel"></div>
+
+            <button onclick="scrollTiles(200)">▶</button>
+          </div>
+        </div>
+
+        <!-- CONTROLS -->
+
+        <div class="controls">
+          <h3>Adjust Tiles</h3>
+
+          <div class="control-grid">
+            <div class="control-group">
+              <label>Move X</label>
+              <input type="range" id="moveX" min="-500" max="500" value="0" />
+            </div>
+
+            <div class="control-group">
+              <label>Move Y</label>
+              <input type="range" id="moveY" min="-500" max="500" value="0" />
+            </div>
+
+            <div class="control-group">
+              <label>Scale</label>
+              <input
+                type="range"
+                id="scale"
+                min="0.2"
+                max="3"
+                step="0.1"
+                value="1"
+              />
+            </div>
+
+            <div class="control-group">
+              <label>Tilt X</label>
+              <input type="range" id="tiltX" min="-90" max="90" value="0" />
+            </div>
+
+            <div class="control-group">
+              <label>Tilt Y</label>
+              <input type="range" id="tiltY" min="-90" max="90" value="0" />
+            </div>
+
+            <div class="control-group">
+              <label>Rotation</label>
+              <input type="range" id="rotate" min="-180" max="180" value="0" />
+            </div>
+          </div>
+
+          <button onclick="location.reload()">Back</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      /* CREATE GRID */
+
+      const grid = document.getElementById("grid");
+
+      for (let i = 0; i < 20; i++) {
+        const cell = document.createElement("div");
+        cell.className = "cell";
+
+        grid.appendChild(cell);
+      }
+
+      /* SAVE SELECTED TILE */
+
+      let currentTile = "";
+
+      /* ROOM DATA */
+
+      const rooms = [
+        {
+          name: "Living Room",
+          image: "room.png",
+
+          tiles: [
+            {
+              name: "Marble White",
+              src: "Visualizer Images/Living Room Floor/0099-wood-and-marble-parquet-decorated-texture-seamless.jpg",
+            },
+            {
+              name: "Marble White",
+              src: "Visualizer Images/Living Room Floor/0099-wood-and-marble-parquet-decorated-texture-seamless.jpg",
+            },
+            {
+              name: "Italian Grey",
+              src: "Visualizer Images/Living Room Floor/104-decorated-floral-parquet-texture-seamless.jpg",
+            },
+            {
+              name: "Royal Beige",
+              src: "Visualizer Images/Living Room Floor/106-decorated-floral-parquet-texture-seamless.jpg",
+            },
+            {
+              name: "Marble White",
+              src: "Visualizer Images/Living Room Floor/Glam Up Your Screen with White Aesthetic Wallpapers.jpg",
+            },
+            {
+              name: "Italian Grey",
+              src: "Visualizer Images/Living Room Floor/Tile Image 1.jpg",
+            },
+            {
+              name: "Royal Beige",
+              src: "Visualizer Images/Living Room Floor/Tile Image 4.jpg",
+            },
+            {
+              name: "Marble White",
+              src: "Visualizer Images/Living Room Floor/Untitled-2.jpg.jpeg",
+            },
+            {
+              name: "Marble White",
+              src: "Visualizer Images/Living Room Floor/0099-wood-and-marble-parquet-decorated-texture-seamless.jpg",
+            },
+            {
+              name: "Italian Grey",
+              src: "Visualizer Images/Living Room Floor/104-decorated-floral-parquet-texture-seamless.jpg",
+            },
+          ],
+        },
+
+        {
+          name: "Kitchen",
+          image: "hall2.png",
+
+          tiles: [
+            {
+              name: "Kitchen Glossy",
+              src: "stanza tile 4-2 glossy/Screenshot_14-3-2026_1613_.jpeg",
+            },
+            {
+              name: "Kitchen Brick",
+              src: "stanza tile 4-2 glossy/Screenshot_14-3-2026_16750_.jpeg",
+            },
+            {
+              name: "Kitchen Glossy",
+              src: "Visualizer Images/Kitchen Wall/114-herringbone-parquet-pbr-texture-seamless-20251124195346.jpg",
+            },
+            {
+              name: "Kitchen Brick",
+              src: "Visualizer Images/Kitchen Wall/Screenshot 2026-03-09 220220.png",
+            },
+            {
+              name: "Kitchen Glossy",
+              src: "Visualizer Images/Kitchen Wall/109-herringbone-parquet-pbr-texture-seamless.jpg",
+            },
+            {
+              name: "Kitchen Brick",
+              src: "Visualizer Images/Kitchen Wall/112-herringbone-parquet-pbr-texture-seamless.jpg",
+            },
+            {
+              name: "Kitchen Glossy",
+              src: "Visualizer Images/Kitchen Wall/114-herringbone-parquet-pbr-texture-seamless-20251124195346.jpg",
+            },
+            {
+              name: "Kitchen Brick",
+              src: "Visualizer Images/Kitchen Wall/Screenshot 2026-03-09 220220.png",
+            },
+          ],
+        },
+
+        {
+          name: "Bathroom",
+          image: "room.png",
+
+          tiles: [
+            {
+              name: "Bath Marble",
+              src: "",
+            },
+            { name: "" },
+          ],
+        },
+      ];
+
+      const gallery = document.getElementById("gallery");
+      const tileCarousel = document.getElementById("tileCarousel");
+
+      const page1 = document.getElementById("page1");
+      const page2 = document.getElementById("page2");
+
+      const selectedImg = document.getElementById("selectedImg");
+
+      /* CREATE ROOM GALLERY */
+
+      rooms.forEach((room) => {
+        const card = document.createElement("div");
+        card.className = "room-card";
+
+        const img = document.createElement("img");
+        img.src = room.image;
+        img.className = "thumb";
+
+        const name = document.createElement("div");
+        name.className = "room-name";
+        name.innerText = room.name;
+
+        card.appendChild(img);
+        card.appendChild(name);
+
+        card.onclick = () => {
+          selectedImg.src = room.image;
+          loadTiles(room.tiles);
+
+          page1.classList.add("hidden");
+          page2.classList.remove("hidden");
+        };
+
+        gallery.appendChild(card);
+      });
+
+      /* LOAD TILES */
+
+      function loadTiles(tileList) {
+        tileCarousel.innerHTML = "";
+
+        tileList.forEach((tile) => {
+          const box = document.createElement("div");
+          box.className = "tile-box";
+
+          const img = document.createElement("img");
+          img.src = tile.src;
+          img.className = "tile-thumb";
+
+          const name = document.createElement("div");
+          name.className = "tile-name";
+          name.innerText = tile.name;
+
+          box.appendChild(img);
+          box.appendChild(name);
+
+          box.onclick = () => {
+            applyTile(tile.src);
+
+            document.querySelectorAll(".tile-box").forEach((b) => {
+              b.classList.remove("active");
+            });
+
+            box.classList.add("active");
+          };
+
+          tileCarousel.appendChild(box);
+        });
+      }
+
+      /* APPLY TILE */
+
+      function applyTile(url) {
+        currentTile = url;
+
+        document.querySelectorAll(".cell").forEach((cell) => {
+          cell.style.backgroundImage = `url("${url}")`;
+        });
+      }
+
+      /* SCROLL */
+
+      function scrollTiles(val) {
+        tileCarousel.scrollLeft += val;
+      }
+
+      /* CONTROLS */
+
+      ["moveX", "moveY", "scale", "tiltX", "tiltY", "rotate"].forEach((id) => {
+        document.getElementById(id).addEventListener("input", updateGrid);
+      });
+
+      function updateGrid() {
+        const x = document.getElementById("moveX").value;
+        const y = document.getElementById("moveY").value;
+        const scale = document.getElementById("scale").value;
+        const tiltX = document.getElementById("tiltX").value;
+        const tiltY = document.getElementById("tiltY").value;
+        const rotate = document.getElementById("rotate").value;
+
+        grid.style.transform = `translate(${x}px,${y}px)
+      scale(${scale})
+      perspective(1000px)
+      rotateX(${tiltX}deg)
+      rotateY(${tiltY}deg)
+      rotateZ(${rotate}deg)`;
+
+        /* REAPPLY TILE (FIX DISAPPEAR BUG) */
+
+        if (currentTile != "") {
+          document.querySelectorAll(".cell").forEach((cell) => {
+            cell.style.backgroundImage = `url("${currentTile}")`;
+          });
+        }
+      }
+    </script>
+  </body>
+</html>
