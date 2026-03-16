@@ -5,209 +5,210 @@
     <title>Premium Floor Tiles | Art Tile Ceramics</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
-    <link rel="stylesheet" href="premium-floor-tiles.css" />
+
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        background: #f4f4f4;
+      }
+
+      /* HEADER */
+
+      .page-header {
+        text-align: center;
+        padding: 40px 20px;
+        background: #111;
+        color: white;
+      }
+
+      .page-header h1 {
+        margin: 0;
+        font-size: 40px;
+      }
+
+      .page-header p {
+        opacity: 0.8;
+      }
+
+      .back-btn {
+        display: inline-block;
+        text-decoration: none;
+        color: white;
+        border: 1px solid orange;
+        padding: 10px 20px;
+        border-radius: 30px;
+        transition: 0.3s;
+      }
+
+      .back-btn:hover {
+        background: orange;
+        color: black;
+      }
+
+      /* GALLERY */
+      .tile-gallery {
+        display: grid;
+        gap: 20px;
+        padding: 40px;
+        max-width: 1600px;
+        margin: auto;
+      }
+
+      /* Large screens (Desktop) */
+      @media (min-width: 1200px) {
+        .tile-gallery {
+          grid-template-columns: repeat(5, 1fr);
+        }
+      }
+
+      /* Laptop */
+      @media (min-width: 992px) and (max-width: 1199px) {
+        .tile-gallery {
+          grid-template-columns: repeat(4, 1fr);
+        }
+      }
+
+      /* Tablet */
+      @media (min-width: 768px) and (max-width: 991px) {
+        .tile-gallery {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+
+      /* Mobile */
+      @media (max-width: 767px) {
+        .tile-gallery {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      .tile-card {
+        background: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        transition: 0.3s;
+      }
+
+      .tile-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .tile-card img {
+        width: 100%;
+        aspect-ratio: 1 / 2;
+        object-fit: cover;
+      }
+
+      .tile-info {
+        padding: 15px;
+      }
+
+      .tile-info h3 {
+        margin: 0;
+        font-size: 18px;
+      }
+
+      .tile-info p {
+        margin: 5px 0;
+        font-size: 14px;
+        color: #555;
+      }
+
+      /* BACK TO TOP BUTTON */
+
+      #backToTop {
+        position: fixed;
+        bottom: 40px;
+        right: 40px;
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(135deg, #ff7b00, #ff3c00);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+        cursor: pointer;
+        transform: translateY(20px);
+        transition: all 0.4s ease;
+        z-index: 999;
+      }
+
+      /* Image inside */
+      #backToTop img {
+        width: 130%;
+        height: 130%;
+        object-fit: fill;
+        border-radius: 50px;
+      }
+
+      /* Show Button */
+      #backToTop.show {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+
+      /* Mobile Adjust */
+      @media (max-width: 768px) {
+        #backToTop {
+          right: 20px;
+          bottom: 20px;
+          width: 50px;
+          height: 50px;
+        }
+      }
+    </style>
   </head>
+
   <body>
-    <!-- HEADER -->
     <header class="page-header">
       <h1>Floor Tiles</h1>
       <p>Elegant • Durable • Modern Designs</p>
+
       <a href="index.html" class="back-btn">
         <i class="fa-solid fa-arrow-left"></i> Back to Home
       </a>
     </header>
 
-    <!-- TILE GALLERY -->
-    <section class="tile-gallery">
-      <div class="tile-card">
-        <img src="stanza tile 4-2 glossy/Screenshot_14-3-2026_151917_.jpeg" />
-        <p style="text-align: center;">Name : </p>
-        <p style="text-align: center;"> Size: 4x2</p>
-      </div>
-      <div class="tile-card">
-        <img src="stanza tile 4-2 glossy/Screenshot_14-3-2026_151936_.jpeg" />
-      </div>
-      <div class="tile-card">
-        <img src="stanza tile 4-2 glossy/Screenshot_14-3-2026_151959_.jpeg" />
-      </div>
-      <div class="tile-card">
-        <img src="stanza tile 4-2 glossy/Screenshot_14-3-2026_152021_.jpeg" />
-      </div>
-      <div class="tile-card">
-        <img src="stanza tile 4-2 glossy/Screenshot_14-3-2026_154943_.jpeg" />
-      </div>
-      <div class="tile-card">
-        <img src="stanza tile 4-2 glossy/Screenshot_14-3-2026_154956_.jpeg" />
-      </div>
-      <div class="tile-card">
-        <img src="stanza tile 4-2 glossy/Screenshot_14-3-2026_155016_.jpeg" />
-      </div>
-      <div class="tile-card">
-        <img src="stanza tile 4-2 glossy/Screenshot_14-3-2026_155038_.jpeg" />
-      </div>
-      <div class="tile-card">
-        <img src="stanza tile 4-2 glossy/Screenshot_14-3-2026_155054_.jpeg" />
-      </div>
-      <div class="tile-card">
-        <img src="stanza tile 4-2 glossy/Screenshot_14-3-2026_155219_.jpeg" />
-      </div>
-      <div class="tile-card">
-        <img src="stanza tile 4-2 glossy/Screenshot_14-3-2026_155239_.jpeg" />
-      </div>
-      <div class="tile-card">
-        <img src="stanza tile 4-2 glossy/Screenshot_14-3-2026_155257_.jpeg" />
-      </div>
-      <div class="tile-card">
-        <img src="stanza tile 4-2 glossy/Screenshot_14-3-2026_155315_.jpeg" />
-      </div>
-      <div class="tile-card">
-        <img src="stanza tile 4-2 glossy/Screenshot_14-3-2026_155329_.jpeg" />
-      </div>
-      <div class="tile-card">
-        <img src="stanza tile 4-2 glossy/Screenshot_14-3-2026_155345_.jpeg" />
-      </div>
-      <div class="tile-card">
-        <img src="stanza tile 4-2 glossy/Screenshot_14-3-2026_155415_.jpeg" />
-      </div>
-      <div class="tile-card">
-        <img src="stanza tile 4-2 glossy/Screenshot_14-3-2026_155451_.jpeg" />
-      </div>
-      <div class="tile-card">
-        <img src="stanza tile 4-2 glossy/Screenshot_14-3-2026_155519_.jpeg" />
-      </div>
-      <div class="tile-card">
-        <img src="stanza tile 4-2 glossy/Screenshot_14-3-2026_155538_.jpeg" />
-      </div>
-      <div class="tile-card">
-        <img src="stanza tile 4-2 glossy/Screenshot_14-3-2026_155556_.jpeg" />
-      </div>
-      <div class="tile-card">
-        <img src="stanza tile 4-2 glossy/Screenshot_14-3-2026_155619_.jpeg" />
-      </div>
-      <div class="tile-card">
-        <img src="stanza tile 4-2 glossy/Screenshot_14-3-2026_155636_.jpeg" />
-      </div>
-      <div class="tile-card">
-        <img src="stanza tile 4-2 glossy/Screenshot_14-3-2026_155659_.jpeg" />
-      </div>
-      <div class="tile-card">
-        <img src="stanza tile 4-2 glossy/Screenshot_14-3-2026_155718_.jpeg" />
-      </div>
-      <div class="tile-card">
-        <img src="stanza tile 4-2 glossy/Screenshot_14-3-2026_155737_.jpeg" />
-      </div>
-      <div class="tile-card">
-        <img src="stanza tile 4-2 glossy/Screenshot_14-3-2026_155758_.jpeg" />
-      </div>
-      <div class="tile-card">
-        <img src="stanza tile 4-2 glossy/Screenshot_14-3-2026_155827_.jpeg" />
-      </div>
-      <div class="tile-card">
-        <img src="stanza tile 4-2 glossy/Screenshot_14-3-2026_155843_.jpeg" />
-      </div>
-      <div class="tile-card">
-        <img src="stanza tile 4-2 glossy/Screenshot_14-3-2026_155858_.jpeg" />
-      </div>
-      <div class="tile-card">
-        <img src="stanza tile 4-2 glossy/Screenshot_14-3-2026_16044_.jpeg" />
-      </div>
-      <div class="tile-card">
-        <img src="stanza tile 4-2 glossy/Screenshot_14-3-2026_155923_.jpeg" />
-      </div>
-      <div class="tile-card">
-        <img src="stanza tile 4-2 glossy/Screenshot_14-3-2026_161015_.jpeg" />
-      </div>
-      <div class="tile-card">
-        <img src="stanza tile 4-2 glossy/Screenshot_14-3-2026_161027_.jpeg" />
-      </div>
-      <div class="tile-card">
-        <img src="stanza tile 4-2 glossy/Screenshot_14-3-2026_16103_.jpeg" />
-      </div>
-      <div class="tile-card">
-        <img src="stanza tile 4-2 glossy/Screenshot_14-3-2026_161043_.jpeg" />
-      </div>
-      <div class="tile-card">
-        <img src="stanza tile 4-2 glossy/Screenshot_14-3-2026_16120_.jpeg" />
-      </div>
-      <div class="tile-card">
-        <img src="stanza tile 4-2 glossy/Screenshot_14-3-2026_161212_.jpeg" />
-      </div>
-      <div class="tile-card">
-        <img src="stanza tile 4-2 glossy/Screenshot_14-3-2026_161224_.jpeg" />
-      </div>
-      <div class="tile-card">
-        <img src="stanza tile 4-2 glossy/Screenshot_14-3-2026_161232_.jpeg" />
-      </div>
-      <div class="tile-card">
-        <img src="stanza tile 4-2 glossy/Screenshot_14-3-2026_16123_.jpeg" />
-      </div>
-      <div class="tile-card">
-        <img src="stanza tile 4-2 glossy/" />
-      </div>
-      <div class="tile-card">
-        <img src="stanza tile 4-2 glossy/" />
-      </div>
-      <div class="tile-card">
-        <img src="stanza tile 4-2 glossy/" />
-      </div>
-      <div class="tile-card">
-        <img src="stanza tile 4-2 glossy/" />
-      </div>
-      <div class="tile-card">
-        <img src="stanza tile 4-2 glossy/" />
-      </div>
-      <div class="tile-card">
-        <img src="stanza tile 4-2 glossy/" />
-      </div>
-      <div class="tile-card">
-        <img src="stanza tile 4-2 glossy/" />
-      </div>
-      <div class="tile-card">
-        <img src="stanza tile 4-2 glossy/" />
-      </div><div class="tile-card">
-        <img src="stanza tile 4-2 glossy/" />
-      </div>
-      <div class="tile-card">
-        <img src="stanza tile 4-2 glossy/" />
-      </div>
-      <div class="tile-card">
-        <img src="stanza tile 4-2 glossy/" />
-      </div>
-      <div class="tile-card">
-        <img src="stanza tile 4-2 glossy/" />
-      </div><div class="tile-card">
-        <img src="stanza tile 4-2 glossy/" />
-      </div>
-      <div class="tile-card">
-        <img src="stanza tile 4-2 glossy/" />
-      </div>
-      <div class="tile-card">
-        <img src="stanza tile 4-2 glossy/" />
-      </div>
-      <div class="tile-card">
-        <img src="stanza tile 4-2 glossy/" />
-      </div><div class="tile-card">
-        <img src="stanza tile 4-2 glossy/" />
-      </div>
-      <div class="tile-card">
-        <img src="stanza tile 4-2 glossy/" />
-      </div>
-      <div class="tile-card">
-        <img src="stanza tile 4-2 glossy/" />
-      </div>
-      <div class="tile-card">
-        <img src="stanza tile 4-2 glossy/" />
-      </div>
-    </section>
+    <section class="tile-gallery" id="tileGallery"></section>
 
     <a href="#" id="backToTop">
-      <img src="Screenshot 2026-02-26 214133.png" alt="Back To Top" />
+      <img src="Screenshot 2026-02-26 214133.png" />
     </a>
-    <script src="script.js"></script>
+
+    <script>
+      async function loadTiles() {
+        const response = await fetch("Premium Floor Tiles.json");
+        const tiles = await response.json();
+
+        const gallery = document.getElementById("tileGallery");
+
+        tiles.forEach((tile) => {
+          const card = document.createElement("div");
+          card.className = "tile-card";
+
+          card.innerHTML = `
+<img src="${tile.image}">
+<div class="tile-info">
+<h3>${tile.name}</h3>
+<p><b>Size:</b> ${tile.size}</p>
+<p><b>Finish:</b> ${tile.finish}</p>
+<p><b>Brand:</b> ${tile.brand}</p>
+</div>
+`;
+
+          gallery.appendChild(card);
+        });
+      }
+
+      loadTiles();
+    </script>
   </body>
 </html>
