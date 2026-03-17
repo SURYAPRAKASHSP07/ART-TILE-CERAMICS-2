@@ -14,7 +14,7 @@
       body {
         font-family: Arial, Helvetica, sans-serif;
         margin: 0;
-        background: #f4f4f4;
+        background: #cac5c5;
       }
 
       /* HEADER */
@@ -49,10 +49,14 @@
         background: orange;
         color: black;
       }
+      .tile-2x2 img {
+        display: none;
+      }
 
       /* GALLERY */
       .tile-gallery {
         display: grid;
+        grid-template-columns: repeat(5, 1fr);
         gap: 20px;
         padding: 40px;
         max-width: 1600px;
@@ -101,8 +105,20 @@
 
       .tile-card img {
         width: 100%;
+        object-fit: cover;
+      }
+      /* 4x2 tiles */
+      .tile-4x2 img {
+        width: 100%;
         aspect-ratio: 1 / 2;
         object-fit: cover;
+      }
+
+      /* 2x2 tiles */
+      .tile-2x2 img {
+        width: 100%;
+        object-fit: cover;
+        aspect-ratio: 1/1;
       }
 
       .tile-info {
@@ -192,6 +208,11 @@
 
         tiles.forEach((tile) => {
           const card = document.createElement("div");
+          if (tile.size === "4x2") {
+            card.className = "tile-card tile-4x2";
+          } else {
+            card.className = "tile-card tile-2x2";
+          }
           card.className = "tile-card";
 
           card.innerHTML = `
@@ -200,7 +221,8 @@
 <h3>${tile.name}</h3>
 <p><b>Size:</b> ${tile.size}</p>
 <p><b>Finish:</b> ${tile.finish}</p>
-<p><b>Brand:</b> ${tile.brand}</p>
+<p><b>Brand:</b> ${tile.thickness}</p>
+<p><b>Brand:</b> ${tile.body}</p>
 </div>
 `;
 
