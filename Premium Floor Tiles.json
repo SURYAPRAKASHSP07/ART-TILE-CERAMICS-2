@@ -3,350 +3,790 @@
     "name": "Stanza Marble White",
     "size": "4x2",
     "finish": "Glossy",
-    "brand": "Stanza",
-    "image": "stanza tile 4-2 glossy/Screenshot_14-3-2026_151917_.jpeg"
+    "body": "Vetrified",
+    "image": "stanza tile 4-2 glossy/Tile 1.jpeg",
+    "thickness": "9mm"
   },
   {
     "name": "Stanza Beige Stone",
     "size": "4x2",
     "finish": "Glossy",
-    "brand": "Stanza",
-    "image": "stanza tile 4-2 glossy/Screenshot_14-3-2026_151936_.jpeg"
+    "body": "Vetrified",
+    "image": "stanza tile 4-2 glossy/Tile 2.jpeg",
+    "thickness": "9mm"
   },
   {
     "name": "Stanza Grey Texture",
     "size": "4x2",
     "finish": "Glossy",
-    "brand": "Stanza",
-    "image": "stanza tile 4-2 glossy/Screenshot_14-3-2026_151959_.jpeg"
+    "body": "Vetrified",
+    "image": "stanza tile 4-2 glossy/Tile 3.jpeg",
+    "thickness": "9mm"
   },
+  {
+    "name": "Stanza Grey Texture",
+    "size": "4x2",
+    "finish": "Glossy",
+    "body": "Vetrified",
+    "image": "stanza tile 4-2 glossy/Tile 13.jpeg",
+    "thickness": "9mm"
+  },
+
   {
     "name": "Stanza Classic Brown",
     "size": "4x2",
     "finish": "Glossy",
-    "brand": "Stanza",
-    "image": "stanza tile 4-2 glossy/Screenshot_14-3-2026_152021_.jpeg"
+    "body": "Vetrified",
+    "image": "stanza tile 4-2 glossy/Tile 4.jpeg",
+    "thickness": "9mm"
   },
   {
     "name": "Stanza Cream Design",
     "size": "4x2",
     "finish": "Glossy",
-    "brand": "Stanza",
-    "image": "stanza tile 4-2 glossy/Screenshot_14-3-2026_154943_.jpeg"
+    "body": "Vetrified",
+    "image": "stanza tile 4-2 glossy/Tile 5.jpeg",
+    "thickness": "9mm"
+  },
+  {
+    "name": "Stanza Beige Stone",
+    "size": "4x2",
+    "finish": "Glossy",
+    "body": "Vetrified",
+    "image": "stanza tile 4-2 glossy/Tile 7.jpeg",
+    "thickness": "9mm"
+  },
+  {
+    "name": "Stanza Grey Texture",
+    "size": "4x2",
+    "finish": "Glossy",
+    "body": "Vetrified",
+    "image": "stanza tile 4-2 glossy/Tile 8.jpeg",
+    "thickness": "9mm"
+  },
+  {
+    "name": "Stanza Classic Brown",
+    "size": "4x2",
+    "finish": "Glossy",
+    "body": "Vetrified",
+    "image": "stanza tile 4-2 glossy/Tile 9.jpeg",
+    "thickness": "9mm"
   },
   {
     "name": "Stanza Marble White",
     "size": "4x2",
     "finish": "Glossy",
-    "brand": "Stanza",
-    "image": "stanza tile 4-2 glossy/Screenshot_14-3-2026_151917_.jpeg"
+    "body": "Vetrified",
+    "image": "stanza tile 4-2 glossy/Tile 11.jpeg",
+    "thickness": "9mm"
   },
   {
     "name": "Stanza Beige Stone",
     "size": "4x2",
     "finish": "Glossy",
-    "brand": "Stanza",
-    "image": "stanza tile 4-2 glossy/Screenshot_14-3-2026_151936_.jpeg"
+    "body": "Vetrified",
+    "image": "stanza tile 4-2 glossy/Tile 12.jpeg",
+    "thickness": "9mm"
   },
-  {
-    "name": "Stanza Grey Texture",
-    "size": "4x2",
-    "finish": "Glossy",
-    "brand": "Stanza",
-    "image": "stanza tile 4-2 glossy/Screenshot_14-3-2026_151959_.jpeg"
-  },
+
   {
     "name": "Stanza Classic Brown",
     "size": "4x2",
     "finish": "Glossy",
-    "brand": "Stanza",
-    "image": "stanza tile 4-2 glossy/Screenshot_14-3-2026_152021_.jpeg"
+    "body": "Vetrified",
+    "image": "stanza tile 4-2 glossy/Tile 14.jpeg",
+    "thickness": "9mm"
   },
   {
     "name": "Stanza Cream Design",
     "size": "4x2",
     "finish": "Glossy",
-    "brand": "Stanza",
-    "image": "stanza tile 4-2 glossy/Screenshot_14-3-2026_154943_.jpeg"
+    "body": "Vetrified",
+    "image": "stanza tile 4-2 glossy/Tile 15.jpeg",
+    "thickness": "9mm"
   },
   {
     "name": "Stanza Marble White",
     "size": "4x2",
     "finish": "Glossy",
-    "brand": "Stanza",
-    "image": "stanza tile 4-2 glossy/Screenshot_14-3-2026_151917_.jpeg"
+    "body": "Vetrified",
+    "image": "stanza tile 4-2 glossy/Tile 16.jpeg",
+    "thickness": "9mm"
   },
   {
     "name": "Stanza Beige Stone",
     "size": "4x2",
     "finish": "Glossy",
-    "brand": "Stanza",
-    "image": "stanza tile 4-2 glossy/Screenshot_14-3-2026_151936_.jpeg"
+    "body": "Vetrified",
+    "image": "stanza tile 4-2 glossy/Tile 17.jpeg",
+    "thickness": "9mm"
   },
   {
     "name": "Stanza Grey Texture",
     "size": "4x2",
     "finish": "Glossy",
-    "brand": "Stanza",
-    "image": "stanza tile 4-2 glossy/Screenshot_14-3-2026_151959_.jpeg"
+    "body": "Vetrified",
+    "image": "stanza tile 4-2 glossy/Tile 18.jpeg",
+    "thickness": "9mm"
   },
   {
     "name": "Stanza Classic Brown",
     "size": "4x2",
     "finish": "Glossy",
-    "brand": "Stanza",
-    "image": "stanza tile 4-2 glossy/Screenshot_14-3-2026_152021_.jpeg"
+    "body": "Vetrified",
+    "image": "stanza tile 4-2 glossy/Tile 19.jpeg",
+    "thickness": "9mm"
   },
   {
     "name": "Stanza Cream Design",
     "size": "4x2",
     "finish": "Glossy",
-    "brand": "Stanza",
-    "image": "stanza tile 4-2 glossy/Screenshot_14-3-2026_154943_.jpeg"
+    "body": "Vetrified",
+    "image": "stanza tile 4-2 glossy/Tile 20.jpeg",
+    "thickness": "9mm"
   },
   {
     "name": "Stanza Marble White",
     "size": "4x2",
     "finish": "Glossy",
-    "brand": "Stanza",
-    "image": "stanza tile 4-2 glossy/Screenshot_14-3-2026_151917_.jpeg"
+    "body": "Vetrified",
+    "image": "stanza tile 4-2 glossy/Tile 21.jpeg",
+    "thickness": "9mm"
   },
   {
     "name": "Stanza Beige Stone",
     "size": "4x2",
     "finish": "Glossy",
-    "brand": "Stanza",
-    "image": "stanza tile 4-2 glossy/Screenshot_14-3-2026_151936_.jpeg"
+    "body": "Vetrified",
+    "image": "stanza tile 4-2 glossy/Tile 22.jpeg",
+    "thickness": "9mm"
   },
   {
     "name": "Stanza Grey Texture",
     "size": "4x2",
     "finish": "Glossy",
-    "brand": "Stanza",
-    "image": "stanza tile 4-2 glossy/Screenshot_14-3-2026_151959_.jpeg"
+    "body": "Vetrified",
+    "image": "stanza tile 4-2 glossy/Tile 23.jpeg",
+    "thickness": "9mm"
+  },
+
+  {
+    "name": "Stanza Marble White",
+    "size": "4x2",
+    "finish": "Glossy",
+    "body": "Vetrified",
+    "image": "stanza tile 4-2 glossy/Tile 6.jpeg",
+    "thickness": "9mm"
+  },
+
+  {
+    "name": "Stanza Grey Texture",
+    "size": "4x2",
+    "finish": "Glossy",
+    "body": "Vetrified",
+    "image": "stanza tile 4-2 glossy/Tile 55.jpeg",
+    "thickness": "9mm"
   },
   {
     "name": "Stanza Classic Brown",
     "size": "4x2",
     "finish": "Glossy",
-    "brand": "Stanza",
-    "image": "stanza tile 4-2 glossy/Screenshot_14-3-2026_152021_.jpeg"
+    "body": "Vetrified",
+    "image": "stanza tile 4-2 glossy/Tile 24.jpeg",
+    "thickness": "9mm"
   },
   {
     "name": "Stanza Cream Design",
     "size": "4x2",
     "finish": "Glossy",
-    "brand": "Stanza",
-    "image": "stanza tile 4-2 glossy/Screenshot_14-3-2026_154943_.jpeg"
+    "body": "Vetrified",
+    "image": "stanza tile 4-2 glossy/Tile 25.jpeg",
+    "thickness": "9mm"
   },
   {
     "name": "Stanza Marble White",
     "size": "4x2",
     "finish": "Glossy",
-    "brand": "Stanza",
-    "image": "stanza tile 4-2 glossy/Screenshot_14-3-2026_151917_.jpeg"
+    "body": "Vetrified",
+    "image": "stanza tile 4-2 glossy/Tile 26.jpeg",
+    "thickness": "9mm"
   },
   {
     "name": "Stanza Beige Stone",
     "size": "4x2",
     "finish": "Glossy",
-    "brand": "Stanza",
-    "image": "stanza tile 4-2 glossy/Screenshot_14-3-2026_151936_.jpeg"
+    "body": "Vetrified",
+    "image": "stanza tile 4-2 glossy/Tile 27.jpeg",
+    "thickness": "9mm"
   },
   {
     "name": "Stanza Grey Texture",
     "size": "4x2",
     "finish": "Glossy",
-    "brand": "Stanza",
-    "image": "stanza tile 4-2 glossy/Screenshot_14-3-2026_151959_.jpeg"
+    "body": "Vetrified",
+    "image": "stanza tile 4-2 glossy/Tile 28.jpeg",
+    "thickness": "9mm"
   },
   {
     "name": "Stanza Classic Brown",
     "size": "4x2",
     "finish": "Glossy",
-    "brand": "Stanza",
-    "image": "stanza tile 4-2 glossy/Screenshot_14-3-2026_152021_.jpeg"
+    "body": "Vetrified",
+    "image": "stanza tile 4-2 glossy/Tile 29.jpeg",
+    "thickness": "9mm"
   },
   {
     "name": "Stanza Cream Design",
     "size": "4x2",
     "finish": "Glossy",
-    "brand": "Stanza",
-    "image": "stanza tile 4-2 glossy/Screenshot_14-3-2026_154943_.jpeg"
+    "body": "Vetrified",
+    "image": "stanza tile 4-2 glossy/Tile 30.jpeg",
+    "thickness": "9mm"
   },
   {
     "name": "Stanza Marble White",
     "size": "4x2",
     "finish": "Glossy",
-    "brand": "Stanza",
-    "image": "stanza tile 4-2 glossy/Screenshot_14-3-2026_151917_.jpeg"
+    "body": "Vetrified",
+    "image": "stanza tile 4-2 glossy/Tile 31.jpeg",
+    "thickness": "9mm"
   },
   {
     "name": "Stanza Beige Stone",
     "size": "4x2",
     "finish": "Glossy",
-    "brand": "Stanza",
-    "image": "stanza tile 4-2 glossy/Screenshot_14-3-2026_151936_.jpeg"
+    "body": "Vetrified",
+    "image": "stanza tile 4-2 glossy/Tile 32.jpeg",
+    "thickness": "9mm"
   },
   {
     "name": "Stanza Grey Texture",
     "size": "4x2",
     "finish": "Glossy",
-    "brand": "Stanza",
-    "image": "stanza tile 4-2 glossy/Screenshot_14-3-2026_151959_.jpeg"
+    "body": "Vetrified",
+    "image": "stanza tile 4-2 glossy/Tile 33.jpeg",
+    "thickness": "9mm"
   },
   {
     "name": "Stanza Classic Brown",
     "size": "4x2",
     "finish": "Glossy",
-    "brand": "Stanza",
-    "image": "stanza tile 4-2 glossy/Screenshot_14-3-2026_152021_.jpeg"
+    "body": "Vetrified",
+    "image": "stanza tile 4-2 glossy/Tile 34.jpeg",
+    "thickness": "9mm"
   },
   {
     "name": "Stanza Cream Design",
     "size": "4x2",
     "finish": "Glossy",
-    "brand": "Stanza",
-    "image": "stanza tile 4-2 glossy/Screenshot_14-3-2026_154943_.jpeg"
+    "body": "Vetrified",
+    "image": "stanza tile 4-2 glossy/Tile 35.jpeg",
+    "thickness": "9mm"
   },
   {
     "name": "Stanza Marble White",
     "size": "4x2",
     "finish": "Glossy",
-    "brand": "Stanza",
-    "image": "stanza tile 4-2 glossy/Screenshot_14-3-2026_151917_.jpeg"
+    "body": "Vetrified",
+    "image": "stanza tile 4-2 glossy/Tile 36.jpeg",
+    "thickness": "9mm"
   },
   {
     "name": "Stanza Beige Stone",
     "size": "4x2",
     "finish": "Glossy",
-    "brand": "Stanza",
-    "image": "stanza tile 4-2 glossy/Screenshot_14-3-2026_151936_.jpeg"
+    "body": "Vetrified",
+    "image": "stanza tile 4-2 glossy/Tile 37.jpeg",
+    "thickness": "9mm"
   },
   {
     "name": "Stanza Grey Texture",
     "size": "4x2",
     "finish": "Glossy",
-    "brand": "Stanza",
-    "image": "stanza tile 4-2 glossy/Screenshot_14-3-2026_151959_.jpeg"
+    "body": "Vetrified",
+    "image": "stanza tile 4-2 glossy/Tile 38.jpeg",
+    "thickness": "9mm"
   },
   {
     "name": "Stanza Classic Brown",
     "size": "4x2",
     "finish": "Glossy",
-    "brand": "Stanza",
-    "image": "stanza tile 4-2 glossy/Screenshot_14-3-2026_152021_.jpeg"
+    "body": "Vetrified",
+    "image": "stanza tile 4-2 glossy/Tile 39.jpeg",
+    "thickness": "9mm"
   },
   {
     "name": "Stanza Cream Design",
     "size": "4x2",
     "finish": "Glossy",
-    "brand": "Stanza",
-    "image": "stanza tile 4-2 glossy/Screenshot_14-3-2026_154943_.jpeg"
+    "body": "Vetrified",
+    "image": "stanza tile 4-2 glossy/Tile 40.jpeg",
+    "thickness": "9mm"
   },
   {
     "name": "Stanza Marble White",
     "size": "4x2",
     "finish": "Glossy",
-    "brand": "Stanza",
-    "image": "stanza tile 4-2 glossy/Screenshot_14-3-2026_151917_.jpeg"
+    "body": "Vetrified",
+    "image": "stanza tile 4-2 glossy/Tile 41.jpeg",
+    "thickness": "9mm"
   },
   {
     "name": "Stanza Beige Stone",
     "size": "4x2",
     "finish": "Glossy",
-    "brand": "Stanza",
-    "image": "stanza tile 4-2 glossy/Screenshot_14-3-2026_151936_.jpeg"
-  },
-  {
-    "name": "Stanza Grey Texture",
-    "size": "4x2",
-    "finish": "Glossy",
-    "brand": "Stanza",
-    "image": "stanza tile 4-2 glossy/Screenshot_14-3-2026_151959_.jpeg"
-  },
-  {
-    "name": "Stanza Classic Brown",
-    "size": "4x2",
-    "finish": "Glossy",
-    "brand": "Stanza",
-    "image": "stanza tile 4-2 glossy/Screenshot_14-3-2026_152021_.jpeg"
+    "body": "Vetrified",
+    "image": "stanza tile 4-2 glossy/Tile 42.jpeg",
+    "thickness": "9mm"
   },
   {
     "name": "Stanza Cream Design",
     "size": "4x2",
     "finish": "Glossy",
-    "brand": "Stanza",
-    "image": "stanza tile 4-2 glossy/Screenshot_14-3-2026_154943_.jpeg"
+    "body": "Vetrified",
+    "image": "stanza tile 4-2 glossy/Tile 45.jpeg",
+    "thickness": "9mm"
   },
   {
     "name": "Stanza Marble White",
     "size": "4x2",
     "finish": "Glossy",
-    "brand": "Stanza",
-    "image": "stanza tile 4-2 glossy/Screenshot_14-3-2026_151917_.jpeg"
+    "body": "Vetrified",
+    "image": "stanza tile 4-2 glossy/Tile 46.jpeg",
+    "thickness": "9mm"
   },
   {
     "name": "Stanza Beige Stone",
     "size": "4x2",
     "finish": "Glossy",
-    "brand": "Stanza",
-    "image": "stanza tile 4-2 glossy/Screenshot_14-3-2026_151936_.jpeg"
+    "body": "Vetrified",
+    "image": "stanza tile 4-2 glossy/Tile 47.jpeg",
+    "thickness": "9mm"
   },
   {
     "name": "Stanza Grey Texture",
     "size": "4x2",
     "finish": "Glossy",
-    "brand": "Stanza",
-    "image": "stanza tile 4-2 glossy/Screenshot_14-3-2026_151959_.jpeg"
+    "body": "Vetrified",
+    "image": "stanza tile 4-2 glossy/Tile 48.jpeg",
+    "thickness": "9mm"
   },
   {
     "name": "Stanza Classic Brown",
     "size": "4x2",
     "finish": "Glossy",
-    "brand": "Stanza",
-    "image": "stanza tile 4-2 glossy/Screenshot_14-3-2026_152021_.jpeg"
+    "body": "Vetrified",
+    "image": "stanza tile 4-2 glossy/Tile 49.jpeg",
+    "thickness": "9mm"
   },
   {
     "name": "Stanza Cream Design",
     "size": "4x2",
     "finish": "Glossy",
-    "brand": "Stanza",
-    "image": "stanza tile 4-2 glossy/Screenshot_14-3-2026_154943_.jpeg"
+    "body": "Vetrified",
+    "image": "stanza tile 4-2 glossy/Tile 50.jpeg",
+    "thickness": "9mm"
+  },
+  {
+    "name": "Stanza Classic Brown",
+    "size": "4x2",
+    "finish": "Glossy",
+    "body": "Vetrified",
+    "image": "stanza tile 4-2 glossy/Tile 51.jpeg",
+    "thickness": "9mm"
+  },
+  {
+    "name": "Stanza Cream Design",
+    "size": "4x2",
+    "finish": "Glossy",
+    "body": "Vetrified",
+    "image": "stanza tile 4-2 glossy/Tile 51.jpeg",
+    "thickness": "9mm"
+  },
+  {
+    "name": "Stanza Beige Stone",
+    "size": "4x2",
+    "finish": "Glossy",
+    "body": "Vetrified",
+    "image": "stanza tile 4-2 glossy/Tile 54.jpeg",
+    "thickness": "9mm"
+  },
+  {
+    "name": "Stanza Classic Brown",
+    "size": "4x2",
+    "finish": "Glossy",
+    "body": "Vetrified",
+    "image": "stanza tile 4-2 glossy/Tile 56.jpeg",
+    "thickness": "9mm"
+  },
+  {
+    "name": "Stanza Cream Design",
+    "size": "4x2",
+    "finish": "Glossy",
+    "body": "Vetrified",
+    "image": "stanza tile 4-2 glossy/Tile 57.jpeg",
+    "thickness": "9mm"
   },
   {
     "name": "Stanza Marble White",
     "size": "4x2",
     "finish": "Glossy",
-    "brand": "Stanza",
-    "image": "stanza tile 4-2 glossy/Screenshot_14-3-2026_151917_.jpeg"
+    "body": "Vetrified",
+    "image": "stanza tile 4-2 glossy/Tile 58.jpeg",
+    "thickness": "9mm"
   },
   {
     "name": "Stanza Beige Stone",
     "size": "4x2",
     "finish": "Glossy",
-    "brand": "Stanza",
-    "image": "stanza tile 4-2 glossy/Screenshot_14-3-2026_151936_.jpeg"
+    "body": "Vetrified",
+    "image": "stanza tile 4-2 glossy/Tile 59.jpeg",
+    "thickness": "9mm"
   },
   {
     "name": "Stanza Grey Texture",
     "size": "4x2",
     "finish": "Glossy",
-    "brand": "Stanza",
-    "image": "stanza tile 4-2 glossy/Screenshot_14-3-2026_151959_.jpeg"
+    "body": "Vetrified",
+    "image": "stanza tile 4-2 glossy/Tile 60.jpeg",
+    "thickness": "9mm"
   },
   {
     "name": "Stanza Classic Brown",
     "size": "4x2",
     "finish": "Glossy",
-    "brand": "Stanza",
-    "image": "stanza tile 4-2 glossy/Screenshot_14-3-2026_152021_.jpeg"
+    "body": "Vetrified",
+    "image": "stanza tile 4-2 glossy/Tile 61.jpeg",
+    "thickness": "9mm"
   },
   {
     "name": "Stanza Cream Design",
     "size": "4x2",
     "finish": "Glossy",
-    "brand": "Stanza",
-    "image": "stanza tile 4-2 glossy/Screenshot_14-3-2026_154943_.jpeg"
+    "body": "Vetrified",
+    "image": "stanza tile 4-2 glossy/Tile 62.jpeg",
+    "thickness": "9mm"
+  },
+  {
+    "name": "Stanza Marble White",
+    "size": "4x2",
+    "finish": "Glossy",
+    "body": "Vetrified",
+    "image": "stanza tile 4-2 glossy/Tile 63.jpeg",
+    "thickness": "9mm"
+  },
+
+  {
+    "name": "Stanza Classic Brown",
+    "size": "4x2",
+    "finish": "Glossy",
+    "body": "Vetrified",
+    "image": "stanza tile 4-2 glossy/Tile 44.jpeg",
+    "thickness": "9mm"
+  },
+  {
+    "name": "Stanza Beige Stone",
+    "size": "4x2",
+    "finish": "Glossy",
+    "body": "Vetrified",
+    "image": "stanza tile 4-2 glossy/Tile 64.jpeg",
+    "thickness": "9mm"
+  },
+  {
+    "name": "Stanza Grey Texture",
+    "size": "4x2",
+    "finish": "Glossy",
+    "body": "Vetrified",
+    "image": "stanza tile 4-2 glossy/Tile 65.jpeg",
+    "thickness": "9mm"
+  },
+  {
+    "name": "Stanza Classic Brown",
+    "size": "4x2",
+    "finish": "Glossy",
+    "body": "Vetrified",
+    "image": "stanza tile 4-2 glossy/Tile 66.jpeg",
+    "thickness": "9mm"
+  },
+  {
+    "name": "Stanza Cream Design",
+    "size": "4x2",
+    "finish": "Glossy",
+    "body": "Vetrified",
+    "image": "stanza tile 4-2 glossy/Tile 67.jpeg",
+    "thickness": "9mm"
+  },
+  {
+    "name": "Stanza Marble White",
+    "size": "4x2",
+    "finish": "Glossy",
+    "body": "Vetrified",
+    "image": "stanza tile 4-2 glossy/Tile 68.jpeg",
+    "thickness": "9mm"
+  },
+  {
+    "name": "Stanza Beige Stone",
+    "size": "4x2",
+    "finish": "Glossy",
+    "body": "Vetrified",
+    "image": "stanza tile 4-2 glossy/Tile 69.jpeg",
+    "thickness": "9mm"
+  },
+  {
+    "name": "Stanza Grey Texture",
+    "size": "4x2",
+    "finish": "Glossy",
+    "body": "Vetrified",
+    "image": "stanza tile 4-2 glossy/Tile 70.jpeg",
+    "thickness": "9mm"
+  },
+  {
+    "name": "Stanza Classic Brown",
+    "size": "4x2",
+    "finish": "Glossy",
+    "body": "Vetrified",
+    "image": "stanza tile 4-2 glossy/Tile 71.jpeg",
+    "thickness": "9mm"
+  },
+
+  {
+    "name": "Stanza Cream Design",
+    "size": "4x2",
+    "finish": "Glossy",
+    "body": "Vetrified",
+    "image": "stanza tile 4-2 glossy/Tile 10.jpeg",
+    "thickness": "9mm"
+  },
+  {
+    "name": "Stanza Cream Design",
+    "size": "4x2",
+    "finish": "Glossy",
+    "body": "Vetrified",
+    "image": "stanza tile 4-2 glossy/Tile 72.jpeg",
+    "thickness": "9mm"
+  },
+  {
+    "name": "Stanza Marble White",
+    "size": "4x2",
+    "finish": "Glossy",
+    "body": "Vetrified",
+    "image": "stanza tile 4-2 glossy/Tile 73.jpeg",
+    "thickness": "9mm"
+  },
+  {
+    "name": "Stanza Beige Stone",
+    "size": "4x2",
+    "finish": "Glossy",
+    "body": "Vetrified",
+    "image": "stanza tile 4-2 glossy/Tile 74.jpeg",
+    "thickness": "9mm"
+  },
+  {
+    "name": "Stanza Grey Texture",
+    "size": "4x2",
+    "finish": "Glossy",
+    "body": "Vetrified",
+    "image": "stanza tile 4-2 glossy/Tile 75.jpeg",
+    "thickness": "9mm"
+  },
+  {
+    "name": "surya",
+    "size": "4x2",
+    "finish": "Carving",
+    "body": "Vetrified",
+    "image": "stanza tile 4-2 carving/Screenshot_14-3-2026_15346_.jpeg",
+    "thickness": "9mm"
+  },
+  {
+    "name": "surya",
+    "size": "4x2",
+    "finish": "Carving",
+    "body": "Vetrified",
+    "image": "stanza tile 4-2 carving/Screenshot_14-3-2026_153313_.jpeg",
+    "thickness": "9mm"
+  },
+  {
+    "name": "surya",
+    "size": "4x2",
+    "finish": "Carving",
+    "body": "Vetrified",
+    "image": "stanza tile 4-2 carving/Screenshot_14-3-2026_153332_.jpeg",
+    "thickness": "9mm"
+  },
+  {
+    "name": "surya",
+    "size": "4x2",
+    "finish": "Carving",
+    "body": "Vetrified",
+    "image": "stanza tile 4-2 carving/Screenshot_14-3-2026_153350_.jpeg",
+    "thickness": "9mm"
+  },
+  {
+    "name": "surya",
+    "size": "4x2",
+    "finish": "Carving",
+    "body": "Vetrified",
+    "image": "stanza tile 4-2 carving/Screenshot_14-3-2026_153423_.jpeg",
+    "thickness": "9mm"
+  },
+  {
+    "name": "surya",
+    "size": "4x2",
+    "finish": "Carving",
+    "body": "Vetrified",
+    "image": "stanza tile 4-2 carving/Screenshot_14-3-2026_154134_.jpeg",
+    "thickness": "9mm"
+  },
+  {
+    "name": "surya",
+    "size": "4x2",
+    "finish": "Carving",
+    "body": "Vetrified",
+    "image": "stanza tile 4-2 carving/Screenshot_14-3-2026_154217_.jpeg",
+    "thickness": "9mm"
+  },
+  {
+    "name": "surya",
+    "size": "4x2",
+    "finish": "High Glossy",
+    "body": "Vetrified",
+    "image": "stnza tile 4-2 high glossy/Screenshot_14-3-2026_154341_.jpeg",
+    "thickness": "9mm"
+  },
+  {
+    "name": "surya",
+    "size": "4x2",
+    "finish": "High Glossy",
+    "body": "Vetrified",
+    "image": "stnza tile 4-2 high glossy/Screenshot_14-3-2026_154359_.jpeg",
+    "thickness": "9mm"
+  },
+  {
+    "name": "surya",
+    "size": "4x2",
+    "finish": "High Glossy",
+    "body": "Vetrified",
+    "image": "stnza tile 4-2 high glossy/Screenshot_14-3-2026_154422_.jpeg",
+    "thickness": "9mm"
+  },
+  {
+    "name": "surya",
+    "size": "4x2",
+    "finish": "High Glossy",
+    "body": "Vetrified",
+    "image": "stnza tile 4-2 high glossy/Screenshot_14-3-2026_154445_.jpeg",
+    "thickness": "9mm"
+  },
+  {
+    "name": "surya",
+    "size": "4x2",
+    "finish": "Matt",
+    "body": "Vetrified",
+    "image": "stanza tile 4-2 mat/Screenshot_14-3-2026_15475_.jpeg",
+    "thickness": "9mm"
+  },
+  {
+    "name": "surya",
+    "size": "4x2",
+    "finish": "Matt",
+    "body": "Vetrified",
+    "image": "stanza tile 4-2 mat/Screenshot_14-3-2026_153233_.jpeg",
+    "thickness": "9mm"
+  },
+  {
+    "name": "surya",
+    "size": "4x2",
+    "finish": "Matt",
+    "body": "Vetrified",
+    "image": "stanza tile 4-2 mat/Screenshot_14-3-2026_153251_.jpeg",
+    "thickness": "9mm"
+  },
+  {
+    "name": "surya",
+    "size": "4x2",
+    "finish": "Matt",
+    "body": "Vetrified",
+    "image": "stanza tile 4-2 mat/Screenshot_14-3-2026_154721_.jpeg",
+    "thickness": "9mm"
+  },
+  {
+    "name": "surya",
+    "size": "4x2",
+    "finish": "Matt",
+    "body": "Vetrified",
+    "image": "stanza tile 4-2 mat/Screenshot_14-3-2026_154732_.jpeg",
+    "thickness": "9mm"
+  },
+  {
+    "name": "surya",
+    "size": "4x2",
+    "finish": "Matt",
+    "body": "Vetrified",
+    "image": "stanza tile 4-2 mat/Screenshot_14-3-2026_154745_.jpeg",
+    "thickness": "9mm"
+  },
+  {
+    "name": "surya",
+    "size": "2x2",
+    "finish": "Nano",
+    "body": "Vetrified",
+    "image": "stanza tile 2-2 nano/Screenshot_14-3-2026_16443_.jpeg",
+    "thickness": "9mm"
+  },
+  {
+    "name": "surya",
+    "size": "2x2",
+    "finish": "Nano",
+    "body": "Vetrified",
+    "image": "stanza tile 2-2 nano/Screenshot_14-3-2026_164413_.jpeg",
+    "thickness": "9mm"
+  },
+  {
+    "name": "surya",
+    "size": "2x2",
+    "finish": "Nano",
+    "body": "Vetrified",
+    "image": "stanza tile 2-2 nano/Screenshot_14-3-2026_164422_.jpeg",
+    "thickness": "9mm"
+  },
+  {
+    "name": "surya",
+    "size": "2x2",
+    "finish": "Nano",
+    "body": "Vetrified",
+    "image": "stanza tile 2-2 nano/Screenshot_14-3-2026_164432_.jpeg",
+    "thickness": "9mm"
+  },
+  {
+    "name": "surya",
+    "size": "2x2",
+    "finish": "Nano",
+    "body": "Vetrified",
+    "image": "stanza tile 2-2 nano/Screenshot_14-3-2026_164446_.jpeg",
+    "thickness": "9mm"
+  },
+  {
+    "name": "surya",
+    "size": "2x2",
+    "finish": "Nano",
+    "body": "Vetrified",
+    "image": "stanza tile 2-2 nano/Screenshot_14-3-2026_164458_.jpeg",
+    "thickness": "9mm"
+  },
+  {
+    "name": "surya",
+    "size": "2x2",
+    "finish": "Nano",
+    "body": "Vetrified",
+    "image": "stanza tile 2-2 nano/Screenshot_14-3-2026_164510_.jpeg",
+    "thickness": "9mm"
+  },
+  {
+    "name": "surya",
+    "size": "2x2",
+    "finish": "Nano",
+    "body": "Vetrified",
+    "image": "stanza tile 2-2 nano/Screenshot_14-3-2026_164520_.jpeg",
+    "thickness": "9mm"
   }
 ]
