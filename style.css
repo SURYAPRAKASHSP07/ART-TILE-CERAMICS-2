@@ -104,16 +104,18 @@ nav {
   font-size: 48px;
   font-family: Cambria;
   color: white;
-   text-shadow:  20px 20px 60px rgba(0, 0, 0, 0.842),
-  0 0 10px rgb(0, 0, 0);
+  text-shadow:
+    20px 20px 60px rgba(0, 0, 0, 0.842),
+    0 0 10px rgb(0, 0, 0);
 }
 .hero p {
   margin-top: 10px;
   font-size: 18px;
   color: white;
   font-weight: bold;
- text-shadow:  20px 20px 60px rgba(0, 0, 0, 0.842),
-  0 0 10px rgb(0, 0, 0);
+  text-shadow:
+    20px 20px 60px rgba(0, 0, 0, 0.842),
+    0 0 10px rgb(0, 0, 0);
 }
 .btn {
   display: inline-block;
@@ -848,108 +850,104 @@ footer {
 /* ================= OFFERS SECTION ================= */
 /* OFFER SECTION */
 
-.offers-section{
-  padding:90px 20px;
-  text-align:center;
-  animation:offerSwap 0.5s infinite alternate;
-  transition:0.5s;
+.offers-section {
+  padding: 90px 20px;
+  text-align: center;
+  animation: offerSwap 0.5s infinite alternate;
+  transition: 0.5s;
 }
 
 /* HEADING */
 
-.offer-content h2{
-  font-size:36px;
-  margin-bottom:15px;
-  letter-spacing:1px;
-  font-weight:bold;
-  color:#ffd60a;
+.offer-content h2 {
+  font-size: 36px;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  color: #ffd60a;
 
   text-shadow:
-  0 0 6px #ffd60a,
-  0 0 12px #ffd60a,
-  0 0 20px #ffea00;
+    0 0 6px #ffd60a,
+    0 0 12px #ffd60a,
+    0 0 20px #ffea00;
 
-  animation:glow 2s infinite alternate;
+  animation: glow 2s infinite alternate;
 }
 
 /* TEXT */
 
-.offer-content p{
-  font-size:18px;
-  margin:10px 0;
-  font-weight:500;
+.offer-content p {
+  font-size: 18px;
+  margin: 10px 0;
+  font-weight: 500;
 }
 
-.offer-content p span{
+.offer-content p span {
   color: red;
 }
 
 /* HIGHLIGHT */
 
-.offer-content span{
-  font-size:22px;
-  font-weight:bold;
+.offer-content span {
+  font-size: 22px;
+  font-weight: bold;
 }
 
 /* NOTE */
 
-.offer-note{
-  font-size:14px;
-  opacity:0.9;
+.offer-note {
+  font-size: 14px;
+  opacity: 0.9;
 }
 
 /* BUTTON */
 
-.btn-offer{
-  display:inline-block;
-  margin-top:25px;
-  padding:12px 35px;
-  border-radius:30px;
-  text-decoration:none;
-  font-weight:bold;
-  border:2px solid white;
-  color:white;
-  transition:0.3s;
+.btn-offer {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 35px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  border: 2px solid white;
+  color: white;
+  transition: 0.3s;
 }
 
-.btn-offer:hover{
-  transform:scale(1.08);
-  background:white;
-  color:#7209b7;
+.btn-offer:hover {
+  transform: scale(1.08);
+  background: white;
+  color: #7209b7;
 }
 
 /* BACKGROUND COLOR ANIMATION */
 
-@keyframes offerSwap{
-
-  0%{
-    background:#7209b7;
-    color:white;
+@keyframes offerSwap {
+  0% {
+    background: #7209b7;
+    color: white;
   }
 
-  100%{
-    background:#000;
-    color:white;
+  100% {
+    background: #000;
+    color: white;
   }
-
 }
 
 /* HEADING GLOW */
 
-@keyframes glow{
-
-  0%{
+@keyframes glow {
+  0% {
     text-shadow:
-    0 0 6px #ffd60a,
-    0 0 12px #ffd60a;
+      0 0 6px #ffd60a,
+      0 0 12px #ffd60a;
   }
 
-  100%{
+  100% {
     text-shadow:
-    0 0 10px red,
-    0 0 25px red;
+      0 0 10px red,
+      0 0 25px red;
   }
-
 }
 
 /* SERVICES SECTION */
@@ -1011,6 +1009,133 @@ h2 {
 
 @media (max-width: 500px) {
   .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* About Us */
+.about-section {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #7209b7, #b984db);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 20px;
+}
+
+/* GLASS CARD */
+.about-container {
+  max-width: 950px;
+  padding: 50px;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
+  color: #fff;
+  animation: fadeUp 1s ease;
+}
+
+/* HEADING */
+.about-container h2 {
+  text-align: center;
+  font-size: 38px;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+.about-container h2::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background: #fff;
+  display: block;
+  margin: 12px auto;
+  border-radius: 10px;
+}
+
+/* TEXT */
+.about-container p {
+  font-size: 16px;
+  line-height: 1.9;
+  margin-bottom: 20px;
+  opacity: 0.95;
+}
+
+/* HIGHLIGHT */
+.highlight {
+  font-size: larger;
+  color: black;
+  font-weight: 600;
+}
+
+/* TAMIL STYLE */
+.tamil {
+  display: block;
+  margin-top: 5px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #ffe9ff;
+}
+
+/* QUOTE */
+.quote {
+  margin: 25px 0;
+  padding: 20px;
+  border-radius: 15px;
+  background: linear-gradient(135deg, #ffffff22, #ffffff08);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  font-style: italic;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* BELIEFS GRID */
+.beliefs {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.belief-item {
+  padding: 15px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: 0.3s;
+}
+
+.belief-item:hover {
+  transform: translateY(-5px) scale(1.02);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* ANIMATION */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .about-container {
+    padding: 30px;
+  }
+
+  .about-container h2 {
+    font-size: 28px;
+  }
+
+  .beliefs {
     grid-template-columns: 1fr;
   }
 }
