@@ -184,6 +184,7 @@
 
       button:hover {
         background: var(--secondary);
+        transition: 0.15s ease-in-out;
       }
 
       /* CONTROLS */
@@ -252,7 +253,14 @@
 
         <div id="gallery"></div>
         <button>
-          <a style="text-decoration: none; color: white" href="index.html"
+          <a
+            style="
+              text-decoration: none;
+              padding: 10px;
+              font-weight: 500;
+              color: white;
+            "
+            href="index.html"
             >Back</a
           >
         </button>
@@ -350,103 +358,281 @@
 
       const rooms = [
         {
-          name: "Living Room",
-          image: "room.png",
+          image: "hall way.png",
 
           tiles: [
             {
               name: "Marble White",
-              src: "Visualizer Images/Living Room Floor/0099-wood-and-marble-parquet-decorated-texture-seamless.jpg",
+              src: "stanza_tile_4-2_glossy/Tile_(1).jpeg",
             },
             {
               name: "Marble White",
-              src: "Visualizer Images/Living Room Floor/0099-wood-and-marble-parquet-decorated-texture-seamless.jpg",
+              src: "stanza_tile_4-2_glossy/Tile_(2).jpeg",
             },
             {
               name: "Italian Grey",
-              src: "Visualizer Images/Living Room Floor/104-decorated-floral-parquet-texture-seamless.jpg",
+              src: "stanza_tile_4-2_glossy/Tile_(3).jpeg",
             },
             {
               name: "Royal Beige",
-              src: "Visualizer Images/Living Room Floor/106-decorated-floral-parquet-texture-seamless.jpg",
+              src: "stanza_tile_4-2_glossy/Tile_(4).jpeg",
             },
             {
               name: "Marble White",
-              src: "Visualizer Images/Living Room Floor/Glam Up Your Screen with White Aesthetic Wallpapers.jpg",
+              src: "stanza_tile_4-2_glossy/Tile_(5).jpeg",
             },
             {
               name: "Italian Grey",
-              src: "Visualizer Images/Living Room Floor/Tile Image 1.jpg",
+              src: "stanza_tile_4-2_glossy/Tile_(6).jpeg",
             },
             {
               name: "Royal Beige",
-              src: "Visualizer Images/Living Room Floor/Tile Image 4.jpg",
+              src: "stanza_tile_4-2_glossy/Tile_(7).jpeg",
             },
             {
               name: "Marble White",
-              src: "Visualizer Images/Living Room Floor/Untitled-2.jpg.jpeg",
+              src: "stanza_tile_4-2_glossy/Tile_(8).jpeg",
             },
             {
               name: "Marble White",
-              src: "Visualizer Images/Living Room Floor/0099-wood-and-marble-parquet-decorated-texture-seamless.jpg",
+              src: "stanza_tile_4-2_glossy/Tile_(9).jpeg",
             },
             {
               name: "Italian Grey",
-              src: "Visualizer Images/Living Room Floor/104-decorated-floral-parquet-texture-seamless.jpg",
+              src: "stanza_tile_4-2_glossy/Tile_(10).jpeg",
             },
           ],
         },
 
         {
-          name: "Kitchen",
-          image: "hall2.png",
+          image: "AUDITORIYAM.png",
 
           tiles: [
             {
-              name: "Kitchen Glossy",
-              src: "stanza tile 4-2 glossy/Screenshot_14-3-2026_1613_.jpeg",
+              name: "Marble White",
+              src: "stanza_tile_4-2_glossy/Tile_(1).jpeg",
             },
             {
-              name: "Kitchen Brick",
-              src: "stanza tile 4-2 glossy/Screenshot_14-3-2026_16750_.jpeg",
+              name: "Marble White",
+              src: "stanza_tile_4-2_glossy/Tile_(2).jpeg",
             },
             {
-              name: "Kitchen Glossy",
-              src: "Visualizer Images/Kitchen Wall/114-herringbone-parquet-pbr-texture-seamless-20251124195346.jpg",
+              name: "Italian Grey",
+              src: "stanza_tile_4-2_glossy/Tile_(3).jpeg",
             },
             {
-              name: "Kitchen Brick",
-              src: "Visualizer Images/Kitchen Wall/Screenshot 2026-03-09 220220.png",
+              name: "Royal Beige",
+              src: "stanza_tile_4-2_glossy/Tile_(4).jpeg",
             },
             {
-              name: "Kitchen Glossy",
-              src: "Visualizer Images/Kitchen Wall/109-herringbone-parquet-pbr-texture-seamless.jpg",
+              name: "Marble White",
+              src: "stanza_tile_4-2_glossy/Tile_(5).jpeg",
             },
             {
-              name: "Kitchen Brick",
-              src: "Visualizer Images/Kitchen Wall/112-herringbone-parquet-pbr-texture-seamless.jpg",
+              name: "Italian Grey",
+              src: "stanza_tile_4-2_glossy/Tile_(6).jpeg",
             },
             {
-              name: "Kitchen Glossy",
-              src: "Visualizer Images/Kitchen Wall/114-herringbone-parquet-pbr-texture-seamless-20251124195346.jpg",
+              name: "Royal Beige",
+              src: "stanza_tile_4-2_glossy/Tile_(7).jpeg",
             },
             {
-              name: "Kitchen Brick",
-              src: "Visualizer Images/Kitchen Wall/Screenshot 2026-03-09 220220.png",
+              name: "Marble White",
+              src: "stanza_tile_4-2_glossy/Tile_(8).jpeg",
+            },
+            {
+              name: "Marble White",
+              src: "stanza_tile_4-2_glossy/Tile_(9).jpeg",
+            },
+            {
+              name: "Italian Grey",
+              src: "stanza_tile_4-2_glossy/Tile_(10).jpeg",
             },
           ],
         },
 
         {
-          name: "Bathroom",
-          image: "room.png",
+          image: "HALL.png",
 
           tiles: [
             {
-              name: "Bath Marble",
-              src: "",
+              name: "Marble White",
+              src: "stanza_tile_4-2_glossy/Tile_(1).jpeg",
             },
-            { name: "" },
+            {
+              name: "Marble White",
+              src: "stanza_tile_4-2_glossy/Tile_(2).jpeg",
+            },
+            {
+              name: "Italian Grey",
+              src: "stanza_tile_4-2_glossy/Tile_(3).jpeg",
+            },
+            {
+              name: "Royal Beige",
+              src: "stanza_tile_4-2_glossy/Tile_(4).jpeg",
+            },
+            {
+              name: "Marble White",
+              src: "stanza_tile_4-2_glossy/Tile_(5).jpeg",
+            },
+            {
+              name: "Italian Grey",
+              src: "stanza_tile_4-2_glossy/Tile_(6).jpeg",
+            },
+            {
+              name: "Royal Beige",
+              src: "stanza_tile_4-2_glossy/Tile_(7).jpeg",
+            },
+            {
+              name: "Marble White",
+              src: "stanza_tile_4-2_glossy/Tile_(8).jpeg",
+            },
+            {
+              name: "Marble White",
+              src: "stanza_tile_4-2_glossy/Tile_(9).jpeg",
+            },
+            {
+              name: "Italian Grey",
+              src: "stanza_tile_4-2_glossy/Tile_(10).jpeg",
+            },
+          ],
+        },
+        {
+          image: "Parking_png_1.png",
+
+          tiles: [
+            {
+              name: "Marble White",
+              src: "stanza_tile_4-2_glossy/Tile_(1).jpeg",
+            },
+            {
+              name: "Marble White",
+              src: "stanza_tile_4-2_glossy/Tile_(2).jpeg",
+            },
+            {
+              name: "Italian Grey",
+              src: "stanza_tile_4-2_glossy/Tile_(3).jpeg",
+            },
+            {
+              name: "Royal Beige",
+              src: "stanza_tile_4-2_glossy/Tile_(4).jpeg",
+            },
+            {
+              name: "Marble White",
+              src: "stanza_tile_4-2_glossy/Tile_(5).jpeg",
+            },
+            {
+              name: "Italian Grey",
+              src: "stanza_tile_4-2_glossy/Tile_(6).jpeg",
+            },
+            {
+              name: "Royal Beige",
+              src: "stanza_tile_4-2_glossy/Tile_(7).jpeg",
+            },
+            {
+              name: "Marble White",
+              src: "stanza_tile_4-2_glossy/Tile_(8).jpeg",
+            },
+            {
+              name: "Marble White",
+              src: "stanza_tile_4-2_glossy/Tile_(9).jpeg",
+            },
+            {
+              name: "Italian Grey",
+              src: "stanza_tile_4-2_glossy/Tile_(10).jpeg",
+            },
+          ],
+        },
+        {
+          image: "Parking_png_2.png",
+
+          tiles: [
+            {
+              name: "Marble White",
+              src: "stanza_tile_4-2_glossy/Tile_(1).jpeg",
+            },
+            {
+              name: "Marble White",
+              src: "stanza_tile_4-2_glossy/Tile_(2).jpeg",
+            },
+            {
+              name: "Italian Grey",
+              src: "stanza_tile_4-2_glossy/Tile_(3).jpeg",
+            },
+            {
+              name: "Royal Beige",
+              src: "stanza_tile_4-2_glossy/Tile_(4).jpeg",
+            },
+            {
+              name: "Marble White",
+              src: "stanza_tile_4-2_glossy/Tile_(5).jpeg",
+            },
+            {
+              name: "Italian Grey",
+              src: "stanza_tile_4-2_glossy/Tile_(6).jpeg",
+            },
+            {
+              name: "Royal Beige",
+              src: "stanza_tile_4-2_glossy/Tile_(7).jpeg",
+            },
+            {
+              name: "Marble White",
+              src: "stanza_tile_4-2_glossy/Tile_(8).jpeg",
+            },
+            {
+              name: "Marble White",
+              src: "stanza_tile_4-2_glossy/Tile_(9).jpeg",
+            },
+            {
+              name: "Italian Grey",
+              src: "stanza_tile_4-2_glossy/Tile_(10).jpeg",
+            },
+          ],
+        },
+        {
+          image: "Parking_png_3.png",
+
+          tiles: [
+            {
+              name: "Marble White",
+              src: "stanza_tile_4-2_glossy/Tile_(1).jpeg",
+            },
+            {
+              name: "Marble White",
+              src: "stanza_tile_4-2_glossy/Tile_(2).jpeg",
+            },
+            {
+              name: "Italian Grey",
+              src: "stanza_tile_4-2_glossy/Tile_(3).jpeg",
+            },
+            {
+              name: "Royal Beige",
+              src: "stanza_tile_4-2_glossy/Tile_(4).jpeg",
+            },
+            {
+              name: "Marble White",
+              src: "stanza_tile_4-2_glossy/Tile_(5).jpeg",
+            },
+            {
+              name: "Italian Grey",
+              src: "stanza_tile_4-2_glossy/Tile_(6).jpeg",
+            },
+            {
+              name: "Royal Beige",
+              src: "stanza_tile_4-2_glossy/Tile_(7).jpeg",
+            },
+            {
+              name: "Marble White",
+              src: "stanza_tile_4-2_glossy/Tile_(8).jpeg",
+            },
+            {
+              name: "Marble White",
+              src: "stanza_tile_4-2_glossy/Tile_(9).jpeg",
+            },
+            {
+              name: "Italian Grey",
+              src: "stanza_tile_4-2_glossy/Tile_(10).jpeg",
+            },
           ],
         },
       ];
@@ -471,7 +657,6 @@
 
         const name = document.createElement("div");
         name.className = "room-name";
-        name.innerText = room.name;
 
         card.appendChild(img);
         card.appendChild(name);
