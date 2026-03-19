@@ -1,6 +1,6 @@
 [
   {
-    "name": "Stanza Marble White",
+    "name": "SPEROX 9002",
     "size": "4x2",
     "finish": "Glossy",
     "body": "Vetrified",
@@ -8,11 +8,27 @@
     "thickness": "9mm"
   },
   {
-    "name": "Stanza Beige Stone",
+    "name": "SPEROX 9003",
+    "size": "4x2",
+    "finish": "Glossy",
+    "body": "Vetrified",
+    "image": "stanza_tile_4-2_glossy/Tile_(51).jpeg",
+    "thickness": "9mm"
+  },
+  {
+    "name": "SHREEM CLOUDY AQUA LIGHT DECORE A",
     "size": "4x2",
     "finish": "Glossy",
     "body": "Vetrified",
     "image": "stanza_tile_4-2_glossy/Tile_(2).jpeg",
+    "thickness": "9mm"
+  },
+  {
+    "name": "SHREEM CLOUDY AQUA LIGHT DECORE B",
+    "size": "4x2",
+    "finish": "Glossy",
+    "body": "Vetrified",
+    "image": "stanza_tile_4-2_glossy/Tile_(12).jpeg",
     "thickness": "9mm"
   },
   {
@@ -31,17 +47,8 @@
     "image": "stanza_tile_4-2_glossy/Tile_(4).jpeg",
     "thickness": "9mm"
   },
-
   {
-    "name": "Stanza Classic Brown",
-    "size": "4x2",
-    "finish": "Glossy",
-    "body": "Vetrified",
-    "image": "stanza_tile_4-2_glossy/Tile_(5).jpeg",
-    "thickness": "9mm"
-  },
-  {
-    "name": "Stanza Cream Design",
+    "name": "SHREEM ARTICO (GLOSSY)",
     "size": "4x2",
     "finish": "Glossy",
     "body": "Vetrified",
@@ -49,7 +56,7 @@
     "thickness": "9mm"
   },
   {
-    "name": "Stanza Beige Stone",
+    "name": "SHREEM FULLTON GREY(EL)",
     "size": "4x2",
     "finish": "Glossy",
     "body": "Vetrified",
@@ -57,27 +64,11 @@
     "thickness": "9mm"
   },
   {
-    "name": "Stanza Grey Texture",
+    "name": "SHREEM FULLTON AQUA",
     "size": "4x2",
     "finish": "Glossy",
     "body": "Vetrified",
     "image": "stanza_tile_4-2_glossy/Tile_(8).jpeg",
-    "thickness": "9mm"
-  },
-  {
-    "name": "Stanza Classic Brown",
-    "size": "4x2",
-    "finish": "Glossy",
-    "body": "Vetrified",
-    "image": "stanza_tile_4-2_glossy/Tile_(9).jpeg",
-    "thickness": "9mm"
-  },
-  {
-    "name": "Stanza Classic Brown",
-    "size": "4x2",
-    "finish": "Glossy",
-    "body": "Vetrified",
-    "image": "stanza_tile_4-2_glossy/Tile_(10).jpeg",
     "thickness": "9mm"
   },
   {
@@ -88,17 +79,9 @@
     "image": "stanza_tile_4-2_glossy/Tile_(11).jpeg",
     "thickness": "9mm"
   },
-  {
-    "name": "Stanza Beige Stone",
-    "size": "4x2",
-    "finish": "Glossy",
-    "body": "Vetrified",
-    "image": "stanza_tile_4-2_glossy/Tile_(12).jpeg",
-    "thickness": "9mm"
-  },
 
   {
-    "name": "Stanza Classic Brown",
+    "name": "SHREEM DC GRANITE BLACK",
     "size": "4x2",
     "finish": "Glossy",
     "body": "Vetrified",
@@ -106,7 +89,7 @@
     "thickness": "9mm"
   },
   {
-    "name": "Stanza Cream Design",
+    "name": "SHREEM DC GRANITE BROWN",
     "size": "4x2",
     "finish": "Glossy",
     "body": "Vetrified",
@@ -114,7 +97,7 @@
     "thickness": "9mm"
   },
   {
-    "name": "Stanza Marble White",
+    "name": "SHREEM DC GRANITE BLUE",
     "size": "4x2",
     "finish": "Glossy",
     "body": "Vetrified",
@@ -130,7 +113,7 @@
     "thickness": "9mm"
   },
   {
-    "name": "Stanza Grey Texture",
+    "name": "SHREEM DENZI WHITE DECORE",
     "size": "4x2",
     "finish": "Glossy",
     "body": "Vetrified",
@@ -154,7 +137,7 @@
     "thickness": "9mm"
   },
   {
-    "name": "Stanza Marble White",
+    "name": "SHREEM QUANTOM brown",
     "size": "4x2",
     "finish": "Glossy",
     "body": "Vetrified",
@@ -162,11 +145,27 @@
     "thickness": "9mm"
   },
   {
-    "name": "Stanza Beige Stone",
+    "name": "SHREEM FOGGY GREEN",
     "size": "4x2",
     "finish": "Glossy",
     "body": "Vetrified",
     "image": "stanza_tile_4-2_glossy/Tile_(22).jpeg",
+    "thickness": "9mm"
+  },
+  {
+    "name": "SHREEM FOGGY PINK",
+    "size": "4x2",
+    "finish": "Glossy",
+    "body": "Vetrified",
+    "image": "stanza_tile_4-2_glossy/Tile_(5).jpeg",
+    "thickness": "9mm"
+  },
+  {
+    "name": "SHREEM FOGGY AQUA",
+    "size": "4x2",
+    "finish": "Glossy",
+    "body": "Vetrified",
+    "image": "stanza_tile_4-2_glossy/Tile_(53).jpeg",
     "thickness": "9mm"
   },
   {
@@ -203,7 +202,7 @@
     "thickness": "9mm"
   },
   {
-    "name": "Stanza Beige Stone",
+    "name": "LIVOLLA TESLA 106",
     "size": "4x2",
     "finish": "Glossy",
     "body": "Vetrified",
@@ -211,7 +210,7 @@
     "thickness": "9mm"
   },
   {
-    "name": "Stanza Grey Texture",
+    "name": "LIVOLLA TESLA 105",
     "size": "4x2",
     "finish": "Glossy",
     "body": "Vetrified",
@@ -227,7 +226,7 @@
     "thickness": "9mm"
   },
   {
-    "name": "Stanza Cream Design",
+    "name": "LIVOLLA SPANISH BEIGE",
     "size": "4x2",
     "finish": "Glossy",
     "body": "Vetrified",
@@ -299,7 +298,7 @@
     "thickness": "9mm"
   },
   {
-    "name": "Stanza Classic Brown",
+    "name": "RARE SANDY BLUE",
     "size": "4x2",
     "finish": "Glossy",
     "body": "Vetrified",
@@ -307,7 +306,7 @@
     "thickness": "9mm"
   },
   {
-    "name": "Stanza Cream Design",
+    "name": "RARE SANDY GREY",
     "size": "4x2",
     "finish": "Glossy",
     "body": "Vetrified",
@@ -323,15 +322,7 @@
     "thickness": "9mm"
   },
   {
-    "name": "Stanza Beige Stone",
-    "size": "4x2",
-    "finish": "Glossy",
-    "body": "Vetrified",
-    "image": "stanza_tile_4-2_glossy/Tile_(42).jpeg",
-    "thickness": "9mm"
-  },
-  {
-    "name": "Stanza Cream Design",
+    "name": "RARE ECLIPSE SATUARIO",
     "size": "4x2",
     "finish": "Glossy",
     "body": "Vetrified",
@@ -355,7 +346,7 @@
     "thickness": "9mm"
   },
   {
-    "name": "Stanza Grey Texture",
+    "name": "RARE ROSALIYA BEIGE",
     "size": "4x2",
     "finish": "Glossy",
     "body": "Vetrified",
@@ -379,23 +370,7 @@
     "thickness": "9mm"
   },
   {
-    "name": "Stanza Classic Brown",
-    "size": "4x2",
-    "finish": "Glossy",
-    "body": "Vetrified",
-    "image": "stanza_tile_4-2_glossy/Tile_(51).jpeg",
-    "thickness": "9mm"
-  },
-  {
-    "name": "Stanza Cream Design",
-    "size": "4x2",
-    "finish": "Glossy",
-    "body": "Vetrified",
-    "image": "stanza_tile_4-2_glossy/Tile_(51).jpeg",
-    "thickness": "9mm"
-  },
-  {
-    "name": "Stanza Beige Stone",
+    "name": "RARE GLOW GREEN",
     "size": "4x2",
     "finish": "Glossy",
     "body": "Vetrified",
@@ -403,7 +378,15 @@
     "thickness": "9mm"
   },
   {
-    "name": "Stanza Classic Brown",
+    "name": "RARE GLOW GREY",
+    "size": "4x2",
+    "finish": "Glossy",
+    "body": "Vetrified",
+    "image": "stanza_tile_4-2_glossy/Tile_(55).jpeg",
+    "thickness": "9mm"
+  },
+  {
+    "name": "SHREEM ARTICA AQUA",
     "size": "4x2",
     "finish": "Glossy",
     "body": "Vetrified",
@@ -411,7 +394,7 @@
     "thickness": "9mm"
   },
   {
-    "name": "Stanza Cream Design",
+    "name": "SHREEM ARTICO BLACK",
     "size": "4x2",
     "finish": "Glossy",
     "body": "Vetrified",
@@ -419,15 +402,24 @@
     "thickness": "9mm"
   },
   {
-    "name": "Stanza Marble White",
+    "name": "SHREEM ARTICO BLUE",
     "size": "4x2",
     "finish": "Glossy",
     "body": "Vetrified",
     "image": "stanza_tile_4-2_glossy/Tile_(58).jpeg",
     "thickness": "9mm"
   },
+
   {
-    "name": "Stanza Beige Stone",
+    "name": "RARE MG LEAVES BLUE",
+    "size": "4x2",
+    "finish": "Glossy",
+    "body": "Vetrified",
+    "image": "stanza_tile_4-2_glossy/Tile_(42).jpeg",
+    "thickness": "9mm"
+  },
+  {
+    "name": "RARE MG LEAVES BROWN",
     "size": "4x2",
     "finish": "Glossy",
     "body": "Vetrified",
@@ -435,7 +427,7 @@
     "thickness": "9mm"
   },
   {
-    "name": "Stanza Grey Texture",
+    "name": "RARE MG LEAVES GREEN",
     "size": "4x2",
     "finish": "Glossy",
     "body": "Vetrified",
@@ -443,13 +435,14 @@
     "thickness": "9mm"
   },
   {
-    "name": "Stanza Classic Brown",
+    "name": "RARE MG LEAVES NATURAL",
     "size": "4x2",
     "finish": "Glossy",
     "body": "Vetrified",
     "image": "stanza_tile_4-2_glossy/Tile_(61).jpeg",
     "thickness": "9mm"
   },
+
   {
     "name": "Stanza Cream Design",
     "size": "4x2",
@@ -476,7 +469,7 @@
     "thickness": "9mm"
   },
   {
-    "name": "Stanza Beige Stone",
+    "name": "SUZORA ASTER WHITE",
     "size": "4x2",
     "finish": "Glossy",
     "body": "Vetrified",
@@ -484,7 +477,7 @@
     "thickness": "9mm"
   },
   {
-    "name": "Stanza Grey Texture",
+    "name": "SUZORA ASTER BLACK",
     "size": "4x2",
     "finish": "Glossy",
     "body": "Vetrified",
@@ -492,7 +485,7 @@
     "thickness": "9mm"
   },
   {
-    "name": "Stanza Classic Brown",
+    "name": "LTILE SIGNATURE LT GREY",
     "size": "4x2",
     "finish": "Glossy",
     "body": "Vetrified",
@@ -500,7 +493,7 @@
     "thickness": "9mm"
   },
   {
-    "name": "Stanza Cream Design",
+    "name": "LTILE SIGNATURE GREY",
     "size": "4x2",
     "finish": "Glossy",
     "body": "Vetrified",
@@ -508,7 +501,7 @@
     "thickness": "9mm"
   },
   {
-    "name": "Stanza Marble White",
+    "name": "LTILE LEMON FLOWER YELLOW",
     "size": "4x2",
     "finish": "Glossy",
     "body": "Vetrified",
@@ -516,15 +509,24 @@
     "thickness": "9mm"
   },
   {
-    "name": "Stanza Beige Stone",
+    "name": "LTILE LEMON FLOWER GREEN",
     "size": "4x2",
     "finish": "Glossy",
     "body": "Vetrified",
     "image": "stanza_tile_4-2_glossy/Tile_(69).jpeg",
     "thickness": "9mm"
   },
+
   {
-    "name": "Stanza Grey Texture",
+    "name": " LTILE LEMON FLOWER BLUE",
+    "size": "4x2",
+    "finish": "Glossy",
+    "body": "Vetrified",
+    "image": "stanza_tile_4-2_glossy/Tile_(9).jpeg",
+    "thickness": "9mm"
+  },
+  {
+    "name": "SHREEM MAVIK AQUA GOLD",
     "size": "4x2",
     "finish": "Glossy",
     "body": "Vetrified",
@@ -532,15 +534,24 @@
     "thickness": "9mm"
   },
   {
-    "name": "Stanza Classic Brown",
+    "name": "AVALTA MAGIC FLOW",
     "size": "4x2",
     "finish": "Glossy",
     "body": "Vetrified",
     "image": "stanza_tile_4-2_glossy/Tile_(71).jpeg",
     "thickness": "9mm"
   },
+
   {
-    "name": "Stanza Cream Design",
+    "name": "SHREEM MT 207",
+    "size": "4x2",
+    "finish": "Glossy",
+    "body": "Vetrified",
+    "image": "stanza_tile_4-2_glossy/Tile_(10).jpeg",
+    "thickness": "9mm"
+  },
+  {
+    "name": "SHREEM 208",
     "size": "4x2",
     "finish": "Glossy",
     "body": "Vetrified",
@@ -548,7 +559,7 @@
     "thickness": "9mm"
   },
   {
-    "name": "Stanza Marble White",
+    "name": "SHREEM MT 206",
     "size": "4x2",
     "finish": "Glossy",
     "body": "Vetrified",
@@ -556,7 +567,15 @@
     "thickness": "9mm"
   },
   {
-    "name": "Stanza Beige Stone",
+    "name": "SHREEM CORTY WHITE",
+    "size": "4x2",
+    "finish": "Glossy",
+    "body": "Vetrified",
+    "image": "stanza_tile_4-2_glossy/Tile_(13).jpeg",
+    "thickness": "9mm"
+  },
+  {
+    "name": "SHREEM FULLTON BEIGE(EL)",
     "size": "4x2",
     "finish": "Glossy",
     "body": "Vetrified",
@@ -564,7 +583,7 @@
     "thickness": "9mm"
   },
   {
-    "name": "Stanza Grey Texture",
+    "name": "SHREEM CLOUDY AQUA",
     "size": "4x2",
     "finish": "Glossy",
     "body": "Vetrified",
@@ -572,7 +591,7 @@
     "thickness": "9mm"
   },
   {
-    "name": "surya",
+    "name": "L-TILE I WILD WEIN BEIGE",
     "size": "4x2",
     "finish": "Carving",
     "body": "Vetrified",
@@ -580,7 +599,7 @@
     "thickness": "9mm"
   },
   {
-    "name": "surya",
+    "name": "LTILE MERAKI BROWN(DK)",
     "size": "4x2",
     "finish": "Carving",
     "body": "Vetrified",
@@ -588,7 +607,7 @@
     "thickness": "9mm"
   },
   {
-    "name": "surya",
+    "name": "LTILE MERAKI BROWN(HL)",
     "size": "4x2",
     "finish": "Carving",
     "body": "Vetrified",
@@ -612,7 +631,7 @@
     "thickness": "9mm"
   },
   {
-    "name": "surya",
+    "name": "LTILE MERAKI GREY(HL)",
     "size": "4x2",
     "finish": "Carving",
     "body": "Vetrified",
@@ -628,7 +647,7 @@
     "thickness": "9mm"
   },
   {
-    "name": "surya",
+    "name": "SHREEM CORTY BLACK",
     "size": "4x2",
     "finish": "High Glossy",
     "body": "Vetrified",
@@ -636,7 +655,7 @@
     "thickness": "9mm"
   },
   {
-    "name": "surya",
+    "name": "SHREEM LAKINGO BLACK",
     "size": "4x2",
     "finish": "High Glossy",
     "body": "Vetrified",
@@ -644,7 +663,7 @@
     "thickness": "9mm"
   },
   {
-    "name": "surya",
+    "name": "SHREEM Z BLACK",
     "size": "4x2",
     "finish": "High Glossy",
     "body": "Vetrified",
@@ -652,7 +671,7 @@
     "thickness": "9mm"
   },
   {
-    "name": "surya",
+    "name": "SHREEM LOTUS BLUE",
     "size": "4x2",
     "finish": "High Glossy",
     "body": "Vetrified",
@@ -660,7 +679,7 @@
     "thickness": "9mm"
   },
   {
-    "name": "surya",
+    "name": "SOLOSTONE CIAZ OAT",
     "size": "4x2",
     "finish": "Matt",
     "body": "Vetrified",
@@ -668,7 +687,7 @@
     "thickness": "9mm"
   },
   {
-    "name": "surya",
+    "name": "L-TILE EGYPTIAN BROWN",
     "size": "4x2",
     "finish": "Matt",
     "body": "Vetrified",
@@ -676,7 +695,7 @@
     "thickness": "9mm"
   },
   {
-    "name": "surya",
+    "name": "L-TILE EGYPTIAN BEIGE",
     "size": "4x2",
     "finish": "Matt",
     "body": "Vetrified",
@@ -684,7 +703,7 @@
     "thickness": "9mm"
   },
   {
-    "name": "surya",
+    "name": "SOLOSTONE CIAZ CHESTNUT",
     "size": "4x2",
     "finish": "Matt",
     "body": "Vetrified",
@@ -692,7 +711,7 @@
     "thickness": "9mm"
   },
   {
-    "name": "surya",
+    "name": "SOLOSTONE CIAZ GREY",
     "size": "4x2",
     "finish": "Matt",
     "body": "Vetrified",
@@ -700,7 +719,7 @@
     "thickness": "9mm"
   },
   {
-    "name": "surya",
+    "name": "SOLOSTONE CIAZ NERO",
     "size": "4x2",
     "finish": "Matt",
     "body": "Vetrified",
@@ -708,7 +727,7 @@
     "thickness": "9mm"
   },
   {
-    "name": "surya",
+    "name": "SOLOGRES IVORY",
     "size": "2x2",
     "finish": "Nano",
     "body": "Vetrified",
@@ -716,7 +735,7 @@
     "thickness": "9mm"
   },
   {
-    "name": "surya",
+    "name": "SOLOGRES DYNA",
     "size": "2x2",
     "finish": "Nano",
     "body": "Vetrified",
@@ -724,7 +743,7 @@
     "thickness": "9mm"
   },
   {
-    "name": "surya",
+    "name": "SOLOGRES FEATHER",
     "size": "2x2",
     "finish": "Nano",
     "body": "Vetrified",
@@ -732,7 +751,7 @@
     "thickness": "9mm"
   },
   {
-    "name": "surya",
+    "name": "SOLOGRES GALAXY BLUE",
     "size": "2x2",
     "finish": "Nano",
     "body": "Vetrified",
@@ -740,7 +759,7 @@
     "thickness": "9mm"
   },
   {
-    "name": "surya",
+    "name": "SOLOGRES OCEAN",
     "size": "2x2",
     "finish": "Nano",
     "body": "Vetrified",
@@ -748,7 +767,7 @@
     "thickness": "9mm"
   },
   {
-    "name": "surya",
+    "name": "SOLOGRES ORCHID",
     "size": "2x2",
     "finish": "Nano",
     "body": "Vetrified",
@@ -756,7 +775,7 @@
     "thickness": "9mm"
   },
   {
-    "name": "surya",
+    "name": "SOLOGRES CADBURY",
     "size": "2x2",
     "finish": "Nano",
     "body": "Vetrified",
@@ -764,7 +783,7 @@
     "thickness": "9mm"
   },
   {
-    "name": "surya",
+    "name": "SOLOGRES SOLO WOOD",
     "size": "2x2",
     "finish": "Nano",
     "body": "Vetrified",
