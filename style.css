@@ -663,6 +663,10 @@ footer {
   font-size: 13px;
   color: #aaa;
 }
+.footer-bottom p a {
+  color: #aaa;
+  text-decoration: underline;
+}
 
 /* Responsive */
 @media (max-width: 768px) {
@@ -848,105 +852,146 @@ footer {
 }
 
 /* ================= OFFERS SECTION ================= */
-/* OFFER SECTION */
-
-.offers-section {
-  padding: 90px 20px;
+/* FULL SECTION */
+.offer-section {
+  position: relative;
+  padding: 100px 20px;
   text-align: center;
-  animation: offerSwap 0.5s infinite alternate;
-  transition: 0.5s;
+  color: #fff;
+  overflow: hidden;
+  background: #ffffff;
 }
 
-/* HEADING */
+.offer-container p {
+  color: #000;
+}
 
-.offer-content h2 {
-  font-size: 36px;
+/* ANIMATED GLOW BLOBS */
+.offer-section::before,
+.offer-section::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.6;
+  animation: moveGlow 8s infinite alternate ease-in-out;
+}
+
+.offer-section::before {
+  width: 400px;
+  height: 400px;
+  background: #ffffff40;
+  top: -100px;
+  left: -100px;
+}
+
+.offer-section::after {
+  width: 500px;
+  height: 500px;
+  background: #ffffff30;
+  bottom: -150px;
+  right: -150px;
+}
+
+/* CONTENT */
+.offer-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* TITLE */
+.offer-title {
+  font-size: 48px;
+  font-weight: 700;
   margin-bottom: 15px;
-  letter-spacing: 1px;
-  font-weight: bold;
-  color: #ffd60a;
-
-  text-shadow:
-    0 0 6px #ffd60a,
-    0 0 12px #ffd60a,
-    0 0 20px #ffea00;
-
-  animation: glow 2s infinite alternate;
 }
 
-/* TEXT */
-
-.offer-content p {
-  font-size: 18px;
-  margin: 10px 0;
-  font-weight: 500;
-}
-
-.offer-content p span {
-  color: red;
-}
-
-/* HIGHLIGHT */
-
-.offer-content span {
+/* MAIN TEXT */
+.offer-highlight {
   font-size: 22px;
-  font-weight: bold;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #000000;
 }
 
-/* NOTE */
-
-.offer-note {
-  font-size: 14px;
+/* SUB TEXT */
+.offer-subtitle {
+  font-size: 17px;
+  margin-bottom: 15px;
   opacity: 0.9;
 }
 
-/* BUTTON */
+/* URGENCY */
+.offer-urgency {
+  font-size: 14px;
+  margin-bottom: 35px;
+  opacity: 0.85;
+}
 
-.btn-offer {
+/* BUTTON */
+.offer-btn {
   display: inline-block;
-  margin-top: 25px;
-  padding: 12px 35px;
-  border-radius: 30px;
+  padding: 15px 40px;
+  border-radius: 50px;
+  background: #b984db;
+  color: #7209b7;
+  font-weight: 600;
   text-decoration: none;
-  font-weight: bold;
-  border: 2px solid white;
-  color: white;
+  position: relative;
+  overflow: hidden;
   transition: 0.3s;
 }
 
-.btn-offer:hover {
+/* BUTTON SHINE EFFECT */
+.offer-btn::before {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  top: 0;
+  left: -150px;
+  transform: skewX(-20deg);
+}
+
+/* HOVER */
+.offer-btn:hover::before {
+  animation: shine 0.8s;
+}
+
+.offer-btn:hover {
   transform: scale(1.08);
-  background: white;
-  color: #7209b7;
 }
 
-/* BACKGROUND COLOR ANIMATION */
-
-@keyframes offerSwap {
+/* ANIMATIONS */
+@keyframes shine {
   0% {
-    background: #7209b7;
-    color: white;
+    left: -150px;
   }
-
   100% {
-    background: #000;
-    color: white;
+    left: 120%;
   }
 }
 
-/* HEADING GLOW */
+@keyframes moveGlow {
+  from {
+    transform: translateY(0) translateX(0);
+  }
+  to {
+    transform: translateY(40px) translateX(40px);
+  }
+}
 
-@keyframes glow {
-  0% {
-    text-shadow:
-      0 0 6px #ffd60a,
-      0 0 12px #ffd60a;
+/* MOBILE */
+@media (max-width: 768px) {
+  .offer-title {
+    font-size: 32px;
   }
 
-  100% {
-    text-shadow:
-      0 0 10px red,
-      0 0 25px red;
+  .offer-highlight {
+    font-size: 18px;
   }
 }
 
