@@ -16,28 +16,6 @@ function calculateTiles() {
   }
 }
 
-function sendWhatsApp(product) {
-  let phone = "918110043001";
-  let url = `https://wa.me/${phone}?text=I want details about ${product}`;
-  window.open(url, "_blank");
-}
-
-function sendMessage(e) {
-  e.preventDefault();
-  let name = document.getElementById("name").value;
-  let phone = document.getElementById("phone").value;
-  let message = document.getElementById("message").value;
-
-  let url = `https://wa.me/918110043001?text=
-Name:${name}
-Phone:${phone}
-Message:${message}`;
-
-  window.open(url, "_blank");
-  document.getElementById("formResponse").innerText =
-    "Redirecting to WhatsApp...";
-}
-
 const backToTop = document.getElementById("backToTop");
 
 // Show button after scrolling 300px
@@ -68,5 +46,217 @@ window.addEventListener("scroll", () => {
   if (footerPosition < screenPosition - 100) {
     footer.style.opacity = "1";
     footer.style.transform = "translateY(0)";
+  }
+});
+
+// State to track each of the 3 cards independently
+const slideState = { "coll-1": 0, "coll-2": 0, "coll-3": 0 };
+const maxTiles = 5;
+
+/**
+ * coreMove: The actual sliding logic
+ * @param {string} id - The ID of the specific collection card (coll-1, coll-2, or coll-3)
+ * @param {number} direction - 1 for Next, -1 for Previous
+ */
+function coreMove(id, direction) {
+  // CRITICAL FIX: Only find the track INSIDE the card with the matching ID
+  const container = document.getElementById(id);
+  if (!container) return;
+
+  const track = container.querySelector(".slider-track");
+
+  // Update the specific index for this card
+  slideState[id] += direction;
+
+  // Loop logic
+  if (slideState[id] < 0) slideState[id] = maxTiles - 1;
+  if (slideState[id] >= maxTiles) slideState[id] = 0;
+
+  // Move only THIS track
+  const distance = slideState[id] * -100;
+  track.style.transform = `translateX(${distance}%)`;
+}
+
+// Manual Click Function (Stops auto-play so user can look at the tile)
+let autoIntervals = {};
+
+function manualMove(id, direction) {
+  clearInterval(autoIntervals[id]); // Stop auto-play for THIS card
+  coreMove(id, direction);
+
+  // Optional: Restart auto-play after 8 seconds of no clicking
+  setTimeout(() => startAutoForCard(id), 8000);
+}
+
+// Auto-Play Logic
+function startAutoForCard(id) {
+  clearInterval(autoIntervals[id]);
+  autoIntervals[id] = setInterval(() => {
+    coreMove(id, 1);
+  }, 4000); // 4 Seconds
+}
+
+// Initialize all cards on load
+window.onload = () => {
+  ["coll-1", "coll-2", "coll-3"].forEach((id) => startAutoForCard(id));
+};
+
+function startWeeklyCountdown() {
+  const cycle = 7 * 24 * 60 * 60 * 1000; // 7 Days
+  const baseDate = new Date("2026-01-05T00:00:00").getTime(); // Reference Monday
+
+  function update() {
+    const now = new Date().getTime();
+    const diff = now - baseDate;
+    const remaining = cycle - (diff % cycle);
+
+    const d = Math.floor(remaining / (1000 * 60 * 60 * 24));
+    const h = Math.floor(
+      (remaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
+    );
+    const m = Math.floor((remaining % (1000 * 60 * 60)) / (1000 * 60));
+    const s = Math.floor((remaining % (1000 * 60)) / 1000);
+
+    document.getElementById("days").innerText = d.toString().padStart(2, "0");
+    document.getElementById("hours").innerText = h.toString().padStart(2, "0");
+    document.getElementById("minutes").innerText = m
+      .toString()
+      .padStart(2, "0");
+    document.getElementById("seconds").innerText = s
+      .toString()
+      .padStart(2, "0");
+  }
+
+  setInterval(update, 1000);
+  update();
+}
+startWeeklyCountdown();
+
+document.addEventListener("DOMContentLoaded", function () {
+  function start7DayHook() {
+    // 1. Define 7 days in milliseconds
+    const sevenDays = 7 * 24 * 60 * 60 * 1000;
+
+    // 2. UPDATED REFERENCE: Setting this to TODAY (March 20, 2026)
+    // This ensures the countdown starts fresh from 7 days right now.
+    const startDate = new Date("2026-03-20T00:00:00").getTime();
+
+    function updateClock() {
+      const now = new Date().getTime();
+
+      // To prevent negative numbers if 'now' is slightly before 'startDate'
+      const passed = Math.max(0, now - startDate);
+
+      // The Math that forces the 7-day restart
+      const remaining = sevenDays - (passed % sevenDays);
+
+      // 3. Time Calculations
+      const d = Math.floor(remaining / (1000 * 60 * 60 * 24));
+      const h = Math.floor(
+        (remaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
+      );
+      const m = Math.floor((remaining % (1000 * 60 * 60)) / (1000 * 60));
+      const s = Math.floor((remaining % (1000 * 60)) / 1000);
+
+      // 4. Inject into HTML IDs
+      const elDays = document.getElementById("days");
+      const elHrs = document.getElementById("hours");
+      const elMin = document.getElementById("minutes");
+      const elSec = document.getElementById("seconds");
+
+      if (elDays) {
+        elDays.innerText = d.toString().padStart(2, "0");
+        elHrs.innerText = h.toString().padStart(2, "0");
+        elMin.innerText = m.toString().padStart(2, "0");
+        elSec.innerText = s.toString().padStart(2, "0");
+      }
+    }
+
+    updateClock();
+    setInterval(updateClock, 1000);
+  }
+
+  start7DayHook();
+});
+
+let slides = document.querySelectorAll(".slide");
+let dotsContainer = document.querySelector(".dots");
+let index = 0;
+
+/* CREATE DOTS */
+slides.forEach((_, i) => {
+  let dot = document.createElement("span");
+  dot.addEventListener("click", () => showSlide(i));
+  dotsContainer.appendChild(dot);
+});
+
+function showSlide(i) {
+  slides[index].classList.remove("active");
+  index = i;
+  slides[index].classList.add("active");
+  updateDots();
+}
+
+function nextSlide() {
+  slides[index].classList.remove("active");
+  index = (index + 1) % slides.length;
+  slides[index].classList.add("active");
+  updateDots();
+}
+
+function prevSlide() {
+  slides[index].classList.remove("active");
+  index = (index - 1 + slides.length) % slides.length;
+  slides[index].classList.add("active");
+  updateDots();
+}
+
+/* AUTO SLIDE */
+let auto = setInterval(nextSlide, 4000);
+
+/* DOT UPDATE */
+function updateDots() {
+  let dots = document.querySelectorAll(".dots span");
+  dots.forEach((dot) => dot.classList.remove("active"));
+  dots[index].classList.add("active");
+}
+
+updateDots();
+
+/* ARROW CLICK */
+document.getElementById("next").onclick = () => {
+  nextSlide();
+  resetAuto();
+};
+
+document.getElementById("prev").onclick = () => {
+  prevSlide();
+  resetAuto();
+};
+
+/* RESET AUTO TIMER */
+function resetAuto() {
+  clearInterval(auto);
+  auto = setInterval(nextSlide, 4000);
+}
+
+/* 🔥 SWIPE SUPPORT (MOBILE) */
+let startX = 0;
+
+const slider = document.querySelector(".slider");
+
+slider.addEventListener("touchstart", (e) => {
+  startX = e.touches[0].clientX;
+});
+
+slider.addEventListener("touchend", (e) => {
+  let endX = e.changedTouches[0].clientX;
+
+  if (startX - endX > 50) {
+    nextSlide(); // swipe left
+    resetAuto();
+  } else if (endX - startX > 50) {
+    prevSlide(); // swipe right
+    resetAuto();
   }
 });
