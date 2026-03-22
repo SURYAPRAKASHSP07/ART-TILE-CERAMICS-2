@@ -33,7 +33,73 @@
       </div>
     </header>
 
-    <section id="home" class="hero">
+<section id="home" class="hero">
+
+  <div class="slider">
+
+    <!-- SLIDE 1 -->
+    <div class="slide active">
+      <img src="Home.jpg" />
+      <div class="hero-content">
+        <h1>Art in Every Floor</h1>
+        <p>Premium quality • Best price • Fast delivery</p>
+        <a href="Tile Visualizer.html" class="btn">Click here to Visualize your room</a>
+      </div>
+    </div>
+
+    <!-- SLIDE 2 -->
+    <div class="slide">
+      <img src="carousel_Images/Slider_4.jpg">
+      <div class="hero-content">
+        <h1>Luxury Floor Tiles</h1>
+        <p>Elegant designs for modern homes</p>
+        <a href="#products" class="btn">Explore Collection</a>
+      </div>
+    </div>
+
+    <!-- SLIDE 3 -->
+    <div class="slide">
+      <img src="carousel_Images/Slider_2.jpeg">
+      <div class="hero-content">
+        <h1>Kitchen Wall Tiles</h1>
+        <p>Style your kitchen beautifully</p>
+        <a href="#products" class="btn">View Designs</a>
+      </div>
+    </div>
+
+    <!-- SLIDE 4 -->
+    <div class="slide">
+      <img src="carousel_Images/Slider_1.jpeg">
+      <div class="hero-content">
+        <h1>Bathroom Collection</h1>
+        <p>Comfort meets luxury</p>
+        <a href="#products" class="btn">Explore</a>
+      </div>
+    </div>
+
+    <!-- SLIDE 5 -->
+    <div class="slide">
+      <img src="carousel_Images/Slider_2.jpeg">
+      <div class="hero-content">
+        <h1>Elevation Tiles</h1>
+        <p>Premium exterior designs</p>
+        <a href="#products" class="btn">See More</a>
+      </div>
+    </div>
+
+  </div>
+  <!-- ARROWS -->
+<div class="arrows">
+  <span id="prev">&#10094;</span>
+  <span id="next">&#10095;</span>
+</div>
+
+  <!-- DOTS -->
+  <div class="dots"></div>
+
+</section>
+
+    <!-- <section id="home" class="hero">
       <div class="hero-content">
         <h1>Art in Every Floor</h1>
         <p>Premium quality • Best price • Fast delivery</p>
@@ -41,8 +107,9 @@
           >Click here to Visualize your room</a
         >
       </div>
-    </section>
+    </section> -->
 
+   <!-- ================= PRODUCTS SECTION ================= -->
     <section id="products">
       <h2>Tile Categories</h2>
       <div class="grid">
@@ -102,7 +169,7 @@
         </div>
         <div class="card">
           <img
-            src="Sanitary-Fittings.jpg"
+            src="Sanitary-Fittings.jpeg"
           />
           <h3>Sanitary Items</h3>
           <button>
@@ -112,111 +179,188 @@
       </div>
     </section>
 
-    <section class="best-selling">
-      <div class="section-header">
-        <h2>Best Sellings</h2>
-        <p>Top picks chosen by hundreds of happy customers</p>
-      </div>
 
-      <div class="best-grid">
-        <div class="best-card">
-          <span class="badge">🔥 Best Seller</span>
+   <!-- ================= BEST SELLING SECTION ================= -->
+<section class="best-selling-tiles">
+    <h2 class="main-heading">Best Selling Collections</h2>
 
-          <div class="img-wrap">
-            <img
-              src="Tile_Imgs/img_(12).jpg"
-              alt="Premium Floor Tile"
-            />
-          </div>
-
-          <div class="best-info">
-            <h3>Best Selling</h3>
-            <p>600x600mm • Matte Finish • 8mm</p>
-            <!-- <a href="#" class="btn-primary">View Details</a> -->
-          </div>
+    <div class="main-wrapper">
+        <div class="collection-box" id="coll-1">
+            <div class="slider-container">
+                <div class="slider-track">
+                    <div class="tile-unit">
+                        <img src="Tile_Imgs/img_(1).jpg" alt="Tile">
+                        <div class="info-tag"><h4>Statuario White</h4><p>60x120cm | Glossy</p></div>
+                    </div>
+                    <div class="tile-unit">
+                        <img src="Tile_Imgs/img_(2).jpg" alt="Tile">
+                        <div class="info-tag"><h4>Carrara Gold</h4><p>60x120cm | Polished</p></div>
+                    </div>
+                    <div class="tile-unit">
+                        <img src="Tile_Imgs/img_(3).jpg" alt="Tile">
+                        <div class="info-tag"><h4>Venato Grey</h4><p>80x160cm | High Gloss</p></div>
+                    </div>
+                    <div class="tile-unit">
+                        <img src="Tile_Imgs/img_(4).jpg" alt="Tile">
+                        <div class="info-tag"><h4>Black Marquina</h4><p>60x60cm | Mirror</p></div>
+                    </div>
+                    <div class="tile-unit">
+                        <img src="Tile_Imgs/img_(5).jpg" alt="Tile">
+                        <div class="info-tag"><h4>Onyx Sky</h4><p>120x120cm | Satin</p></div>
+                    </div>
+                </div>
+            </div>
+          <div class="collection-box" id="coll-1"> 
+    <div class="slider-container">
+        <div class="slider-track">
+            </div>
+    </div>
+    <div class="controls">
+        <button onclick="manualMove('coll-1', -1)">&#10094;</button>
+        <span class="label">Wooden Series</span>
+        <button onclick="manualMove('coll-1', 1)">&#10095;</button>
+    </div>
+</div>
         </div>
 
-        <div class="best-card">
-          <span class="badge trending">⭐ Trending</span>
-
-          <div class="img-wrap">
-            <img
-              src="Tile_Imgs/img_(14).jpg"
-              alt="Kitchen Wall Tile"
-            />
-          </div>
-
-          <div class="best-info">
-            <h3>Current Trending</h3>
-            <p>300x450mm • Glossy • Easy Clean</p>
-
-            <!-- <a href="#" class="btn-primary">View Details</a> -->
-          </div>
+        <div class="collection-box" id="coll-2">
+            <div class="slider-container">
+                <div class="slider-track">
+                    <div class="tile-unit">
+                        <img src="kitchen_wall_tile/Img_(1).jpg" alt="Tile">
+                        <div class="info-tag"><h4>Oak Wood</h4><p>20x120cm | Textured</p></div>
+                    </div>
+                    <div class="tile-unit">
+                        <img src="kitchen_wall_tile/Img_(2).jpg" alt="Tile">
+                        <div class="info-tag"><h4>Pine Plank</h4><p>20x100cm | Matte</p></div>
+                    </div>
+                    <div class="tile-unit">
+                        <img src="kitchen_wall_tile/Img_(3).jpg" alt="Tile">
+                        <div class="info-tag"><h4>Walnut Dark</h4><p>20x120cm | Rustic</p></div>
+                    </div>
+                    <div class="tile-unit">
+                        <img src="kitchen_wall_tile/Img_(4).jpg" alt="Tile">
+                        <div class="info-tag"><h4>Teak Classic</h4><p>15x90cm | Natural</p></div>
+                    </div>
+                    <div class="tile-unit">
+                        <img src="kitchen_wall_tile/Img_(5).jpg" alt="Tile">
+                        <div class="info-tag"><h4>Cedar Ash</h4><p>20x120cm | Soft Touch</p></div>
+                    </div>
+                </div>
+            </div>
+            <div class="collection-box" id="coll-2"> 
+    <div class="slider-container">
+        <div class="slider-track">
+            </div>
+    </div>
+    <div class="controls">
+        <button onclick="manualMove('coll-2', -1)">&#10094;</button>
+        <span class="label">Wooden Series</span>
+        <button onclick="manualMove('coll-2', 1)">&#10095;</button>
+    </div>
+</div>
         </div>
 
-        <div class="best-card">
-          <span class="badge premium">💎 Premium Pick</span>
-
-          <div class="img-wrap">
-            <img
-              src="Tile_Imgs/img_(18).jpg"
-              alt="Elevation Tile"
-            />
-          </div>
-
-          <div class="best-info">
-            <h3>New Arrival</h3>
-            <p>Stone Finish • Exterior Use</p>
-            <!-- <a href="#" class="btn-primary">View Details</a> -->
-          </div>
+        <div class="collection-box" id="coll-3">
+            <div class="slider-container">
+                <div class="slider-track">
+                    <div class="tile-unit">
+                        <img src="stanza_tile_4-2_glossy/Tile_(1).jpeg" alt="Tile">
+                        <div class="info-tag"><h4>Cement Grey</h4><p>60x60cm | Anti-skid</p></div>
+                    </div>
+                    <div class="tile-unit">
+                        <img src="stanza_tile_4-2_glossy/Tile_(2).jpeg" alt="Tile">
+                        <div class="info-tag"><h4>Basalt Rock</h4><p>30x60cm | Flamed</p></div>
+                    </div>
+                    <div class="tile-unit">
+                        <img src="stanza_tile_4-2_glossy/Tile_(3).jpeg" alt="Tile">
+                        <div class="info-tag"><h4>Urban Slate</h4><p>60x120cm | Lappato</p></div>
+                    </div>
+                    <div class="tile-unit">
+                        <img src="stanza_tile_4-2_glossy/Tile_(4).jpeg" alt="Tile">
+                        <div class="info-tag"><h4>Sandstone Beige</h4><p>60x60cm | Matte</p></div>
+                    </div>
+                    <div class="tile-unit">
+                        <img src="stanza_tile_4-2_glossy/Tile_(5).jpeg" alt="Tile">
+                        <div class="info-tag"><h4>Coal Anthracite</h4><p>60x120cm | Structured</p></div>
+                    </div>
+                </div>
+            </div>
+          <div class="collection-box" id="coll-3"> 
+    <div class="slider-container">
+        <div class="slider-track">
+            </div>
+    </div>
+    <div class="controls">
+        <button onclick="manualMove('coll-3', -1)">&#10094;</button>
+        <span class="label">Wooden Series</span>
+        <button onclick="manualMove('coll-3', 1)">&#10095;</button>
+    </div>
+</div>
         </div>
-      </div>
-    </section>
+    </div>
+</section>
 
-    <!-- ================= OFFERS SECTION ================= -->
+   <!-- ================= OFFER SECTION ================= -->
 <section class="offer-section">
-    <div class="offer-container">
+    <div class="offer-glass-card">
+        <div class="promo-badge"> Offer Zone | Limited Time</div>
+        
+        <div class="offer-content">
+            <h3 class="offer-highlight">
+                Get <span class="text-gradient">GUARANTEED BEST PRICE</span> on selected Floor & Wall Tiles
+            </h3>
 
-        <h2 class="offer-title">🔥 Offer Zone</h2>
+            <p class="offer-subtitle">
+                Upgrade your space with premium quality tiles at unbeatable prices.
+            </p>
+             <div class="countdown-container">
+            <p class="timer-label">OFFER EXPIRES IN:</p>
+            <div id="countdown" class="timer-grid">
+            <div class="time-box">
+                <span id="days">07</span>
+                <small>Days</small>
+            </div>
+            <div class="time-box">
+                <span id="hours">00</span>
+                <small>Hrs</small>
+            </div>
+            <div class="time-box">
+                <span id="minutes">00</span>
+                <small>Min</small>
+            </div>
+            <div class="time-box">
+                <span id="seconds">00</span>
+                <small>Sec</small>
+            </div>
+        </div>
+        </div>
 
-        <p class="offer-highlight">
-            Get ALL TIME BEST PRICE on selected Floor & Wall Tiles
-        </p>
-
-        <p class="offer-subtitle">
-            Upgrade your space with premium quality tiles at unbeatable prices.
-        </p>
-
-        <p class="offer-urgency">
-            ⏳ Limited Stock Available • Offer Valid Till Stocks Last
-        </p>
-
-        <a href="#" class="offer-btn">Grab Offer Now 🚀</a>
-
+            <div class="offer-footer">
+                <p class="offer-urgency">
+                    <span class="pulse-icon">⏳</span> Limited Stock Available • Offer Valid Till Stocks Last
+                </p>
+                <a href="#" class="offer-btn">Grab Offer Now 🚀</a>
+            </div>
+        </div>
     </div>
 </section>
 
    <!-- ================= About Us SECTION ================= -->
-<section class="about-section">
+<section class="about-section" id="about">
     <div class="about-container">
 
         <h2 style="color: white;">About Us</h2>
 
-        <p>
-            At our<span class="highlight"> Art Tile Ceramics</span>, we don’t just sell tiles… 
-            <span class="tamil">நாங்கள் உங்கள் வீட்டின் கனவுகளை கட்டுகிறோம்.</span>
+        <p><span class="highlight"> Art Tile Ceramics</span><p class="tamil" style="margin-top:25px; font-weight: bolder;font-size: larger;">
+            உங்கள் வீட்டை அழகாக மாற்றும் ஒவ்வொரு தேர்விலும், நாங்கள் உங்களுடன் இருக்கிறோம்.
+        </p>
         </p>
 
         <p>
             Every home has a story. From the first step you take inside… 
             to the walls that hold your memories — tiles are not just materials, 
             they are part of your life journey.
-        </p>
-
-        <p>
-            <span class="highlight">Quality-யும், Style-யும், Durability-யும்</span> combine ஆகும் இடம் தான் நாங்கள்.  
-            We carefully select every design to match your taste — whether it’s 
-            modern, traditional, or luxury.
         </p>
 
         <div class="quote">
@@ -230,9 +374,7 @@
             <div class="belief-item">🏡 We design spaces, not just surfaces</div>
         </div>
 
-        <p class="tamil" style="margin-top:25px; font-weight: bolder;font-size: larger;">
-            உங்கள் வீட்டை அழகாக மாற்றும் ஒவ்வொரு தேர்விலும், நாங்கள் உங்களுடன் இருக்கிறோம்.
-        </p>
+        
 
     </div>
 </section>
