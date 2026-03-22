@@ -101,87 +101,48 @@ window.onload = () => {
   ["coll-1", "coll-2", "coll-3"].forEach((id) => startAutoForCard(id));
 };
 
-function startWeeklyCountdown() {
-  const cycle = 7 * 24 * 60 * 60 * 1000; // 7 Days
-  const baseDate = new Date("2026-01-05T00:00:00").getTime(); // Reference Monday
-
-  function update() {
-    const now = new Date().getTime();
-    const diff = now - baseDate;
-    const remaining = cycle - (diff % cycle);
-
-    const d = Math.floor(remaining / (1000 * 60 * 60 * 24));
-    const h = Math.floor(
-      (remaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
-    );
-    const m = Math.floor((remaining % (1000 * 60 * 60)) / (1000 * 60));
-    const s = Math.floor((remaining % (1000 * 60)) / 1000);
-
-    document.getElementById("days").innerText = d.toString().padStart(2, "0");
-    document.getElementById("hours").innerText = h.toString().padStart(2, "0");
-    document.getElementById("minutes").innerText = m
-      .toString()
-      .padStart(2, "0");
-    document.getElementById("seconds").innerText = s
-      .toString()
-      .padStart(2, "0");
-  }
-
-  setInterval(update, 1000);
-  update();
-}
-startWeeklyCountdown();
-
 document.addEventListener("DOMContentLoaded", function () {
-  function start7DayHook() {
-    // 1. Define 7 days in milliseconds
-    const sevenDays = 7 * 24 * 60 * 60 * 1000;
+  // 1. Clear any existing timers to prevent "fighting" (The Blinking Fix)
+  if (window.countdownTimer) clearInterval(window.countdownTimer);
 
-    // 2. UPDATED REFERENCE: Setting this to TODAY (March 20, 2026)
-    // This ensures the countdown starts fresh from 7 days right now.
-    const startDate = new Date("2026-03-20T00:00:00").getTime();
+  function start7DayHook() {
+    const sevenDays = 7 * 24 * 60 * 60 * 1000;
+    // Setting start to a Monday (March 16, 2026) so the cycle feels natural
+    const startDate = new Date("2026-03-16T00:00:00").getTime();
+
+    const elDays = document.getElementById("days");
+    const elHrs = document.getElementById("hours");
+    const elMin = document.getElementById("minutes");
+    const elSec = document.getElementById("seconds");
 
     function updateClock() {
       const now = new Date().getTime();
-
-      // To prevent negative numbers if 'now' is slightly before 'startDate'
-      const passed = Math.max(0, now - startDate);
-
-      // The Math that forces the 7-day restart
+      const passed = now - startDate;
       const remaining = sevenDays - (passed % sevenDays);
 
-      // 3. Time Calculations
-      const d = Math.floor(remaining / (1000 * 60 * 60 * 24));
+      // Calculations
+      const d = Math.floor((remaining * 20) / (1000 * 60 * 60 * 24));
       const h = Math.floor(
         (remaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
       );
       const m = Math.floor((remaining % (1000 * 60 * 60)) / (1000 * 60));
       const s = Math.floor((remaining % (1000 * 60)) / 1000);
 
-      // 4. Inject into HTML IDs
-      const elDays = document.getElementById("days");
-      const elHrs = document.getElementById("hours");
-      const elMin = document.getElementById("minutes");
-      const elSec = document.getElementById("seconds");
-
-      if (elDays) {
+      // Only update the text if it has actually changed (Prevents Flickering)
+      if (elDays && elDays.innerText !== d.toString()) {
         elDays.innerText = d.toString().padStart(2, "0");
-        elHrs.innerText = h.toString().padStart(2, "0");
-        elMin.innerText = m.toString().padStart(2, "0");
-        elSec.innerText = s.toString().padStart(2, "0");
       }
+      if (elHrs) elHrs.innerText = h.toString().padStart(2, "0");
+      if (elMin) elMin.innerText = m.toString().padStart(2, "0");
+      if (elSec) elSec.innerText = s.toString().padStart(2, "0");
     }
 
     updateClock();
-    setInterval(updateClock, 1000);
+    window.countdownTimer = setInterval(updateClock, 1000);
   }
 
   start7DayHook();
 });
-
-let slides = document.querySelectorAll(".slide");
-let dotsContainer = document.querySelector(".dots");
-let index = 0;
 
 /* CREATE DOTS */
 slides.forEach((_, i) => {
@@ -260,3 +221,88 @@ slider.addEventListener("touchend", (e) => {
     resetAuto();
   }
 });
+
+// COUNTDOWN STARTS HERE
+// function startWeeklyCountdown() {
+//   const cycle = 7 * 24 * 60 * 60 * 1000; // 7 Days
+//   const baseDate = new Date("2026-01-05T00:00:00").getTime(); // Reference Monday
+
+//   function update() {
+//     const now = new Date().getTime();
+//     const diff = now - baseDate;
+//     const remaining = cycle - (diff % cycle);
+
+//     const d = Math.floor(remaining / (1000 * 60 * 60 * 24));
+//     const h = Math.floor(
+//       (remaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
+//     );
+//     const m = Math.floor((remaining % (1000 * 60 * 60)) / (1000 * 60));
+//     const s = Math.floor((remaining % (1000 * 60)) / 1000);
+
+//     document.getElementById("days").innerText = d.toString().padStart(2, "0");
+//     document.getElementById("hours").innerText = h.toString().padStart(2, "0");
+//     document.getElementById("minutes").innerText = m
+//       .toString()
+//       .padStart(2, "0");
+//     document.getElementById("seconds").innerText = s
+//       .toString()
+//       .padStart(2, "0");
+//   }
+
+//   setInterval(update, 1000);
+//   update();
+// }
+// startWeeklyCountdown();
+
+// document.addEventListener("DOMContentLoaded", function () {
+//   function start7DayHook() {
+//     // 1. Define 7 days in milliseconds
+//     const sevenDays = 7 * 24 * 60 * 60 * 1000;
+
+//     // 2. UPDATED REFERENCE: Setting this to TODAY (March 20, 2026)
+//     // This ensures the countdown starts fresh from 7 days right now.
+//     const startDate = new Date("2026-03-20T00:00:00").getTime();
+
+//     function updateClock() {
+//       const now = new Date().getTime();
+
+//       // To prevent negative numbers if 'now' is slightly before 'startDate'
+//       const passed = Math.max(0, now - startDate);
+
+//       // The Math that forces the 7-day restart
+//       const remaining = sevenDays - (passed % sevenDays);
+
+//       // 3. Time Calculations
+//       const d = Math.floor(remaining / (1000 * 60 * 60 * 24));
+//       const h = Math.floor(
+//         (remaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
+//       );
+//       const m = Math.floor((remaining % (1000 * 60 * 60)) / (1000 * 60));
+//       const s = Math.floor((remaining % (1000 * 60)) / 1000);
+
+//       // 4. Inject into HTML IDs
+//       const elDays = document.getElementById("days");
+//       const elHrs = document.getElementById("hours");
+//       const elMin = document.getElementById("minutes");
+//       const elSec = document.getElementById("seconds");
+
+//       if (elDays) {
+//         elDays.innerText = d.toString().padStart(2, "0");
+//         elHrs.innerText = h.toString().padStart(2, "0");
+//         elMin.innerText = m.toString().padStart(2, "0");
+//         elSec.innerText = s.toString().padStart(2, "0");
+//       }
+//     }
+
+//     updateClock();
+//     setInterval(updateClock, 1000);
+//   }
+
+//   start7DayHook();
+// });
+
+// let slides = document.querySelectorAll(".slide");
+// let dotsContainer = document.querySelector(".dots");
+// let index = 0;
+
+// COUNTDOWN ENDS HERE
