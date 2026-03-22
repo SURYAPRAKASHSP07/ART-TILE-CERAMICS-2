@@ -1244,7 +1244,7 @@ footer {
 .timer-grid {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 25px;
   margin: 30px 0;
 }
 
@@ -1256,7 +1256,7 @@ footer {
 }
 
 .time-box span {
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: 900;
   color: var(--primary);
   line-height: 1;
@@ -1268,6 +1268,19 @@ footer {
   color: #666;
   text-transform: uppercase;
   margin-top: 8px;
+}
+
+@media (max-width: 900px) {
+}
+
+@media (max-width: 500px) {
+  .timer-grid {
+    gap: 15px;
+    margin: 20px 0;
+  }
+  .time-box span {
+    font-size: 2rem;
+  }
 }
 
 /* .text-gradient {
