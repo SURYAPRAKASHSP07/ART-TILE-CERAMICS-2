@@ -1244,7 +1244,7 @@ footer {
 .timer-grid {
   display: flex;
   justify-content: center;
-  gap: 25px;
+  gap: 20px;
   margin: 30px 0;
 }
 
@@ -1256,7 +1256,7 @@ footer {
 }
 
 .time-box span {
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 900;
   color: var(--primary);
   line-height: 1;
