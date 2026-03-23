@@ -121,7 +121,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const remaining = sevenDays - (passed % sevenDays);
 
       // Calculations
-      const d = Math.floor((remaining * 20) / (1000 * 60 * 60 * 24));
+      const d = Math.floor(remaining / (1000 * 60 * 60 * 24));
       const h = Math.floor(
         (remaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
       );
@@ -143,6 +143,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
   start7DayHook();
 });
+
+let slides = document.querySelectorAll(".slide");
+let dotsContainer = document.querySelector(".dots");
+let index = 0;
 
 /* CREATE DOTS */
 slides.forEach((_, i) => {
@@ -183,17 +187,6 @@ function updateDots() {
 }
 
 updateDots();
-
-/* ARROW CLICK */
-document.getElementById("next").onclick = () => {
-  nextSlide();
-  resetAuto();
-};
-
-document.getElementById("prev").onclick = () => {
-  prevSlide();
-  resetAuto();
-};
 
 /* RESET AUTO TIMER */
 function resetAuto() {
@@ -300,9 +293,5 @@ slider.addEventListener("touchend", (e) => {
 
 //   start7DayHook();
 // });
-
-// let slides = document.querySelectorAll(".slide");
-// let dotsContainer = document.querySelector(".dots");
-// let index = 0;
 
 // COUNTDOWN ENDS HERE
