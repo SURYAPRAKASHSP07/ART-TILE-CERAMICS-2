@@ -312,41 +312,6 @@ section {
   }
 }
 
-/* ARROWS */
-.arrows span {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 30px;
-  color: white;
-  background: rgba(0, 0, 0, 0.4);
-  padding: 10px 15px;
-  cursor: pointer;
-  border-radius: 50%;
-  z-index: 5;
-  transition: 0.3s;
-}
-
-#prev {
-  left: 20px;
-}
-#next {
-  right: 20px;
-}
-
-.arrows span:hover {
-  background: #7209b7;
-  transform: translateY(-50%) scale(1.1);
-}
-
-/* MOBILE */
-@media (max-width: 768px) {
-  .arrows span {
-    font-size: 22px;
-    padding: 8px 12px;
-  }
-}
-
 /* SECTION */
 section {
   padding: 70px 20px;
