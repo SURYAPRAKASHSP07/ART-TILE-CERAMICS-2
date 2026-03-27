@@ -1047,7 +1047,7 @@ footer {
 
 .offer-section {
   padding: 100px 20px;
-  background: radial-gradient(circle at center, #fdfaff 0%, #ffffff 100%);
+  background: radial-gradient(circle at center, #eae0f3 0%, #fcfbfc 100%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1061,7 +1061,7 @@ footer {
   width: 100%;
   background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(10px);
-  border: 5px solid rgba(185, 132, 219, 0.3);
+  border: 2px solid red;
   border-radius: 40px;
   padding: 60px 40px;
   text-align: center;
@@ -1088,7 +1088,7 @@ footer {
   left: 50%;
   transform: translateX(-50%);
   background: white;
-  outline: 1px solid red;
+  outline: 2px solid red;
   color: red;
   padding: 6px 20px;
   border-radius: 50px;
@@ -1115,9 +1115,7 @@ footer {
 
 /* Gradient Text Effect */
 .text-gradient {
-  color: #7209b7;
-  /* background: linear-gradient(90deg, var(--primary), var(--light));
-  -webkit-text-fill-color: transparent; */
+  color: red;
 }
 
 .offer-subtitle {
@@ -1137,7 +1135,7 @@ footer {
 
 .offer-urgency {
   font-weight: 600;
-  color: #d00000; /* Contrast color for urgency */
+  color: red; /* Contrast color for urgency */
   font-size: 0.95rem;
   display: flex;
   align-items: center;
