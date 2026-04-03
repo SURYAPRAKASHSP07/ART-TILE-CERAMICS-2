@@ -719,7 +719,7 @@
     "thickness": "9mm"
   },
   {
-    "name": "SOLOSTONE CIAZ NERO",
+    "name": "",
     "size": "4x2",
     "finish": "Matt",
     "body": "Vetrified",
@@ -727,67 +727,491 @@
     "thickness": "9mm"
   },
   {
-    "name": "SOLOGRES IVORY",
+    "name": "",
     "size": "2x2",
     "finish": "Nano",
     "body": "Vetrified",
-    "image": "stanza_tile_2-2_nano/Screenshot_14-3-2026_16443_.jpeg",
-    "thickness": "9mm"
+    "image": "stanza_tile_2-2_nano/1.jpeg",
+    "thickness": "6mm"
   },
   {
-    "name": "SOLOGRES DYNA",
+    "name": "",
     "size": "2x2",
     "finish": "Nano",
     "body": "Vetrified",
-    "image": "stanza_tile_2-2_nano/Screenshot_14-3-2026_164413_.jpeg",
-    "thickness": "9mm"
+    "image": "stanza_tile_2-2_nano/2.jpg",
+    "thickness": "6mm"
   },
   {
-    "name": "SOLOGRES FEATHER",
+    "name": "",
     "size": "2x2",
     "finish": "Nano",
     "body": "Vetrified",
-    "image": "stanza_tile_2-2_nano/Screenshot_14-3-2026_164422_.jpeg",
-    "thickness": "9mm"
+    "image": "stanza_tile_2-2_nano/3.jpeg",
+    "thickness": "6mm"
   },
   {
-    "name": "SOLOGRES GALAXY BLUE",
+    "name": "",
     "size": "2x2",
     "finish": "Nano",
     "body": "Vetrified",
-    "image": "stanza_tile_2-2_nano/Screenshot_14-3-2026_164432_.jpeg",
-    "thickness": "9mm"
+    "image": "stanza_tile_2-2_nano/4.jpg",
+    "thickness": "6mm"
   },
   {
-    "name": "SOLOGRES OCEAN",
+    "name": "",
     "size": "2x2",
     "finish": "Nano",
     "body": "Vetrified",
-    "image": "stanza_tile_2-2_nano/Screenshot_14-3-2026_164446_.jpeg",
-    "thickness": "9mm"
+    "image": "stanza_tile_2-2_nano/5.jpeg",
+    "thickness": "6mm"
   },
   {
-    "name": "SOLOGRES ORCHID",
+    "name": "",
     "size": "2x2",
     "finish": "Nano",
     "body": "Vetrified",
-    "image": "stanza_tile_2-2_nano/Screenshot_14-3-2026_164458_.jpeg",
-    "thickness": "9mm"
+    "image": "stanza_tile_2-2_nano/6.jpg",
+    "thickness": "6mm"
   },
   {
-    "name": "SOLOGRES CADBURY",
+    "name": "",
     "size": "2x2",
     "finish": "Nano",
     "body": "Vetrified",
-    "image": "stanza_tile_2-2_nano/Screenshot_14-3-2026_164510_.jpeg",
-    "thickness": "9mm"
+    "image": "stanza_tile_2-2_nano/7.jpg",
+    "thickness": "6mm"
   },
   {
-    "name": "SOLOGRES SOLO WOOD",
+    "name": "",
     "size": "2x2",
     "finish": "Nano",
     "body": "Vetrified",
-    "image": "stanza_tile_2-2_nano/Screenshot_14-3-2026_164520_.jpeg",
-    "thickness": "9mm"
+    "image": "stanza_tile_2-2_nano/8.jpg",
+    "thickness": "6mm"
+  },
+  {
+    "name": "",
+    "size": "2x2",
+    "finish": "Nano",
+    "body": "Vetrified",
+    "image": "stanza_tile_2-2_nano/9.jpg",
+    "thickness": "6mm"
+  },
+  {
+    "name": "",
+    "size": "2x2",
+    "finish": "Nano",
+    "body": "Vetrified",
+    "image": "stanza_tile_2-2_nano/10.jpg",
+    "thickness": "6mm"
+  },
+  {
+    "name": "",
+    "size": "2x2",
+    "finish": "Nano",
+    "body": "Vetrified",
+    "image": "stanza_tile_2-2_nano/11.jpeg",
+    "thickness": "6mm"
+  },
+  {
+    "name": "",
+    "size": "2x2",
+    "finish": "Nano",
+    "body": "Vetrified",
+    "image": "stanza_tile_2-2_nano/12.jpg",
+    "thickness": "6mm"
+  },
+  {
+    "name": "",
+    "size": "2x2",
+    "finish": "Nano",
+    "body": "Vetrified",
+    "image": "stanza_tile_2-2_nano/13.jpg",
+    "thickness": "6mm"
+  },
+  {
+    "name": "",
+    "size": "2x2",
+    "finish": "Nano",
+    "body": "Vetrified",
+    "image": "stanza_tile_2-2_nano/14.jpg",
+    "thickness": "6mm"
+  },
+  {
+    "name": "",
+    "size": "2x2",
+    "finish": "Nano",
+    "body": "Vetrified",
+    "image": "stanza_tile_2-2_nano/15.jpg",
+    "thickness": "6mm"
+  },
+  {
+    "name": "",
+    "size": "2x2",
+    "finish": "Nano",
+    "body": "Vetrified",
+    "image": "stanza_tile_2-2_nano/16.jpg",
+    "thickness": "6mm"
+  },
+  {
+    "name": "",
+    "size": "2x2",
+    "finish": "Nano",
+    "body": "Vetrified",
+    "image": "stanza_tile_2-2_nano/17.jpg",
+    "thickness": "6mm"
+  },
+  {
+    "name": "",
+    "size": "2x2",
+    "finish": "Nano",
+    "body": "Vetrified",
+    "image": "stanza_tile_2-2_nano/18.jpg",
+    "thickness": "6mm"
+  },
+  {
+    "name": "",
+    "size": "2x2",
+    "finish": "Nano",
+    "body": "Vetrified",
+    "image": "stanza_tile_2-2_nano/19.jpg",
+    "thickness": "6mm"
+  },
+  {
+    "name": "",
+    "size": "2x2",
+    "finish": "Nano",
+    "body": "Vetrified",
+    "image": "stanza_tile_2-2_nano/20.jpg",
+    "thickness": "6mm"
+  },
+  {
+    "name": "",
+    "size": "2x2",
+    "finish": "Nano",
+    "body": "Vetrified",
+    "image": "stanza_tile_2-2_nano/21.jpeg",
+    "thickness": "6mm"
+  },
+  {
+    "name": "",
+    "size": "2x2",
+    "finish": "Nano",
+    "body": "Vetrified",
+    "image": "stanza_tile_2-2_nano/22.jpg",
+    "thickness": "6mm"
+  },
+  {
+    "name": "",
+    "size": "2x2",
+    "finish": "Nano",
+    "body": "Vetrified",
+    "image": "stanza_tile_2-2_nano/23.jpg",
+    "thickness": "6mm"
+  },
+  {
+    "name": "",
+    "size": "2x2",
+    "finish": "Nano",
+    "body": "Vetrified",
+    "image": "stanza_tile_2-2_nano/24.jpg",
+    "thickness": "6mm"
+  },
+  {
+    "name": "",
+    "size": "2x2",
+    "finish": "Nano",
+    "body": "Vetrified",
+    "image": "stanza_tile_2-2_nano/25.jpg",
+    "thickness": "6mm"
+  },
+  {
+    "name": "",
+    "size": "2x2",
+    "finish": "Nano",
+    "body": "Vetrified",
+    "image": "stanza_tile_2-2_nano/26.jpg",
+    "thickness": "6mm"
+  },
+  {
+    "name": "",
+    "size": "2x2",
+    "finish": "Nano",
+    "body": "Vetrified",
+    "image": "stanza_tile_2-2_nano/27.jpg",
+    "thickness": "6mm"
+  },
+  {
+    "name": "",
+    "size": "2x2",
+    "finish": "Nano",
+    "body": "Vetrified",
+    "image": "stanza_tile_2-2_nano/28.jpg",
+    "thickness": "6mm"
+  },
+  {
+    "name": "",
+    "size": "2x2",
+    "finish": "Nano",
+    "body": "Vetrified",
+    "image": "stanza_tile_2-2_nano/29.jpg",
+    "thickness": "6mm"
+  },
+  {
+    "name": "",
+    "size": "2x2",
+    "finish": "Nano",
+    "body": "Vetrified",
+    "image": "stanza_tile_2-2_nano/30.jpg",
+    "thickness": "6mm"
+  },
+  {
+    "name": "",
+    "size": "2x2",
+    "finish": "Nano",
+    "body": "Vetrified",
+    "image": "stanza_tile_2-2_nano/31.jpg",
+    "thickness": "6mm"
+  },
+  {
+    "name": "",
+    "size": "2x2",
+    "finish": "Nano",
+    "body": "Vetrified",
+    "image": "stanza_tile_2-2_nano/32.jpg",
+    "thickness": "6mm"
+  },
+  {
+    "name": "",
+    "size": "2x2",
+    "finish": "Nano",
+    "body": "Vetrified",
+    "image": "stanza_tile_2-2_nano/33.jpeg",
+    "thickness": "6mm"
+  },
+  {
+    "name": "",
+    "size": "2x2",
+    "finish": "Nano",
+    "body": "Vetrified",
+    "image": "stanza_tile_2-2_nano/34.jpg",
+    "thickness": "6mm"
+  },
+  {
+    "name": "",
+    "size": "2x2",
+    "finish": "Nano",
+    "body": "Vetrified",
+    "image": "stanza_tile_2-2_nano/35.jpg",
+    "thickness": "6mm"
+  },
+  {
+    "name": "",
+    "size": "2x2",
+    "finish": "Nano",
+    "body": "Vetrified",
+    "image": "stanza_tile_2-2_nano/36.jpg",
+    "thickness": "6mm"
+  },
+  {
+    "name": "",
+    "size": "2x2",
+    "finish": "Nano",
+    "body": "Vetrified",
+    "image": "stanza_tile_2-2_nano/37.jpg",
+    "thickness": "6mm"
+  },
+  {
+    "name": "",
+    "size": "2x2",
+    "finish": "Nano",
+    "body": "Vetrified",
+    "image": "stanza_tile_2-2_nano/38.jpg",
+    "thickness": "6mm"
+  },
+  {
+    "name": "",
+    "size": "2x2",
+    "finish": "Nano",
+    "body": "Vetrified",
+    "image": "stanza_tile_2-2_nano/39.jpg",
+    "thickness": "6mm"
+  },
+  {
+    "name": "",
+    "size": "2x2",
+    "finish": "Nano",
+    "body": "Vetrified",
+    "image": "stanza_tile_2-2_nano/40.jpg",
+    "thickness": "6mm"
+  },
+  {
+    "name": "",
+    "size": "2x2",
+    "finish": "Nano",
+    "body": "Vetrified",
+    "image": "stanza_tile_2-2_nano/41.jpg",
+    "thickness": "6mm"
+  },
+  {
+    "name": "",
+    "size": "2x2",
+    "finish": "Nano",
+    "body": "Vetrified",
+    "image": "stanza_tile_2-2_nano/42.jpg",
+    "thickness": "6mm"
+  },
+  {
+    "name": "",
+    "size": "2x2",
+    "finish": "Nano",
+    "body": "Vetrified",
+    "image": "stanza_tile_2-2_nano/43.jpg",
+    "thickness": "6mm"
+  },
+  {
+    "name": "",
+    "size": "2x2",
+    "finish": "Nano",
+    "body": "Vetrified",
+    "image": "stanza_tile_2-2_nano/44.jpg",
+    "thickness": "6mm"
+  },
+  {
+    "name": "",
+    "size": "2x2",
+    "finish": "Nano",
+    "body": "Vetrified",
+    "image": "stanza_tile_2-2_nano/45.jpg",
+    "thickness": "6mm"
+  },
+  {
+    "name": "",
+    "size": "2x2",
+    "finish": "Nano",
+    "body": "Vetrified",
+    "image": "stanza_tile_2-2_nano/46.jpg",
+    "thickness": "6mm"
+  },
+  {
+    "name": "",
+    "size": "2x2",
+    "finish": "Nano",
+    "body": "Vetrified",
+    "image": "stanza_tile_2-2_nano/47.jpg",
+    "thickness": "6mm"
+  },
+  {
+    "name": "",
+    "size": "2x2",
+    "finish": "Nano",
+    "body": "Vetrified",
+    "image": "stanza_tile_2-2_nano/48.jpg",
+    "thickness": "6mm"
+  },
+  {
+    "name": "",
+    "size": "2x2",
+    "finish": "Nano",
+    "body": "Vetrified",
+    "image": "stanza_tile_2-2_nano/49.jpg",
+    "thickness": "6mm"
+  },
+  {
+    "name": "",
+    "size": "2x2",
+    "finish": "Nano",
+    "body": "Vetrified",
+    "image": "stanza_tile_2-2_nano/50.jpg",
+    "thickness": "6mm"
+  },
+  {
+    "name": "",
+    "size": "2x2",
+    "finish": "Nano",
+    "body": "Vetrified",
+    "image": "stanza_tile_2-2_nano/51.jpg",
+    "thickness": "6mm"
+  },
+  {
+    "name": "",
+    "size": "2x2",
+    "finish": "Nano",
+    "body": "Vetrified",
+    "image": "stanza_tile_2-2_nano/52.jpg",
+    "thickness": "6mm"
+  },
+  {
+    "name": "",
+    "size": "2x2",
+    "finish": "Nano",
+    "body": "Vetrified",
+    "image": "stanza_tile_2-2_nano/53.jpg",
+    "thickness": "6mm"
+  },
+  {
+    "name": "",
+    "size": "2x2",
+    "finish": "Nano",
+    "body": "Vetrified",
+    "image": "stanza_tile_2-2_nano/54.jpeg",
+    "thickness": "6mm"
+  },
+  {
+    "name": "",
+    "size": "2x2",
+    "finish": "Nano",
+    "body": "Vetrified",
+    "image": "stanza_tile_2-2_nano/55.jpeg",
+    "thickness": "6mm"
+  },
+  {
+    "name": "",
+    "size": "2x2",
+    "finish": "Nano",
+    "body": "Vetrified",
+    "image": "stanza_tile_2-2_nano/56.jpg",
+    "thickness": "6mm"
+  },
+  {
+    "name": "",
+    "size": "2x2",
+    "finish": "Nano",
+    "body": "Vetrified",
+    "image": "stanza_tile_2-2_nano/57.jpg",
+    "thickness": "6mm"
+  },
+  {
+    "name": "",
+    "size": "2x2",
+    "finish": "Nano",
+    "body": "Vetrified",
+    "image": "stanza_tile_2-2_nano/58.jpeg",
+    "thickness": "6mm"
+  },
+  {
+    "name": "",
+    "size": "2x2",
+    "finish": "Nano",
+    "body": "Vetrified",
+    "image": "stanza_tile_2-2_nano/59.jpg",
+    "thickness": "6mm"
+  },
+  {
+    "name": "",
+    "size": "2x2",
+    "finish": "Nano",
+    "body": "Vetrified",
+    "image": "stanza_tile_2-2_nano/60.jpeg",
+    "thickness": "6mm"
+  },
+  {
+    "name": "",
+    "size": "2x2",
+    "finish": "Nano",
+    "body": "Vetrified",
+    "image": "stanza_tile_2-2_nano/61.jpg",
+    "thickness": "6mm"
   }
 ]
