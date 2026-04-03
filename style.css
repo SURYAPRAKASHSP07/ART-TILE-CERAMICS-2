@@ -246,6 +246,40 @@ section {
   font-weight: bold;
   text-shadow: 0 0 10px black;
 }
+/* HERO SECTION FIX */
+.hero {
+  position: relative;
+}
+
+/* VISUALIZER BUTTON */
+.hero .an {
+  position: absolute;
+  bottom: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  transition: all 0.4s ease;
+}
+
+/* HOVER FIX */
+.hero .an:hover {
+  transform: translateX(-50%) translateY(-5px); /* keep SAME translateX */
+}
+
+/* DOTS POSITION */
+.dots {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+/* @media (max-width: 480px) {
+  .slider .slide .hero-content a {
+    padding: 10px;
+    font-size: 12px;
+  }
+} */
 
 /* BUTTON */
 .btn {
