@@ -1,0 +1,54 @@
+[
+  {
+    "name": "Blue",
+    "finish": "Indian Toilet",
+    "image": "Sanitary_Items/iblue.jpg"
+  },
+  {
+    "name": "Brown",
+    "finish": "Indian Toilet",
+    "image": "Sanitary_Items/ibrown.jpg"
+  },
+  {
+    "name": "Ivory",
+    "finish": "Indian Toilet",
+    "image": "Sanitary_Items/iivory.jpg"
+  },
+  {
+    "name": "Pink",
+    "finish": "Indian Toilet",
+    "image": "Sanitary_Items/ipink.jpg"
+  },
+  {
+    "name": "White",
+    "finish": "Indian Toilet",
+    "image": "Sanitary_Items/iwhite.jpg"
+  },
+  {
+    "name": "Blue",
+    "finish": "Western Toilet",
+    "image": "Sanitary_Items/wblue.jpg"
+  },
+
+  {
+    "name": "Brown",
+    "finish": "Western Toilet",
+    "image": "Sanitary_Items/wbrown.jpg"
+  },
+  {
+    "name": "Ivory",
+    "finish": "Western Toilet",
+    "image": "Sanitary_Items/wivory.jpg"
+  },
+  {
+    "name": "Pink",
+    "finish": "Western Toilet",
+    "image": "Sanitary_Items/pink.jpg"
+  },
+
+  {
+    "name": "Green",
+    "finish": "Western Toilet",
+    "image": "Sanitary_Items/wgreen.jpg"
+  }
+]
