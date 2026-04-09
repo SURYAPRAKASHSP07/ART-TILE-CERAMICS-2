@@ -274,13 +274,6 @@ section {
   text-align: center;
 }
 
-/* @media (max-width: 480px) {
-  .slider .slide .hero-content a {
-    padding: 10px;
-    font-size: 12px;
-  }
-} */
-
 /* BUTTON */
 .btn {
   display: inline-block;
@@ -1480,5 +1473,66 @@ h2 {
 
   .beliefs {
     grid-template-columns: 1fr;
+  }
+}
+
+/* ===== AUTO RECENT WORKS CAROUSEL ===== */
+.works-carousel {
+  overflow: hidden;
+  width: 100%;
+  margin: 40px auto;
+  position: relative;
+}
+
+/* Track */
+.works-track {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  animation: scrollWorks 55s linear infinite;
+}
+
+/* Images */
+.works-track img {
+  width: 300px;
+  height: 550px;
+  object-fit: cover;
+  border-radius: 12px;
+  flex-shrink: 0;
+  transition: 0.4s ease;
+}
+
+/* Hover Effect */
+.works-track img:hover {
+  transform: scale(1.05);
+}
+
+/* Pause on hover (premium feel) */
+.works-carousel:hover .works-track {
+  animation-play-state: paused;
+}
+
+/* Animation */
+@keyframes scrollWorks {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .works-track img {
+    width: 60vw;
+    height: 850px;
+  }
+}
+
+@media (max-width: 480px) {
+  .works-track img {
+    width: 70vw;
+    height: 500px;
   }
 }
