@@ -295,3 +295,9 @@ slider.addEventListener("touchend", (e) => {
 // });
 
 // COUNTDOWN ENDS HERE
+
+// ===== DUPLICATE IMAGES FOR INFINITE LOOP =====
+const worksTrack = document.getElementById("worksTrack");
+
+// duplicate images for seamless scroll
+worksTrack.innerHTML += worksTrack.innerHTML;
