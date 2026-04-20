@@ -301,3 +301,7 @@ const worksTrack = document.getElementById("worksTrack");
 
 // duplicate images for seamless scroll
 worksTrack.innerHTML += worksTrack.innerHTML;
+
+function goToPage(page) {
+  window.location.href = page;
+}
