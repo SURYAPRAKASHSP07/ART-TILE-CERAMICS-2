@@ -32,7 +32,6 @@
         color: #7b2cbf;
         font-weight: 600;
         background-color: white;
-        padding: 10px 20px;
         border-radius: 30px;
       }
 
@@ -297,6 +296,56 @@
           height: 50px;
         }
       }
+
+      /* MAIN SIZE SECTION */
+      .main-size-section {
+        padding: 40px 20px;
+        text-align: center;
+      }
+
+      /* BIG HEADING (4x2) */
+      .size-heading {
+        font-size: 60px;
+        font-weight: 900;
+        color: #7b2cbf;
+        background: #eee;
+        padding: 20px;
+        margin-bottom: 30px;
+        border-radius: 10px;
+      }
+
+      /* BUTTON ROW */
+      .finish-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        margin-bottom: 30px;
+      }
+
+      /* BUTTON STYLE */
+      .finish-buttons button {
+        width: 220px;
+        height: 100px;
+        border-radius: 10px;
+        border: none;
+        background: #eee;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .finish-buttons button:hover {
+        background: #7b2cbf;
+        color: white;
+        transform: translateY(-5px);
+      }
+
+      /* FINISH SECTION */
+      .finish-container {
+        margin-top: 20px;
+      }
     </style>
   </head>
 
@@ -311,9 +360,11 @@
     </header>
 
     <!-- CATEGORY BUTTONS -->
+
     <div id="categoryButtons" class="btn-container"></div>
 
     <!-- SECTIONS -->
+
     <div id="sectionsContainer"></div>
 
     <a href="#" id="backToTop">
@@ -321,6 +372,103 @@
     </a>
 
     <script>
+      async function loadTiles() {
+        const response = await fetch("Premium Floor Tiles.json");
+        const tiles = await response.json();
+
+        const container = document.getElementById("sectionsContainer");
+
+        // ✅ Get unique sizes (4x2, 2x2)
+        const sizes = [...new Set(tiles.map((tile) => tile.size))];
+
+        sizes.forEach((size) => {
+          const sizeId = size.replace(/\s+/g, "-");
+
+          // Create section
+          const section = document.createElement("div");
+          section.className = "main-size-section";
+
+          section.innerHTML = `
+      <h1 class="size-heading">${size}</h1>
+      <div class="finish-buttons" id="${sizeId}-buttons"></div>
+      <div class="finish-container" id="${sizeId}-container"></div>
+    `;
+
+          container.appendChild(section);
+
+          // ✅ Filter tiles by size
+          const sizeTiles = tiles.filter((tile) => tile.size === size);
+
+          // ✅ Get finishes inside this size
+          const finishes = [...new Set(sizeTiles.map((tile) => tile.finish))];
+
+          const btnContainer = document.getElementById(`${sizeId}-buttons`);
+          const finishContainer = document.getElementById(
+            `${sizeId}-container`,
+          );
+
+          finishes.forEach((finish, index) => {
+            const safeFinish = finish.replace(/\s+/g, "-");
+
+            // BUTTON
+            const btn = document.createElement("button");
+            btn.innerText = finish;
+
+            btn.onclick = () => {
+              document
+                .getElementById(`${sizeId}-${safeFinish}`)
+                .scrollIntoView({
+                  behavior: "smooth",
+                });
+            };
+
+            btnContainer.appendChild(btn);
+
+            // SECTION
+            const finishSection = document.createElement("div");
+            finishSection.className = "tile-section";
+            finishSection.id = `${sizeId}-${safeFinish}`;
+
+            finishSection.innerHTML = `
+        <h2>${finish}</h2>
+        <div class="tile-gallery" id="${sizeId}-${safeFinish}-grid"></div>
+      `;
+
+            finishContainer.appendChild(finishSection);
+          });
+
+          // ✅ Add tiles
+          sizeTiles.forEach((tile) => {
+            const safeFinish = tile.finish.replace(/\s+/g, "-");
+            const grid = document.getElementById(
+              `${sizeId}-${safeFinish}-grid`,
+            );
+
+            const card = document.createElement("div");
+            card.className = "tile-card";
+
+            card.innerHTML = `
+        <div class="img-container">
+          <img src="${tile.image}">
+        </div>
+        <div class="tile-info">
+          <h3>${tile.name}</h3>
+          <p><b>Size:</b> ${tile.size}</p>
+          <p><b>Body:</b> ${tile.body}</p>
+          <p><b>Finish:</b> ${tile.finish}</p>
+          <p><b>Thickness:</b> ${tile.thickness}</p>
+        </div>
+      `;
+
+            grid.appendChild(card);
+          });
+        });
+      }
+
+      loadTiles();
+    </script>
+
+    <!-- <script>
       async function loadTiles() {
         const response = await fetch("Premium Floor Tiles.json");
         const tiles = await response.json();
@@ -395,7 +543,7 @@
       }
 
       loadTiles();
-    </script>
+    </script> -->
   </body>
 </html>
 
