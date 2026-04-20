@@ -88,54 +88,6 @@ nav {
   cursor: pointer;
 }
 
-/* HERO
-.hero {
-  height: 90vh;
-  background: url("Home.jpg");
-  display: flex;
-  background-size: cover;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: white;
-}
-
-.hero h1 {
-  font-size: 48px;
-  font-family: Cambria;
-  color: white;
-  text-shadow:
-    20px 20px 60px rgba(0, 0, 0, 0.842),
-    0 0 10px rgb(0, 0, 0);
-}
-.hero p {
-  margin-top: 10px;
-  font-size: 18px;
-  color: white;
-  font-weight: bold;
-  text-shadow:
-    20px 20px 60px rgba(0, 0, 0, 0.842),
-    0 0 10px rgb(0, 0, 0);
-}
-.btn {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 12px 25px;
-  text-decoration: none;
-  border-radius: 30px;
-  transition: 0.3s;
-  background: #7209b7;
-  color: white;
-  font-weight: bold;
-}
-
-.btn:hover {
-  background: white;
-  color: #7209b7;
-  transition: 0.5s;
-  transform: translateY(-2px);
-} */
-
 /* REMOVE DEFAULT SPACE */
 body {
   margin: 0;
@@ -145,7 +97,7 @@ body {
 /* HERO FULL FIT */
 .hero {
   width: 100%;
-  height: 100vh; /* full screen */
+  height: 65vh; /* full screen */
   margin: 0;
   padding: 0;
   overflow: hidden;
@@ -179,7 +131,6 @@ section {
 
 /* HERO CAROUSEL */
 .hero {
-  height: 90vh;
   position: relative;
   overflow: hidden;
 }
@@ -354,15 +305,30 @@ section {
 /* GRID */
 .grid {
   margin-top: 30px;
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
+  display: grid;
+  gap: 30px;
+  padding: 0 15px;
+
+  /* Desktop */
+  grid-template-columns: repeat(4, 1fr);
+}
+/* Tablet */
+@media (max-width: 992px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* CARD */
 .card {
-  width: 250px;
+  width: 100%;
   background: white;
   border-radius: 12px;
   overflow: hidden;
@@ -384,7 +350,7 @@ section {
 
 .card img {
   width: 100%;
-  height: 180px;
+  height: 200px;
   object-fit: cover;
 }
 
