@@ -302,6 +302,60 @@ const worksTrack = document.getElementById("worksTrack");
 // duplicate images for seamless scroll
 worksTrack.innerHTML += worksTrack.innerHTML;
 
+// HOMEPAGE TOUCH FUNCTION
 function goToPage(page) {
   window.location.href = page;
 }
+
+// MODEL GALLRY SILDER
+const track = document.getElementById("worksTrack");
+
+let scrollAmount = 0;
+const scrollStep = 320; // image width + gap
+
+// BUTTON CONTROL
+function moveWorks(direction) {
+  scrollAmount += direction * scrollStep;
+
+  // LIMIT SCROLL
+  const maxScroll = track.scrollWidth - track.parentElement.offsetWidth;
+
+  if (scrollAmount < 0) scrollAmount = 0;
+  if (scrollAmount > maxScroll) scrollAmount = maxScroll;
+
+  track.style.transform = `translateX(-${scrollAmount}px)`;
+}
+
+/* ================= DRAG / SWIPE ================= */
+
+let isDown = false;
+let scrollLeft;
+
+track.addEventListener("mousedown", (e) => {
+  isDown = true;
+  startX = e.pageX;
+});
+
+track.addEventListener("mouseleave", () => {
+  isDown = false;
+});
+
+track.addEventListener("mouseup", () => {
+  isDown = false;
+});
+
+track.addEventListener("mousemove", (e) => {
+  if (!isDown) return;
+  const walk = (e.pageX - startX) * 1.5;
+  track.style.transform = `translateX(${-scrollAmount + walk}px)`;
+});
+
+/* TOUCH (Mobile) */
+track.addEventListener("touchstart", (e) => {
+  startX = e.touches[0].pageX;
+});
+
+track.addEventListener("touchmove", (e) => {
+  const walk = (e.touches[0].pageX - startX) * 1.5;
+  track.style.transform = `translateX(${-scrollAmount + walk}px)`;
+});
