@@ -346,6 +346,20 @@
       .finish-container {
         margin-top: 20px;
       }
+      @media (max-width: 768px) {
+        .finish-buttons {
+          display: flex;
+          flex-wrap: wrap; /* ✅ allows next line */
+          justify-content: center;
+          gap: 10px;
+        }
+
+        .finish-buttons button {
+          width: 45%; /* ✅ 2 buttons per row */
+          height: 80px;
+          font-size: 14px;
+        }
+      }
     </style>
   </head>
 
