@@ -1442,7 +1442,6 @@ h2 {
   }
 }
 
-/* ===== AUTO RECENT WORKS CAROUSEL ===== */
 .works-carousel {
   overflow: hidden;
   width: 100%;
@@ -1454,8 +1453,8 @@ h2 {
 .works-track {
   display: flex;
   gap: 20px;
-  width: max-content;
-  animation: scrollWorks 55s linear infinite;
+  transition: transform 0.5s ease;
+  cursor: grab;
 }
 
 /* Images */
@@ -1465,38 +1464,36 @@ h2 {
   object-fit: cover;
   border-radius: 12px;
   flex-shrink: 0;
-  transition: 0.4s ease;
 }
 
-/* Hover Effect */
-.works-track img:hover {
-  transform: scale(1.05);
+/* Buttons */
+.works-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 12px 15px;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 50%;
+  z-index: 10;
 }
 
-/* Pause on hover (premium feel) */
-.works-carousel:hover .works-track {
-  animation-play-state: paused;
+.works-btn.left {
+  left: 10px;
+}
+.works-btn.right {
+  right: 10px;
 }
 
-/* Animation */
-@keyframes scrollWorks {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
+.works-btn:hover {
+  background: #7209b7;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-  .works-track img {
-    width: 60vw;
-    height: 850px;
-  }
-}
-
-@media (max-width: 480px) {
   .works-track img {
     width: 70vw;
     height: 500px;
