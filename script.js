@@ -50,7 +50,7 @@ window.addEventListener("scroll", () => {
 });
 
 // State to track each of the 3 cards independently
-const slideState = { "coll-1": 0, "coll-2": 0, "coll-3": 0 };
+const slideState = { "coll-1": 0, "coll-2": 0, "coll-3": 0, "coll-4": 0 };
 const maxTiles = 5;
 
 /**
@@ -307,55 +307,77 @@ function goToPage(page) {
   window.location.href = page;
 }
 
-// MODEL GALLRY SILDER
-const track = document.getElementById("worksTrack");
+// ===== GALLERY SAFE INIT =====
+document.addEventListener("DOMContentLoaded", function () {
+  const track = document.getElementById("worksTrack");
+  if (!track) return; // STOP if gallery not present
 
-let scrollAmount = 0;
-const scrollStep = 320; // image width + gap
+  // duplicate images (optional infinite feel)
+  track.innerHTML += track.innerHTML;
 
-// BUTTON CONTROL
-function moveWorks(direction) {
-  scrollAmount += direction * scrollStep;
+  let scrollAmount = 0;
+  let startX = 0;
+  let isDown = false;
+  let currentTranslate = 0;
 
-  // LIMIT SCROLL
-  const maxScroll = track.scrollWidth - track.parentElement.offsetWidth;
+  // BUTTON CLICK (GLOBAL)
+  window.moveWorks = function (direction) {
+    const img = track.querySelector("img");
+    if (!img) return;
 
-  if (scrollAmount < 0) scrollAmount = 0;
-  if (scrollAmount > maxScroll) scrollAmount = maxScroll;
+    const imgWidth = img.offsetWidth + 20;
 
-  track.style.transform = `translateX(-${scrollAmount}px)`;
-}
+    scrollAmount += direction * imgWidth;
 
-/* ================= DRAG / SWIPE ================= */
+    const maxScroll = track.scrollWidth - track.clientWidth;
 
-let isDown = false;
-let scrollLeft;
+    if (scrollAmount < 0) scrollAmount = 0;
+    if (scrollAmount > maxScroll) scrollAmount = maxScroll;
 
-track.addEventListener("mousedown", (e) => {
-  isDown = true;
-  startX = e.pageX;
-});
+    track.style.transform = `translateX(${-scrollAmount}px)`;
+    currentTranslate = scrollAmount;
+  };
 
-track.addEventListener("mouseleave", () => {
-  isDown = false;
-});
+  /* ===== DRAG ===== */
 
-track.addEventListener("mouseup", () => {
-  isDown = false;
-});
+  track.addEventListener("mousedown", (e) => {
+    isDown = true;
+    startX = e.pageX;
+    track.style.cursor = "grabbing";
+  });
 
-track.addEventListener("mousemove", (e) => {
-  if (!isDown) return;
-  const walk = (e.pageX - startX) * 1.5;
-  track.style.transform = `translateX(${-scrollAmount + walk}px)`;
-});
+  track.addEventListener("mouseup", () => {
+    isDown = false;
+    scrollAmount = currentTranslate;
+  });
 
-/* TOUCH (Mobile) */
-track.addEventListener("touchstart", (e) => {
-  startX = e.touches[0].pageX;
-});
+  track.addEventListener("mouseleave", () => {
+    isDown = false;
+  });
 
-track.addEventListener("touchmove", (e) => {
-  const walk = (e.touches[0].pageX - startX) * 1.5;
-  track.style.transform = `translateX(${-scrollAmount + walk}px)`;
+  track.addEventListener("mousemove", (e) => {
+    if (!isDown) return;
+
+    const walk = (e.pageX - startX) * 1.5;
+    const move = currentTranslate - walk;
+
+    track.style.transform = `translateX(${-move}px)`;
+  });
+
+  /* ===== TOUCH ===== */
+
+  track.addEventListener("touchstart", (e) => {
+    startX = e.touches[0].pageX;
+  });
+
+  track.addEventListener("touchmove", (e) => {
+    const walk = (e.touches[0].pageX - startX) * 1.5;
+    const move = currentTranslate - walk;
+
+    track.style.transform = `translateX(${-move}px)`;
+  });
+
+  track.addEventListener("touchend", () => {
+    scrollAmount = currentTranslate;
+  });
 });
