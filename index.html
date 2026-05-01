@@ -22,16 +22,16 @@
       <nav id="nav">
         <a href="#home" class="nav-link">Home</a>
         <a href="#products" class="nav-link">Products</a>
-        <a href="aboutUs.html" class="nav-link">About</a>
-        <a href="#services" class="nav-link">Services</a>
         <a href="#gallery" class="nav-link">Gallery</a>
+        <a href="#services" class="nav-link">Services</a>
         <a href="#contact" class="nav-link">Contact</a>
+        <a href="aboutUs.html" class="nav-link">About</a>
       </nav>
 
       <div class="menu-toggle" onclick="toggleMenu()">
         <i class="fa-solid fa-bars"></i>
       </div>
-    </header>
+    </header>  
 
 <section id="home" class="hero">
 
@@ -84,7 +84,7 @@
  
   <!-- DOTS -->
    
- <a href="Tile Visualizer.html" class="btn an">Click here to Visualize your room</a>
+ <!-- <a href="Tile Visualizer.html" class="btn an">Click here to Visualize your room</a> -->
    <div class="dots"></div>
 
 </section>
@@ -333,6 +333,43 @@
     </div>
 </div>
         </div>
+        <div class="collection-box" id="coll-1">
+            <div class="slider-container">
+                <div class="slider-track">
+                    <div class="tile-unit">
+                        <img src="Tile_Imgs/img_(1).jpg" alt="Tile">
+                        <div class="info-tag"><h4>Statuario White</h4><p>60x120cm | Glossy</p></div>
+                    </div>
+                    <div class="tile-unit">
+                        <img src="Tile_Imgs/img_(2).jpg" alt="Tile">
+                        <div class="info-tag"><h4>Carrara Gold</h4><p>60x120cm | Polished</p></div>
+                    </div>
+                    <div class="tile-unit">
+                        <img src="Tile_Imgs/img_(3).jpg" alt="Tile">
+                        <div class="info-tag"><h4>Venato Grey</h4><p>80x160cm | High Gloss</p></div>
+                    </div>
+                    <div class="tile-unit">
+                        <img src="Tile_Imgs/img_(4).jpg" alt="Tile">
+                        <div class="info-tag"><h4>Black Marquina</h4><p>60x60cm | Mirror</p></div>
+                    </div>
+                    <div class="tile-unit">
+                        <img src="Tile_Imgs/img_(5).jpg" alt="Tile">
+                        <div class="info-tag"><h4>Onyx Sky</h4><p>120x120cm | Satin</p></div>
+                    </div>
+                </div>
+            </div>
+          <div class="collection-box" id="coll-1"> 
+    <div class="slider-container">
+        <div class="slider-track">
+            </div>
+    </div>
+    <div class="controls">
+        <button onclick="manualMove('coll-1', -1)">&#10094;</button>
+        <span class="label">Wooden Series</span>
+        <button onclick="manualMove('coll-1', 1)">&#10095;</button>
+    </div>
+</div>
+        </div>
     </div>
 </section>
 
@@ -366,12 +403,37 @@
 </section>
 
    <!-- ================= Recent Works SECTION ================= -->
-<section id="gallery">
+    <section id="gallery">
   <h2>Model Gallery</h2>
 
   <div class="works-carousel">
 
     <!-- LEFT BUTTON -->
+    <button class="works-btn left" onclick="moveWorks(-1)">&#10094;</button>
+
+    <div class="works-track" id="worksTrack">
+      <img src="https://picsum.photos/id/1011/400/600">
+      <img src="https://picsum.photos/id/1012/400/600">
+      <img src="https://picsum.photos/id/1013/400/600">
+      <img src="https://picsum.photos/id/1015/400/600">
+      <img src="https://picsum.photos/id/1016/400/600">
+      <img src="https://picsum.photos/id/1018/400/600">
+      <img src="https://picsum.photos/id/1020/400/600">
+      <img src="https://picsum.photos/id/1024/400/600">
+      <img src="https://picsum.photos/id/1027/400/600">
+    </div>
+
+    <!-- RIGHT BUTTON -->
+    <button class="works-btn right" onclick="moveWorks(1)">&#10095;</button>
+
+  </div>
+</section>
+<!-- <section id="gallery">
+  <h2>Model Gallery</h2>
+
+  <div class="works-carousel">
+
+   
     <button class="works-btn left" onclick="moveWorks(-1)">&#10094;</button>
 
     <div class="works-track" id="worksTrack">
@@ -386,11 +448,11 @@
       <img src="Sample_9.png" />
     </div>
 
-    <!-- RIGHT BUTTON -->
+    
     <button class="works-btn right" onclick="moveWorks(1)">&#10095;</button>
 
   </div>
-</section>
+</section> -->
     
     <!-- ================= Contact Us SECTION ================= -->
     <section id="contact" class="contact-section">
