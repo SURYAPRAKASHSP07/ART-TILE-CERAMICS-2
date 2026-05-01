@@ -22,7 +22,7 @@
       .page-header {
         text-align: center;
         padding: 40px 20px;
-        background: #111;
+        background: linear-gradient(135deg, #111, #333);
         color: white;
       }
 
@@ -123,19 +123,6 @@
         color: #555;
       }
 
-      /* BACK TO TOP */
-      #backToTop {
-        position: fixed;
-        bottom: 25px;
-        right: 25px;
-        width: 50px;
-        height: 50px;
-      }
-
-      #backToTop img {
-        width: 100%;
-        height: 100%;
-      }
       body {
         font-family: Arial, Helvetica, sans-serif;
         margin: 0;
@@ -257,10 +244,11 @@
       #backToTop {
         position: fixed;
         bottom: 40px;
-        right: 40px;
-        width: 60px;
-        height: 60px;
-        background: linear-gradient(135deg, #ff7b00, #ff3c00);
+        left: 40px;
+        width: 30px;
+        height: 30px;
+        padding: 12px;
+        background: linear-gradient(135deg, #be6ef3, #7b41a1);
         border-radius: 50%;
         display: flex;
         align-items: center;
@@ -290,10 +278,11 @@
       /* Mobile Adjust */
       @media (max-width: 768px) {
         #backToTop {
-          right: 20px;
-          bottom: 20px;
-          width: 50px;
-          height: 50px;
+          padding: 10px;
+          left: 20px;
+          bottom: 35px;
+          width: 30px;
+          height: 30px;
         }
       }
 
@@ -360,6 +349,28 @@
           font-size: 14px;
         }
       }
+      .btnContainer {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+        padding: 15px;
+        position: sticky;
+        top: 0;
+        background: #cac5c5;
+        z-index: 1000;
+      }
+      .btnContainer a {
+        padding: 25px 50px;
+        border-radius: 20px;
+        border: 2px solid #b984db;
+        background: white;
+        color: #7b2cbf;
+        font-size: 30px;
+        text-decoration: none;
+        font-weight: bold;
+        cursor: pointer;
+      }
     </style>
   </head>
 
@@ -373,12 +384,10 @@
       </a>
     </header>
 
-    <!-- CATEGORY BUTTONS -->
-
-    <div id="categoryButtons" class="btn-container"></div>
-
-    <!-- SECTIONS -->
-
+    <div class="btnContainer">
+      <a href="#" onclick="goToSection('4x2')">4x2</a>
+      <a href="#" onclick="goToSection('2x2')">2x2</a>
+    </div>
     <div id="sectionsContainer"></div>
 
     <a href="#" id="backToTop">
@@ -386,6 +395,19 @@
     </a>
 
     <script>
+      function goToSection(id) {
+        event.preventDefault(); // stop page refresh
+
+        const section = document.getElementById(id);
+
+        if (section) {
+          section.scrollIntoView({
+            behavior: "smooth",
+          });
+        } else {
+          console.log("Section not found:", id);
+        }
+      }
       async function loadTiles() {
         const response = await fetch("Premium Floor Tiles.json");
         const tiles = await response.json();
@@ -409,6 +431,7 @@
     `;
 
           container.appendChild(section);
+          section.id = sizeId; // this becomes "4x2" or "2x2"
 
           // ✅ Filter tiles by size
           const sizeTiles = tiles.filter((tile) => tile.size === size);
@@ -481,83 +504,7 @@
 
       loadTiles();
     </script>
-
-    <!-- <script>
-      async function loadTiles() {
-        const response = await fetch("Premium Floor Tiles.json");
-        const tiles = await response.json();
-
-        const btnContainer = document.getElementById("categoryButtons");
-        const sectionsContainer = document.getElementById("sectionsContainer");
-
-        // ✅ Get unique finishes
-        const finishes = [...new Set(tiles.map((tile) => tile.finish))];
-
-        // ✅ Create buttons
-        finishes.forEach((finish) => {
-          const safeId = finish.replace(/\s+/g, "-");
-
-          const btn = document.createElement("button");
-          btn.innerText = finish;
-
-          btn.onclick = () => {
-            document.getElementById(safeId).scrollIntoView({
-              behavior: "smooth",
-            });
-          };
-
-          btnContainer.appendChild(btn);
-        });
-
-        // ✅ Create sections
-        finishes.forEach((finish) => {
-          const safeId = finish.replace(/\s+/g, "-");
-
-          const section = document.createElement("div");
-          section.className = "tile-section";
-          section.id = safeId;
-
-          section.innerHTML = `
-      <h2>${finish}</h2>
-      <div class="tile-gallery" id="${safeId}-grid"></div>
-    `;
-
-          sectionsContainer.appendChild(section);
-        });
-
-        // ✅ Add tiles to sections
-        tiles.forEach((tile) => {
-          const safeId = tile.finish.replace(/\s+/g, "-");
-
-          const grid = document.getElementById(`${safeId}-grid`);
-
-          const card = document.createElement("div");
-
-          if (tile.size === "4x2") {
-            card.className = "tile-card tile-4x2";
-          } else {
-            card.className = "tile-card tile-2x2";
-          }
-
-          card.innerHTML = `
-      <div class="img-container">
-        <img src="${tile.image}">
-      </div>
-      <div class="tile-info">
-        <h3>${tile.name}</h3>
-        <p><b>Size:</b> ${tile.size}</p>
-        <p><b>Body:</b> ${tile.body}</p>
-        <p><b>Finish:</b> ${tile.finish}</p>
-        <p><b>Thickness:</b> ${tile.thickness}</p>
-      </div>
-    `;
-
-          grid.appendChild(card);
-        });
-      }
-
-      loadTiles();
-    </script> -->
+    y
   </body>
 </html>
 
