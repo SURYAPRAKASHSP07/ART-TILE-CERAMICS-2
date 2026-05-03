@@ -336,12 +336,72 @@ section {
   transition: 0.3s;
 }
 
-/* GALLERY */
-.gallery img {
-  width: 250px;
+/* ===== GALLERY SECTION ===== */
+#gallery {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#gallery h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+.works-carousel {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.works-wrapper {
+  overflow: hidden;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.works-track {
+  display: flex;
+  gap: 16px;
+  transition: transform 0.4s ease;
+  cursor: grab;
+  will-change: transform;
+  padding: 10px 4px;
+}
+
+.works-track.grabbing {
+  cursor: grabbing;
+  transition: none;
+}
+
+/* ===== GALLERY - scoped to works-track only ===== */
+.works-track img {
+  width: 260px;
   height: 380px;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 10px;
+  flex-shrink: 0;
+  pointer-events: none;
+  user-select: none;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s;
+}
+
+.works-track img:hover {
+  transform: scale(1.03);
+}
+
+/* ===== CARD (Products Section) - protected styles ===== */
+.card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s;
+  cursor: pointer;
 }
 
 .card:hover {
@@ -352,6 +412,17 @@ section {
   width: 100%;
   height: 200px;
   object-fit: cover;
+  border-radius: 0;
+  pointer-events: auto;
+  user-select: auto;
+  box-shadow: none;
+  flex-shrink: unset;
+}
+
+.card h3 {
+  padding: 12px;
+  color: black;
+  font-size: 20px;
 }
 
 .card button {
@@ -368,6 +439,21 @@ section {
 .card button:hover {
   background: #7209b7;
   transform: scale(1.05);
+}
+
+/* Responsive gallery images */
+@media (max-width: 768px) {
+  .works-track img {
+    width: 200px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 425px) {
+  .works-track img {
+    width: 160px;
+    height: 240px;
+  }
 }
 
 /* SERVICES */
@@ -1566,15 +1652,16 @@ h2 {
 .works-btn:hover {
   background: #7209b7;
 }
-
+#gallery h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #7209b7;
+}
 /* Responsive */
 @media (max-width: 768px) {
   .works-track img {
     width: 70vw;
-    height: 400px;
-  }
-
-  .works-btn {
-    display: none;
+    height: 500px;
   }
 }
