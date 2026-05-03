@@ -307,77 +307,77 @@ function goToPage(page) {
   window.location.href = page;
 }
 
-// ===== GALLERY SAFE INIT =====
 document.addEventListener("DOMContentLoaded", function () {
   const track = document.getElementById("worksTrack");
-  if (!track) return; // STOP if gallery not present
+  const leftBtn = document.getElementById("leftBtn");
+  const rightBtn = document.getElementById("rightBtn");
 
-  // duplicate images (optional infinite feel)
-  track.innerHTML += track.innerHTML;
+  if (!track) return;
 
-  let scrollAmount = 0;
-  let startX = 0;
-  let isDown = false;
-  let currentTranslate = 0;
+  let currentOffset = 0;
+  let isDragging = false;
+  let dragStartX = 0;
+  let dragStartOffset = 0;
 
-  // BUTTON CLICK (GLOBAL)
-  window.moveWorks = function (direction) {
+  // ── Helper: get one step width (image + gap) ──
+  function getStepWidth() {
     const img = track.querySelector("img");
-    if (!img) return;
+    if (!img) return 200;
+    return img.offsetWidth + 16; // 16 = gap
+  }
 
-    const imgWidth = img.offsetWidth + 20;
+  // ── Helper: max scroll limit ──
+  function getMaxOffset() {
+    return track.scrollWidth - track.parentElement.offsetWidth;
+  }
 
-    scrollAmount += direction * imgWidth;
+  // ── Apply transform ──
+  function applyOffset(offset, animate = true) {
+    currentOffset = Math.max(0, Math.min(offset, getMaxOffset()));
+    track.style.transition = animate ? "transform 0.4s ease" : "none";
+    track.style.transform = `translateX(${-currentOffset}px)`;
+    updateButtons();
+  }
 
-    const maxScroll = track.scrollWidth - track.clientWidth;
+  // ── Disable buttons at edges ──
+  function updateButtons() {
+    leftBtn.disabled = currentOffset <= 0;
+    rightBtn.disabled = currentOffset >= getMaxOffset();
+  }
 
-    if (scrollAmount < 0) scrollAmount = 0;
-    if (scrollAmount > maxScroll) scrollAmount = maxScroll;
+  // ── Button clicks ──
+  leftBtn.addEventListener("click", () => {
+    applyOffset(currentOffset - getStepWidth());
+  });
 
-    track.style.transform = `translateX(${-scrollAmount}px)`;
-    currentTranslate = scrollAmount;
-  };
+  rightBtn.addEventListener("click", () => {
+    applyOffset(currentOffset + getStepWidth());
+  });
 
-  /* ===== DRAG ===== */
-
+  // ── Mouse drag ──
   track.addEventListener("mousedown", (e) => {
-    isDown = true;
-    startX = e.pageX;
-    track.style.cursor = "grabbing";
+    isDragging = true;
+    dragStartX = e.pageX;
+    dragStartOffset = currentOffset;
+    track.classList.add("grabbing");
   });
 
-  track.addEventListener("mouseup", () => {
-    isDown = false;
-    scrollAmount = currentTranslate;
+  window.addEventListener("mousemove", (e) => {
+    if (!isDragging) return;
+    const walk = dragStartX - e.pageX;
+    applyOffset(dragStartOffset + walk, false);
   });
 
-  track.addEventListener("mouseleave", () => {
-    isDown = false;
+  window.addEventListener("mouseup", () => {
+    if (!isDragging) return;
+    isDragging = false;
+    track.classList.remove("grabbing");
+    // Snap to nearest image
+    const step = getStepWidth();
+    const snapped = Math.round(currentOffset / step) * step;
+    applyOffset(snapped);
   });
 
-  track.addEventListener("mousemove", (e) => {
-    if (!isDown) return;
-
-    const walk = (e.pageX - startX) * 1.5;
-    const move = currentTranslate - walk;
-
-    track.style.transform = `translateX(${-move}px)`;
-  });
-
-  /* ===== TOUCH ===== */
-
-  track.addEventListener("touchstart", (e) => {
-    startX = e.touches[0].pageX;
-  });
-
-  track.addEventListener("touchmove", (e) => {
-    const walk = (e.touches[0].pageX - startX) * 1.5;
-    const move = currentTranslate - walk;
-
-    track.style.transform = `translateX(${-move}px)`;
-  });
-
-  track.addEventListener("touchend", () => {
-    scrollAmount = currentTranslate;
-  });
+  // ── Init ──
+  updateButtons();
 });
