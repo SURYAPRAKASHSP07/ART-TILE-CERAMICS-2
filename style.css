@@ -721,6 +721,9 @@ footer {
     display: block;
   }
 }
+#products {
+  margin-top: -50px;
+}
 
 /* ================= PRODUCT BUTTON GLITTER EFFECT ================= */
 #products .card button {
@@ -1663,5 +1666,78 @@ h2 {
   .works-track img {
     width: 70vw;
     height: 500px;
+  }
+}
+
+/* PROMO SECTION */
+.promo-banner {
+  background: #f3f3f3;
+  padding: 30px 15px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* CARD */
+.promo-card {
+  flex: 1;
+  max-width: 600px;
+  text-align: center;
+}
+
+/* IMAGE */
+.promo-link img {
+  width: 100%;
+  max-height: 320px;
+  object-fit: contain;
+  display: block;
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+
+.promo-link img:hover {
+  transform: scale(1.01);
+}
+
+/* BUTTON */
+.promo-btn {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 10px 22px;
+  background: #7209b7;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.promo-btn:hover {
+  background: white;
+  color: #7209b7;
+  border: 1px solid #7209b7;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .promo-banner {
+    flex-direction: column;
+    padding: 8px 10px;
+    gap: 15px;
+  }
+
+  .promo-card {
+    max-width: 100%;
+  }
+
+  .promo-link img {
+    max-height: 200px;
+    border-radius: 8px;
+  }
+
+  .promo-btn {
+    padding: 9px 18px;
+    font-size: 14px;
   }
 }
