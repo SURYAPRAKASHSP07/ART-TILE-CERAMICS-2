@@ -1,0 +1,350 @@
+<!-- <!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Anuj Tiles | Art Tile Ceramics</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <link rel="stylesheet" href="premium-floor-tiles.css" />
+
+</head>
+
+<body>
+    <header class="page-header">
+        <h1>Anju Tiles</h1>
+        <p>Elegant • Durable • Modern Designs</p>
+
+        <a href="index.html" class="back-btn">
+            <i class="fa-solid fa-arrow-left"></i> Back to Home
+        </a>
+    </header>
+
+
+</body>
+
+</html> -->
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anuj Tiles Showcase</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", sans-serif;
+        }
+
+        body {
+            background: #f3f4f6;
+            padding: 20px;
+        }
+
+        /* HEADER */
+        .page-header {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .page-header h1 {
+            font-size: 38px;
+            color: #1f2937;
+            font-weight: 700;
+        }
+
+        .page-header p {
+            color: #6b7280;
+            margin-top: 8px;
+            font-size: 15px;
+        }
+
+        /* MAIN WRAPPER */
+        .tiles-wrapper {
+            max-width: 1500px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        /* TILE CARD */
+        .tile-box {
+            background: white;
+            border-radius: 22px;
+            padding: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 22px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: 0.3s ease;
+        }
+
+        .tile-box:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 35px rgba(0, 0, 0, 0.12);
+        }
+
+        /* LEFT + RIGHT IMAGE */
+        .tile-image,
+        .demo-image {
+            flex: 1;
+        }
+
+        .tile-image img,
+        .demo-image img {
+            width: 100%;
+            aspect-ratio: 9 / 16;
+            object-fit: cover;
+            border-radius: 18px;
+            display: block;
+        }
+
+        /* CENTER INFO */
+        .tile-info {
+            width: 280px;
+            min-width: 280px;
+            text-align: center;
+        }
+
+        /* LOGO */
+        .tile-logo {
+            width: 150px;
+            margin-bottom: 15px;
+            object-fit: contain;
+        }
+
+        /* INFO CARD */
+        .info-card {
+            background: #fafafa;
+            border: 1px solid #ececec;
+            border-radius: 18px;
+            padding: 20px;
+        }
+
+        .info-card h3 {
+            margin-bottom: 18px;
+            color: #111827;
+            font-size: 20px;
+        }
+
+        .info-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .info-row:last-child {
+            border-bottom: none;
+        }
+
+        .label {
+            font-weight: 600;
+            color: #4b5563;
+        }
+
+        .value {
+            color: #7209b7;
+            font-weight: 700;
+        }
+
+        /* TABLET */
+        @media (max-width: 992px) {
+            .tile-box {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .tile-info {
+                width: 100%;
+                min-width: unset;
+            }
+
+            .tile-image,
+            .demo-image {
+                width: 100%;
+            }
+        }
+
+        /* MOBILE */
+        @media (max-width: 768px) {
+            body {
+                padding: 12px;
+            }
+
+            .page-header h1 {
+                font-size: 28px;
+            }
+
+            .page-header p {
+                font-size: 14px;
+            }
+
+            .tile-box {
+                padding: 16px;
+                border-radius: 18px;
+                gap: 16px;
+            }
+
+            .tile-image img,
+            .demo-image img {
+                aspect-ratio: 9 / 16;
+                border-radius: 14px;
+            }
+
+            .tile-logo {
+                width: 100px;
+                height: 90px;
+            }
+
+            .info-card {
+                padding: 16px;
+            }
+
+            .info-card h3 {
+                font-size: 18px;
+            }
+
+            .info-row {
+                font-size: 14px;
+            }
+        }
+
+        /* TABLET */
+        @media (max-width: 992px) {
+            .tiles-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            .tile-box {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .tile-info {
+                width: 100%;
+                min-width: unset;
+            }
+        }
+
+        /* MOBILE */
+        @media (max-width: 768px) {
+            body {
+                padding: 12px;
+            }
+
+            .page-header h1 {
+                font-size: 28px;
+            }
+
+            .tile-box {
+                padding: 16px;
+                gap: 16px;
+            }
+
+            .tile-image img,
+            .demo-image img {
+                aspect-ratio: 16/9;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <div class="page-header">
+        <h1>Premium Tile Collection</h1>
+        <p>Elegant • Premium • Modern Designs</p>
+    </div>
+
+    <!-- TILES -->
+    <div class="tiles-wrapper" id="tilesWrapper"></div>
+
+    <script>
+        async function loadTiles() {
+
+            try {
+
+                const response = await fetch("Anuj_Tile.json");
+                const tiles = await response.json();
+
+                const wrapper = document.getElementById("tilesWrapper");
+
+                tiles.forEach(tile => {
+
+                    const box = document.createElement("div");
+                    box.className = "tile-box";
+
+                    box.innerHTML = `
+          
+            <!-- TILE IMAGE -->
+            <div class="tile-image">
+              <img src="${tile.TileImage}" alt="Tile Image">
+            </div>
+
+            <!-- CENTER INFO -->
+            <div class="tile-info">
+
+              <img src="${tile.Logo}" 
+              class="tile-logo" 
+              alt="Logo">
+
+              <div class="info-card">
+
+                <h3>Tile Details</h3>
+
+                <div class="info-row">
+                  <span class="label">Code</span>
+                  <span class="value">${tile.Code}</span>
+                </div>
+
+                <div class="info-row">
+                  <span class="label">Surface</span>
+                  <span class="value">${tile.Surface}</span>
+                </div>
+
+                <div class="info-row">
+                  <span class="label">Thickness</span>
+                  <span class="value">${tile.Thickness}</span>
+                </div>
+
+                <div class="info-row">
+                  <span class="label">Type</span>
+                  <span class="value">${tile.Type}</span>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- DEMO IMAGE -->
+            <div class="demo-image">
+              <img src="${tile.DemoImage}" alt="Demo Image">
+            </div>
+          `;
+
+                    wrapper.appendChild(box);
+
+                });
+
+            } catch (error) {
+                console.log("Error loading JSON:", error);
+            }
+        }
+
+        loadTiles();
+    </script>
+
+</body>
+
+</html>

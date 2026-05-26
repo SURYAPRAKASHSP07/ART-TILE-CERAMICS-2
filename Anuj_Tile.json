@@ -1,0 +1,83 @@
+[
+  {
+    "Logo": "Anuj.jpeg",
+    "Code": "24021",
+    "Surface": "Glossy",
+    "TileImage": "Anuj_Tiles_Photos/1.jpeg",
+    "DemoImage": "Anuj_Tiles_Photos/1.jpeg",
+    "Thickness": "8MM",
+    "Type": "Premium"
+  },
+  {
+    "Logo": "Anuj.jpeg",
+    "Code": "24126",
+    "Surface": "Glossy",
+    "TileImage": "Anuj_Tiles_Photos/2.jpeg",
+    "DemoImage": "Anuj_Tiles_Photos/Demo_2.jpeg",
+    "Thickness": "8MM",
+    "Type": "Premium"
+  },
+  {
+    "Logo": "Anuj.jpeg",
+    "Code": "24170",
+    "Surface": "Glossy",
+    "TileImage": "Anuj_Tiles_Photos/3.jpeg",
+    "DemoImage": "Anuj_Tiles_Photos/3.jpeg",
+    "Thickness": "8MM",
+    "Type": "Premium"
+  },
+  {
+    "Logo": "Anuj.jpeg",
+    "Code": "24126",
+    "Surface": "Glossy",
+    "TileImage": "Anuj_Tiles_Photos/4.jpeg",
+    "DemoImage": "Anuj_Tiles_Photos/4.jpeg",
+    "Thickness": "8MM",
+    "Type": "Premium"
+  },
+  {
+    "Logo": "Anuj.jpeg",
+    "Code": "24126",
+    "Surface": "Glossy",
+    "TileImage": "Anuj_Tiles_Photos/5.jpeg",
+    "DemoImage": "Anuj_Tiles_Photos/5.jpeg",
+    "Thickness": "8MM",
+    "Type": "Premium"
+  },
+  {
+    "Logo": "Anuj.jpeg",
+    "Code": "24126",
+    "Surface": "Glossy",
+    "TileImage": "Anuj_Tiles_Photos/6.jpeg",
+    "DemoImage": "Anuj_Tiles_Photos/6.jpeg",
+    "Thickness": "8MM",
+    "Type": "Premium"
+  },
+  {
+    "Logo": "Anuj.jpeg",
+    "Code": "24126",
+    "Surface": "Glossy",
+    "TileImage": "Anuj_Tiles_Photos/7.jpeg",
+    "DemoImage": "Anuj_Tiles_Photos/7.jpeg",
+    "Thickness": "8MM",
+    "Type": "Premium"
+  },
+  {
+    "Logo": "Anuj.jpeg",
+    "Code": "24126",
+    "Surface": "Glossy",
+    "TileImage": "Anuj_Tiles_Photos/8.jpeg",
+    "DemoImage": "Anuj_Tiles_Photos/Demo_1.jpeg",
+    "Thickness": "8MM",
+    "Type": "Premium"
+  },
+  {
+    "Logo": "Anuj.jpeg",
+    "Code": "24126",
+    "Surface": "Glossy",
+    "TileImage": "Anuj_Tiles_Photos/9.jpeg",
+    "DemoImage": "Anuj_Tiles_Photos/Demo_2.jpeg",
+    "Thickness": "8MM",
+    "Type": "Premium"
+  }
+]
