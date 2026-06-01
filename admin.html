@@ -1,118 +1,134 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Admin Panel</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Panel | Art Tile Ceramics</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .admin-box {
+            background: #fff;
+            width: 100%;
+            max-width: 450px;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            color: #7209b7;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #666;
+            margin-bottom: 25px;
+        }
+
+        button {
+            border: none;
+            padding: 14px 22px;
+            border-radius: 12px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .login-btn {
+            background: #7209b7;
+            color: white;
+            width: 100%;
+        }
+
+        .login-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        #adminPanel {
+            display: none;
+            margin-top: 25px;
+        }
+
+        input {
+            width: 100%;
+            padding: 14px;
+            margin-bottom: 14px;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+        }
+
+        .upload-btn {
+            background: #7209b7;
+            color: white;
+            width: 100%;
+        }
+
+        .logout-btn {
+            margin-top: 15px;
+            background: #e63946;
+            color: white;
+            width: 100%;
+        }
+    </style>
 </head>
 
 <body>
 
-    <h2>Add Tile</h2>
+    <div class="admin-box">
 
-    <input type="text" id="code" placeholder="Tile Code">
-    <input type="text" id="surface" placeholder="Surface">
-    <input type="text" id="thickness" placeholder="Thickness">
-    <input type="text" id="type" placeholder="Type">
+        <h1>Admin Panel</h1>
+        <p>Only admin can access</p>
 
-    <br><br>
+        <button id="loginBtn" class="login-btn">
+            Login with Google
+        </button>
 
-    Tile Image:
-    <input type="file" id="tileImage">
+        <div id="adminPanel">
 
-    <br><br>
+            <h3>Add Tile</h3>
 
-    Demo Image:
-    <input type="file" id="demoImage">
+            <input type="text" id="tileCode" placeholder="Tile Code">
 
-    <br><br>
+            <input type="text" id="surface" placeholder="Surface">
 
-    <button id="uploadBtn">
-        Upload Tile
-    </button>
+            <input type="text" id="thickness" placeholder="Thickness">
 
-    <script type="module">
+            <input type="text" id="type" placeholder="Type">
 
-        import {
-            db,
-            collection,
-            addDoc
-        } from "./firebase.js";
+            <input type="file" id="tileImage">
 
+            <button class="upload-btn">
+                Upload Tile
+            </button>
 
-        const CLOUD_NAME = "doz0zyoce";
-        const UPLOAD_PRESET = "art_tile_upload";
+            <button id="logoutBtn" class="logout-btn">
+                Logout
+            </button>
 
-        document.getElementById("uploadBtn")
-            .addEventListener("click", async () => {
+        </div>
 
-                const code =
-                    document.getElementById("code").value;
+    </div>
 
-                const surface =
-                    document.getElementById("surface").value;
-
-                const thickness =
-                    document.getElementById("thickness").value;
-
-                const type =
-                    document.getElementById("type").value;
-
-                const tileFile =
-                    document.getElementById("tileImage").files[0];
-
-                const demoFile =
-                    document.getElementById("demoImage").files[0];
-
-
-                // Upload Tile Image
-                const tileForm = new FormData();
-                tileForm.append("file", tileFile);
-                tileForm.append("upload_preset", UPLOAD_PRESET);
-
-                const tileUpload = await fetch(
-                    `https://api.cloudinary.com/v1_1/${CLOUD_NAME}/image/upload`,
-                    {
-                        method: "POST",
-                        body: tileForm
-                    }
-                );
-
-                const tileData = await tileUpload.json();
-
-
-                // Upload Demo Image
-                const demoForm = new FormData();
-                demoForm.append("file", demoFile);
-                demoForm.append("upload_preset", UPLOAD_PRESET);
-
-                const demoUpload = await fetch(
-                    `https://api.cloudinary.com/v1_1/${CLOUD_NAME}/image/upload`,
-                    {
-                        method: "POST",
-                        body: demoForm
-                    }
-                );
-
-                const demoData = await demoUpload.json();
-
-
-                // Save to Firestore
-                await addDoc(collection(db, "tiles"), {
-
-                    Code: code,
-                    Surface: surface,
-                    Thickness: thickness,
-                    Type: type,
-
-                    TileImage: tileData.secure_url,
-                    DemoImage: demoData.secure_url
-                });
-
-                alert("Tile Uploaded Successfully");
-
-            });
-
-    </script>
+    <script type="module" src="firebase.js"></script>
 
 </body>
 
