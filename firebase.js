@@ -1,18 +1,13 @@
-// Firebase Import
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
 
 import {
-  getFirestore,
-  collection,
-  addDoc,
-  getDocs,
-  deleteDoc,
-  doc,
-} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+  getAuth,
+  GoogleAuthProvider,
+  signInWithPopup,
+  onAuthStateChanged,
+  signOut,
+} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 
-import { getAuth } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
-
-// YOUR FIREBASE CONFIG
 const firebaseConfig = {
   apiKey: "AIzaSyC6bxPsQbZtdRIt-q2hGvfXsAd2EnRjnII",
   authDomain: "art-tile-ceramics.firebaseapp.com",
@@ -22,10 +17,45 @@ const firebaseConfig = {
   appId: "1:197115417380:web:dfe0fdaa0995a840e959b1",
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
 
-export const db = getFirestore(app);
-export const auth = getAuth(app);
+const provider = new GoogleAuthProvider();
 
-export { collection, addDoc, getDocs, deleteDoc, doc };
+const ADMIN_EMAIL = "sp1706smart@gmail.com";
+
+const loginBtn = document.getElementById("loginBtn");
+const adminPanel = document.getElementById("adminPanel");
+const logoutBtn = document.getElementById("logoutBtn");
+
+loginBtn.addEventListener("click", async () => {
+  try {
+    const result = await signInWithPopup(auth, provider);
+
+    const user = result.user;
+
+    if (user.email !== ADMIN_EMAIL) {
+      alert("Access Denied");
+      await signOut(auth);
+      return;
+    }
+
+    alert("Login Successful");
+  } catch (error) {
+    console.log(error);
+  }
+});
+
+onAuthStateChanged(auth, (user) => {
+  if (user && user.email === ADMIN_EMAIL) {
+    adminPanel.style.display = "block";
+    loginBtn.style.display = "none";
+  } else {
+    adminPanel.style.display = "none";
+    loginBtn.style.display = "block";
+  }
+});
+
+logoutBtn.addEventListener("click", () => {
+  signOut(auth);
+});
