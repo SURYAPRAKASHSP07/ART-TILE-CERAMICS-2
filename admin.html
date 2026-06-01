@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Admin Panel</title>
+</head>
+
+<body>
+
+    <h2>Add Tile</h2>
+
+    <input type="text" id="code" placeholder="Tile Code">
+    <input type="text" id="surface" placeholder="Surface">
+    <input type="text" id="thickness" placeholder="Thickness">
+    <input type="text" id="type" placeholder="Type">
+
+    <br><br>
+
+    Tile Image:
+    <input type="file" id="tileImage">
+
+    <br><br>
+
+    Demo Image:
+    <input type="file" id="demoImage">
+
+    <br><br>
+
+    <button id="uploadBtn">
+        Upload Tile
+    </button>
+
+    <script type="module">
+
+        import {
+            db,
+            collection,
+            addDoc
+        } from "./firebase.js";
+
+
+        const CLOUD_NAME = "doz0zyoce";
+        const UPLOAD_PRESET = "art_tile_upload";
+
+        document.getElementById("uploadBtn")
+            .addEventListener("click", async () => {
+
+                const code =
+                    document.getElementById("code").value;
+
+                const surface =
+                    document.getElementById("surface").value;
+
+                const thickness =
+                    document.getElementById("thickness").value;
+
+                const type =
+                    document.getElementById("type").value;
+
+                const tileFile =
+                    document.getElementById("tileImage").files[0];
+
+                const demoFile =
+                    document.getElementById("demoImage").files[0];
+
+
+                // Upload Tile Image
+                const tileForm = new FormData();
+                tileForm.append("file", tileFile);
+                tileForm.append("upload_preset", UPLOAD_PRESET);
+
+                const tileUpload = await fetch(
+                    `https://api.cloudinary.com/v1_1/${CLOUD_NAME}/image/upload`,
+                    {
+                        method: "POST",
+                        body: tileForm
+                    }
+                );
+
+                const tileData = await tileUpload.json();
+
+
+                // Upload Demo Image
+                const demoForm = new FormData();
+                demoForm.append("file", demoFile);
+                demoForm.append("upload_preset", UPLOAD_PRESET);
+
+                const demoUpload = await fetch(
+                    `https://api.cloudinary.com/v1_1/${CLOUD_NAME}/image/upload`,
+                    {
+                        method: "POST",
+                        body: demoForm
+                    }
+                );
+
+                const demoData = await demoUpload.json();
+
+
+                // Save to Firestore
+                await addDoc(collection(db, "tiles"), {
+
+                    Code: code,
+                    Surface: surface,
+                    Thickness: thickness,
+                    Type: type,
+
+                    TileImage: tileData.secure_url,
+                    DemoImage: demoData.secure_url
+                });
+
+                alert("Tile Uploaded Successfully");
+
+            });
+
+    </script>
+
+</body>
+
+</html>
